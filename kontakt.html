@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EQUINAT® — Erstgespräch & Partnership</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --dark:#070B05;--forest:#1B2F14;
+  --gold:#C9943A;--gold-l:#E0B055;
+  --cream:#F4EFE4;--cream-2:rgba(244,239,228,0.7);--cream-3:rgba(244,239,228,0.35);
+  --border:rgba(201,148,58,0.18);--border-s:rgba(201,148,58,0.35);
+  --red:#C94A3A;--green:#3A8A3A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;background:var(--dark);}
+body{font-family:'Instrument Sans',sans-serif;background:var(--dark);color:var(--cream);font-size:14px;line-height:1.65;min-height:100vh;}
+nav{background:rgba(7,11,5,0.97);border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;}
+.nav-brand span{color:var(--gold);}
+.back-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream-3);text-decoration:none;transition:color .2s;}
+.back-link:hover{color:var(--gold);}
+
+/* LAYOUT */
+.page-wrap{max-width:860px;margin:0 auto;padding:60px 24px 100px;}
+
+/* INTRO */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:60px;align-items:start;}
+.intro-left{}
+.intro-eyebrow{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,148,58,.6);margin-bottom:12px;}
+.intro-title{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:#fff;line-height:1.05;margin-bottom:16px;}
+.intro-title em{color:var(--gold);font-style:italic;}
+.intro-text{font-size:13.5px;color:var(--cream-2);line-height:1.8;margin-bottom:20px;}
+.why-box{background:rgba(201,148,58,.06);border-left:3px solid var(--gold);padding:20px 24px;}
+.why-box h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.why-box p{font-size:12.5px;color:var(--cream-2);line-height:1.75;}
+.why-box ul{list-style:none;margin-top:10px;}
+.why-box ul li{font-size:12.5px;color:var(--cream-2);padding:4px 0;display:flex;gap:8px;}
+.why-box ul li::before{content:'✓';color:var(--green);flex-shrink:0;}
+
+/* STEPS VISUAL */
+.steps-visual{display:flex;flex-direction:column;gap:0;}
+.sv-item{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--border);}
+.sv-item:last-child{border:none;}
+.sv-num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:rgba(201,148,58,.25);line-height:1;flex-shrink:0;width:40px;text-align:right;}
+.sv-content{}
+.sv-title{font-size:13px;font-weight:600;color:var(--cream);margin-bottom:4px;}
+.sv-desc{font-size:12px;color:var(--cream-3);line-height:1.6;}
+.sv-time{font-family:'DM Mono',monospace;font-size:10px;color:var(--gold);margin-top:4px;}
+
+/* FORM */
+.form-card{background:rgba(27,47,20,.2);border:1px solid var(--border);padding:44px 48px;}
+.form-title{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#fff;margin-bottom:6px;}
+.form-sub{font-size:12.5px;color:var(--cream-3);margin-bottom:32px;line-height:1.6;}
+.form-group{margin-bottom:20px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+label{display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--cream-3);margin-bottom:8px;}
+label span{color:var(--gold);}
+input[type=text],input[type=email],input[type=tel],select,textarea{
+  width:100%;background:rgba(244,239,228,.04);border:1px solid var(--border);
+  color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;
+  padding:13px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;
+}
+input:focus,select:focus,textarea:focus{border-color:rgba(201,148,58,.6);}
+input::placeholder,textarea::placeholder{color:rgba(244,239,228,.2);}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23C9943A'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;}
+select option{background:#0D1209;}
+textarea{resize:vertical;min-height:100px;}
+.nda-section{border-top:1px solid var(--border);padding-top:28px;margin-top:8px;}
+.nda-section h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.nda-text{background:rgba(0,0,0,.3);padding:18px 20px;margin-bottom:18px;border-left:2px solid rgba(201,148,58,.25);font-size:12px;color:rgba(244,239,228,.5);line-height:1.75;}
+.nda-text strong{color:rgba(244,239,228,.8);}
+.checkbox-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;}
+.checkbox-row input[type=checkbox]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--gold);cursor:pointer;}
+.checkbox-row label{font-size:12.5px;color:rgba(244,239,228,.65);cursor:pointer;letter-spacing:0;text-transform:none;}
+.btn-p{display:block;width:100%;background:var(--gold);color:var(--dark);border:none;padding:16px;font-family:'Instrument Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
+.btn-p:hover{background:var(--gold-l);}
+.err{font-size:12px;color:var(--red);min-height:16px;margin-bottom:10px;}
+.form-note{font-size:10.5px;color:rgba(244,239,228,.2);text-align:center;margin-top:14px;line-height:1.6;}
+
+/* SUCCESS */
+.success{display:none;text-align:center;padding:60px 40px;}
+.success-icon{font-size:3.5rem;margin-bottom:20px;}
+.success-title{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:#fff;margin-bottom:12px;}
+.success-text{font-size:13.5px;color:var(--cream-2);line-height:1.8;max-width:480px;margin:0 auto 32px;}
+.success-text strong{color:var(--gold-l);}
+
+/* FOOTER */
+.page-footer{border-top:1px solid var(--border);padding:20px 48px;text-align:center;font-size:10.5px;color:rgba(244,239,228,.2);}
+
+@media(max-width:700px){
+  nav,.page-footer{padding-left:20px;padding-right:20px;}
+  .page-wrap{padding:40px 20px 80px;}
+  .intro{grid-template-columns:1fr;}
+  .form-card{padding:28px 20px;}
+  .form-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- Hidden Netlify form -->
+<form name="equinat-hersteller-kontakt" netlify style="display:none;">
+  <input name="firmenname"/><input name="anschrift"/>
+  <input name="ansprechpartner"/><input name="funktion"/>
+  <input name="email"/><input name="telefon"/>
+  <input name="kapazitaet"/><input name="zertifizierung"/>
+  <textarea name="nachricht"></textarea>
+  <input name="nda_akzeptiert"/><input name="timestamp"/>
+</form>
+
+<nav>
+  <div class="nav-brand">EQUINAT<span>®</span></div>
+  <a href="index.html" class="back-link">← Zurück zur Pitch-Seite</a>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- INTRO + WHY NDA -->
+  <div class="intro">
+    <div class="intro-left">
+      <div class="intro-eyebrow">Partnership Anfrage</div>
+      <h1 class="intro-title">Erstgespräch <em>vereinbaren.</em></h1>
+      <p class="intro-text">Wir freuen uns über Ihr Interesse an einer Lohnproduktions-Partnerschaft für EQUINAT®. Bevor wir Rezepturen, Spezifikationen und Konditionen besprechen, bitten wir Sie um einen kurzen Schritt vorab.</p>
+      <div class="why-box">
+        <h3>Warum zuerst die NDA?</h3>
+        <p>EQUINAT® enthält fünf vollständig entwickelte Produktrezepturen mit patentierten Wirkstoffen (Meriva®, GOPO®, OptiMSM®) und proprietärer Formulierungstechnik. Diese Information ist unser wichtigstes Kapital.</p>
+        <ul>
+          <li>Schützt beide Parteien rechtlich von Anfang an</li>
+          <li>Ermöglicht ein offenes, detailliertes Erstgespräch</li>
+          <li>Signalisiert gegenseitigen professionellen Respekt</li>
+          <li>Ist Standard in jeder ernsthaften Industriepartnerschaft</li>
+        </ul>
+        <p style="margin-top:12px;">Nach Eingang Ihrer Anfrage melden wir uns <strong style="color:rgba(244,239,228,.9);">innerhalb von 48 Stunden</strong> persönlich bei Ihnen.</p>
+      </div>
+    </div>
+    <div>
+      <div class="steps-visual">
+        <div class="sv-item">
+          <div class="sv-num">01</div>
+          <div class="sv-content">
+            <div class="sv-title">Anfrage & NDA senden</div>
+            <div class="sv-desc">Formular ausfüllen, NDA digital akzeptieren, Anfrage absenden.</div>
+            <div class="sv-time">→ Jetzt · 3 Minuten</div>
+          </div>
+        </div>
+        <div class="sv-item">
+          <div class="sv-num">02</div>
+          <div class="sv-content">
+            <div class="sv-title">Persönliche Rückmeldung</div>
+            <div class="sv-desc">Dirc Zahlmann meldet sich direkt per E-Mail oder Telefon.</div>
+            <div class="sv-time">→ Innerhalb 48 Stunden</div>
+          </div>
+        </div>
+        <div class="sv-item">
+          <div class="sv-num">03</div>
+          <div class="sv-content">
+            <div class="sv-title">Erstgespräch (Video oder Vor-Ort)</div>
+            <div class="sv-desc">Vollständige Rezepturen, Anforderungen, Volumen und Konditionen besprechen.</div>
+            <div class="sv-time">→ Ca. 45–60 Minuten</div>
+          </div>
+        </div>
+        <div class="sv-item">
+          <div class="sv-num">04</div>
+          <div class="sv-content">
+            <div class="sv-title">Pilotcharge & Rahmenvertrag</div>
+            <div class="sv-desc">Bei beiderseitigem Interesse: Pilotcharge planen, Konditionen fixieren.</div>
+            <div class="sv-time">→ Q3/Q4 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div class="form-card" id="form-wrap">
+    <div class="form-title">Ihre Anfrage</div>
+    <p class="form-sub">Alle mit <span style="color:var(--gold);">✦</span> markierten Felder sind Pflichtfelder.</p>
+
+    <div class="form-row">
+      <div>
+        <label>Firmenname <span>✦</span></label>
+        <input type="text" id="f-firma" placeholder="Muster GmbH & Co. KG"/>
+      </div>
+      <div>
+        <label>Anschrift <span>✦</span></label>
+        <input type="text" id="f-anschrift" placeholder="Musterstraße 1, 12345 Musterstadt"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label>Ansprechpartner <span>✦</span></label>
+        <input type="text" id="f-name" placeholder="Max Mustermann"/>
+      </div>
+      <div>
+        <label>Funktion / Position</label>
+        <input type="text" id="f-funktion" placeholder="Geschäftsführer"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label>E-Mail <span>✦</span></label>
+        <input type="email" id="f-email" placeholder="kontakt@unternehmen.de"/>
+      </div>
+      <div>
+        <label>Telefon (für Rückruf)</label>
+        <input type="tel" id="f-tel" placeholder="+49 ..."/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div>
+        <label>Monatliche Produktionskapazität</label>
+        <select id="f-kap">
+          <option value="" disabled selected>Bitte wählen</option>
+          <option value="unter5t">Unter 5 t/Monat</option>
+          <option value="5-20t">5–20 t/Monat</option>
+          <option value="20-50t">20–50 t/Monat</option>
+          <option value="ueber50t">Über 50 t/Monat</option>
+        </select>
+      </div>
+      <div>
+        <label>Vorhanden: GMP+B2 / QS</label>
+        <select id="f-zert">
+          <option value="" disabled selected>Bitte wählen</option>
+          <option value="gmp">GMP+B2 vorhanden</option>
+          <option value="qs">QS-Zertifizierung vorhanden</option>
+          <option value="beide">Beide vorhanden</option>
+          <option value="keines">Noch nicht vorhanden</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Kurze Vorstellung Ihres Betriebs (optional)</label>
+      <textarea id="f-msg" placeholder="Was macht Ihren Betrieb für eine EQUINAT-Partnerschaft geeignet? Erfahrungen, Besonderheiten, Fragen..."></textarea>
+    </div>
+
+    <!-- NDA -->
+    <div class="nda-section">
+      <h3>Geheimhaltungsvereinbarung (NDA) <span style="color:var(--gold);">✦</span></h3>
+      <div class="nda-text">
+        <strong>Kurzfassung — Geheimhaltungsvereinbarung Zafao GmbH:</strong><br><br>
+        Alle übermittelten Informationen — Produktrezepturen, Wirkstoffspezifikationen, Mengenverhältnisse, Rohstoffquellen, Preisstrukturen und Geschäftsstrategien der Zafao GmbH — sind streng vertraulich zu behandeln.<br><br>
+        <strong>Pflichten des Herstellers:</strong> Keine Weitergabe an Dritte ohne schriftliche Zustimmung. Keine Nutzung für eigene Produktentwicklungen. Rückgabe aller Unterlagen auf Anfrage.<br><br>
+        <strong>Laufzeit: 5 Jahre</strong> ab Unterzeichnung, unabhängig vom Ausgang der Gespräche.<br>
+        <strong>Vertragsstrafe bei Verstoß: €25.000 je Vorfall</strong>, unbeschadet weiterer Ansprüche nach GeschGehG.<br>
+        Gerichtsstand: Wiesbaden · Deutsches Recht.
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="cb-nda"/>
+        <label for="cb-nda">Ich bestätige verbindlich, die Geheimhaltungsvereinbarung der Zafao GmbH gelesen zu haben, und akzeptiere diese als rechtsverbindlich für unser Unternehmen. Die digitale Bestätigung hat die Wirkung einer handschriftlichen Unterschrift.</label>
+      </div>
+    </div>
+
+    <div class="err" id="form-err"></div>
+    <button class="btn-p" onclick="submitForm()">Anfrage & NDA verbindlich senden →</button>
+    <p class="form-note">Wir melden uns innerhalb von 48 Stunden persönlich · Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden</p>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="success" id="success">
+    <div class="success-icon">🤝</div>
+    <h2 class="success-title">Anfrage eingegangen.</h2>
+    <p class="success-text">Vielen Dank für Ihr Interesse und die Unterzeichnung der NDA.<br><br>
+    <strong>Dirc Zahlmann</strong> wird sich persönlich bei Ihnen melden — in der Regel <strong>innerhalb von 48 Stunden</strong>.<br><br>
+    Wir freuen uns auf das Gespräch.</p>
+    <a href="index.html" style="display:inline-block;background:var(--gold);color:var(--dark);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;">← Zurück zur Pitch-Seite</a>
+  </div>
+
+</div>
+
+<div class="page-footer">© 2026 Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · EQUINAT® ist eine angemeldete Marke</div>
+
+<script>
+function submitForm(){
+  const firma    = document.getElementById('f-firma').value.trim();
+  const anschrift= document.getElementById('f-anschrift').value.trim();
+  const name     = document.getElementById('f-name').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
+  const cb       = document.getElementById('cb-nda').checked;
+  const err      = document.getElementById('form-err');
+
+  if(!firma)  { err.textContent='Bitte Firmennamen eingeben.'; return; }
+  if(!anschrift){ err.textContent='Bitte Anschrift eingeben.'; return; }
+  if(!name)   { err.textContent='Bitte Ansprechpartner eingeben.'; return; }
+  if(!email || !email.includes('@')){ err.textContent='Bitte gültige E-Mail eingeben.'; return; }
+  if(!cb)     { err.textContent='Bitte die Geheimhaltungsvereinbarung akzeptieren.'; return; }
+  err.textContent='';
+
+  const btn = document.querySelector('.btn-p');
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+
+  fetch('/', {
+    method: 'POST',
+    headers: {'Content-Type':'application/x-www-form-urlencoded'},
+    body: new URLSearchParams({
+      'form-name': 'equinat-hersteller-kontakt',
+      firmenname:      firma,
+      anschrift:       anschrift,
+      ansprechpartner: name,
+      funktion:        document.getElementById('f-funktion').value.trim(),
+      email:           email,
+      telefon:         document.getElementById('f-tel').value.trim(),
+      kapazitaet:      document.getElementById('f-kap').value,
+      zertifizierung:  document.getElementById('f-zert').value,
+      nachricht:       document.getElementById('f-msg').value.trim(),
+      nda_akzeptiert:  'Ja — digital bestätigt',
+      timestamp:       new Date().toISOString()
+    })
+  })
+  .then(()=>{
+    document.getElementById('form-wrap').style.display='none';
+    document.getElementById('success').style.display='block';
+    window.scrollTo({top:0,behavior:'smooth'});
+  })
+  .catch(()=>{
+    // Fallback: show success anyway (offline testing)
+    document.getElementById('form-wrap').style.display='none';
+    document.getElementById('success').style.display='block';
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+}
+</script>
+</body>
+</html>

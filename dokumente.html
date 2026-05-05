@@ -127,13 +127,6 @@ input::placeholder{color:rgba(244,239,228,.2);}
 </head>
 <body>
 
-<!-- Hidden Netlify form -->
-<form name="equinat-hersteller-nda" netlify style="display:none;">
-  <input name="firmenname"/><input name="anschrift"/>
-  <input name="ansprechpartner"/><input name="funktion"/>
-  <input name="email"/><input name="timestamp"/>
-</form>
-
 <nav>
   <div class="nav-brand">EQUINAT<span>®</span></div>
   <a href="index.html" class="back-link">← Zurück zur Pitch-Seite</a>
@@ -142,76 +135,31 @@ input::placeholder{color:rgba(244,239,228,.2);}
 <div class="page-header">
   <div class="eyebrow">Hersteller-Bereich · Geschützt</div>
   <div class="page-title">Hersteller-<em>Dokumente</em></div>
-  <p class="page-sub">Bitte füllen Sie zuerst die Geheimhaltungsvereinbarung aus. Danach erhalten Sie mit Ihrem persönlichen Zugangscode Zugang zu allen Unterlagen.</p>
-  <div class="steps">
-    <div class="step-i active" id="si1">01 &nbsp;NDA</div>
-    <div class="step-i" id="si2">02 &nbsp;Passwort</div>
-    <div class="step-i" id="si3">03 &nbsp;Dokumente</div>
+  <p class="page-sub">Geben Sie Ihren persönlichen Zugangscode ein. Noch keinen? <a href="kontakt.html" style="color:var(--gold);">Erstgespräch anfragen →</a></p>
+  <div class="steps" style="max-width:320px;">
+    <div class="step-i active" id="si1">01 &nbsp;Passwort</div>
+    <div class="step-i" id="si2">02 &nbsp;Dokumente</div>
   </div>
 </div>
 
 <main>
 
-  <!-- STEP 1: NDA -->
+  <!-- PASSWORD -->
   <div id="s1">
     <div class="box">
-      <div class="box-title">Geheimhaltungsvereinbarung</div>
-      <div class="box-sub">Mit Absenden bestätigen Sie die NDA mit der Zafao GmbH verbindlich. Laufzeit 5 Jahre. Eine Kopie geht an info@zafao.world.</div>
-
-      <div class="form-group">
-        <label>Firmenname <span>*</span></label>
-        <input type="text" id="f-firma" placeholder="Muster GmbH & Co. KG"/>
-      </div>
-      <div class="form-group">
-        <label>Anschrift <span>*</span></label>
-        <input type="text" id="f-anschrift" placeholder="Musterstraße 1, 12345 Musterstadt"/>
-      </div>
-      <div class="form-row" style="margin-bottom:20px;">
-        <div class="form-group" style="margin:0;">
-          <label>Ansprechpartner <span>*</span></label>
-          <input type="text" id="f-name" placeholder="Max Mustermann"/>
-        </div>
-        <div class="form-group" style="margin:0;">
-          <label>Funktion</label>
-          <input type="text" id="f-funktion" placeholder="Geschäftsführer"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label>E-Mail <span>*</span></label>
-        <input type="email" id="f-email" placeholder="kontakt@unternehmen.de"/>
-      </div>
-
-      <div class="nda-text">
-        <strong>Geheimhaltungsvereinbarung (Kurzfassung):</strong><br>
-        Alle übermittelten Informationen — Rezepturen, Spezifikationen, Preisstrukturen, Geschäftsstrategien der Zafao GmbH — sind streng vertraulich. Keine Weitergabe an Dritte. Keine Nutzung für eigene Produktentwicklungen. Rückgabe aller Unterlagen bei Anfrage. Laufzeit: <strong>5 Jahre.</strong> Vertragsstrafe bei Verstoß: <strong>€25.000 je Vorfall.</strong> Gerichtsstand: Wiesbaden · Deutsches Recht.
-      </div>
-
-      <div class="checkbox-row">
-        <input type="checkbox" id="cb-nda"/>
-        <label for="cb-nda">Ich bestätige verbindlich, die Geheimhaltungsvereinbarung gelesen zu haben und akzeptiere diese als rechtsverbindlich für unser Unternehmen.</label>
-      </div>
-
-      <div class="err" id="err1"></div>
-      <button class="btn-p" onclick="submitNDA()">NDA akzeptieren & weiter →</button>
-    </div>
-  </div>
-
-  <!-- STEP 2: PASSWORD -->
-  <div id="s2" style="display:none;">
-    <div class="box">
       <div class="box-title">Zugangscode eingeben</div>
-      <div class="box-sub">NDA erfolgreich übermittelt. Bitte geben Sie Ihren persönlichen Zugangscode ein. Noch keinen? <a href="mailto:info@zafao.world?subject=EQUINAT%20Zugangscode" style="color:var(--gold);">info@zafao.world</a></div>
+      <div class="box-sub">Ihr persönlicher Zugangscode wurde von EQUINAT per E-Mail übermittelt. Noch keinen erhalten? <a href="kontakt.html" style="color:var(--gold);">Erstgespräch anfragen →</a></div>
       <div class="form-group">
         <label>Zugangscode</label>
         <input type="password" id="f-pw" placeholder="Ihr persönlicher Code"/>
       </div>
-      <div class="err" id="err2"></div>
+      <div class="err" id="err1"></div>
       <button class="btn-p" onclick="checkPW()">Zugang öffnen →</button>
     </div>
   </div>
 
-  <!-- STEP 3: DOCUMENTS -->
-  <div id="s3" style="display:none;">
+  <!-- DOCUMENTS -->
+  <div id="s2" style="display:none;">
     <div class="portal-head">
       <div>
         <h2>Hersteller-Dokumente</h2>
@@ -222,7 +170,6 @@ input::placeholder{color:rgba(244,239,228,.2);}
         <button class="logout-btn" onclick="logout()">Abmelden</button>
       </div>
     </div>
-
     <div class="doc-grid">
       <div class="doc-card" style="--dc:#C9943A;" onclick="showDoc('spec')">
         <div class="dc-icon">📋</div>
@@ -254,16 +201,18 @@ input::placeholder{color:rgba(244,239,228,.2);}
         <div class="dc-desc">Brand Doctrine · 6 Hard Limits · FEI Anti-Doping · Verbindliche Standards für alle Partner.</div>
         <span class="dc-tag tag-nda">NDA</span>
       </div>
-      <a class="doc-card" href="mailto:info@zafao.world?subject=EQUINAT%20Erstgespräch" style="--dc:#C9943A;">
+      <a class="doc-card" href="kontakt.html" style="--dc:#C9943A;">
         <div class="dc-icon">📞</div>
         <div class="dc-name">Erstgespräch anfragen</div>
         <div class="dc-desc">Unterlagen geprüft? Wir melden uns innerhalb von 48 Stunden für ein erstes Gespräch.</div>
-        <span class="dc-tag tag-mail">E-Mail</span>
+        <span class="dc-tag tag-mail">Anfrage</span>
       </a>
     </div>
   </div>
 
 </main>
+
+
 
 <div class="page-footer">© 2026 Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · EQUINAT® ist eine angemeldete Marke</div>
 
@@ -280,7 +229,6 @@ input::placeholder{color:rgba(244,239,228,.2);}
 
 <script>
 const PW_HASH = '348344ec10e5218ad448bcbdeca005e0f6ea3609e42bd5712e00c69f2c7af32c';
-const NDA_KEY = 'eq_nda_ok';
 const AUTH_KEY = 'eq_hw_auth';
 
 async function sha256(msg){
@@ -289,60 +237,22 @@ async function sha256(msg){
 }
 
 function goStep(n){
-  [1,2,3].forEach(i=>{
+  [1,2].forEach(i=>{
     document.getElementById('s'+i).style.display = i===n ? 'block' : 'none';
     const si = document.getElementById('si'+i);
-    if(i < n){ si.className='step-i done'; }
-    else if(i===n){ si.className='step-i active'; }
-    else{ si.className='step-i'; }
+    si.className = i<=n ? 'step-i active' : 'step-i';
   });
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// Init
 (function(){
-  if(sessionStorage.getItem(AUTH_KEY)==='1'){ goStep(3); }
-  else if(sessionStorage.getItem(NDA_KEY)==='1'){ goStep(2); }
-  else{ goStep(1); }
-
+  if(sessionStorage.getItem(AUTH_KEY)==='1'){ goStep(2); return; }
+  goStep(1);
   document.getElementById('f-pw').addEventListener('keydown', e=>{
     if(e.key==='Enter') checkPW();
-    document.getElementById('err2').textContent='';
+    document.getElementById('err1').textContent='';
   });
 })();
-
-function submitNDA(){
-  const firma = document.getElementById('f-firma').value.trim();
-  const anschrift = document.getElementById('f-anschrift').value.trim();
-  const name = document.getElementById('f-name').value.trim();
-  const email = document.getElementById('f-email').value.trim();
-  const cb = document.getElementById('cb-nda').checked;
-  const err = document.getElementById('err1');
-
-  if(!firma){ err.textContent='Bitte Firmennamen eingeben.'; return; }
-  if(!anschrift){ err.textContent='Bitte Anschrift eingeben.'; return; }
-  if(!name){ err.textContent='Bitte Ansprechpartner eingeben.'; return; }
-  if(!email || !email.includes('@')){ err.textContent='Bitte gültige E-Mail eingeben.'; return; }
-  if(!cb){ err.textContent='Bitte die NDA akzeptieren.'; return; }
-  err.textContent='';
-
-  // Submit to Netlify
-  fetch('/', {
-    method:'POST',
-    headers:{'Content-Type':'application/x-www-form-urlencoded'},
-    body: new URLSearchParams({
-      'form-name':'equinat-hersteller-nda',
-      firmenname: firma, anschrift,
-      ansprechpartner: name,
-      funktion: document.getElementById('f-funktion').value.trim(),
-      email, timestamp: new Date().toISOString()
-    })
-  }).catch(()=>{});
-
-  sessionStorage.setItem(NDA_KEY,'1');
-  goStep(2);
-  setTimeout(()=>document.getElementById('f-pw').focus(), 300);
-}
 
 async function checkPW(){
   const pw = document.getElementById('f-pw').value;
@@ -350,9 +260,9 @@ async function checkPW(){
   const hash = await sha256(pw);
   if(hash===PW_HASH){
     sessionStorage.setItem(AUTH_KEY,'1');
-    goStep(3);
+    goStep(2);
   } else {
-    document.getElementById('err2').textContent='Zugangscode ungültig. Bitte an info@zafao.world wenden.';
+    document.getElementById('err1').textContent='Zugangscode ungültig. Bitte an info@zafao.world wenden.';
     document.getElementById('f-pw').value='';
     document.getElementById('f-pw').focus();
   }
@@ -360,7 +270,6 @@ async function checkPW(){
 
 function logout(){
   sessionStorage.removeItem(AUTH_KEY);
-  sessionStorage.removeItem(NDA_KEY);
   goStep(1);
 }
 
