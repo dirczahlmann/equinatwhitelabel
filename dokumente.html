@@ -3,161 +3,113 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>EQUINAT® — Hersteller-Dokumente</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<title>EQUINAT® Hersteller-Dokumente</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet"/>
 <style>
-:root{
-  --dark:#070B05;--forest:#1B2F14;
-  --gold:#C9943A;--gold-l:#E0B055;
-  --cream:#F4EFE4;--cream-2:rgba(244,239,228,0.7);--cream-3:rgba(244,239,228,0.35);
-  --border:rgba(201,148,58,0.18);--border-s:rgba(201,148,58,0.35);
-  --red:#C94A3A;--green:#3A8A3A;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;background:var(--dark);}
-body{font-family:'Instrument Sans',sans-serif;background:var(--dark);color:var(--cream);font-size:14px;line-height:1.65;min-height:100vh;}
-
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Instrument Sans',sans-serif;background:#070B05;color:#F4EFE4;font-size:14px;line-height:1.65;min-height:100vh;}
+a{color:inherit;text-decoration:none;}
 /* NAV */
-nav{background:rgba(7,11,5,0.97);border-bottom:1px solid var(--border);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 48px;}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;}
-.nav-brand span{color:var(--gold);}
-.back-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream-3);text-decoration:none;transition:color .2s;}
-.back-link:hover{color:var(--gold);}
-
-/* STEP HEADER */
-.page-header{padding:48px 48px 0;max-width:680px;margin:0 auto;text-align:center;}
-.eyebrow{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,148,58,.6);margin-bottom:8px;}
-.page-title{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:#fff;margin-bottom:8px;}
-.page-title em{color:var(--gold);font-style:italic;}
-.page-sub{font-size:13px;color:var(--cream-3);line-height:1.6;}
-
-/* STEP INDICATOR */
-.steps{display:flex;max-width:480px;margin:36px auto 0;}
-.step-i{flex:1;text-align:center;padding:10px 0;border-bottom:2px solid rgba(201,148,58,.2);font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.3);transition:all .3s;}
-.step-i.active{border-bottom-color:var(--gold);color:var(--gold);}
-.step-i.done{border-bottom-color:var(--green);color:rgba(58,138,58,.7);}
-
-/* MAIN */
-main{max-width:620px;margin:0 auto;padding:48px 24px 80px;}
-
-/* FORM ELEMENTS */
-.form-group{margin-bottom:20px;}
-label{display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--cream-3);margin-bottom:8px;}
-label span{color:var(--gold);}
-input[type=text],input[type=email],input[type=password]{
-  width:100%;background:rgba(244,239,228,.04);
-  border:1px solid var(--border);color:var(--cream);
-  font-family:'Instrument Sans',sans-serif;font-size:14px;
-  padding:13px 16px;outline:none;transition:border-color .2s;
-  -webkit-appearance:none;
-}
-input:focus{border-color:rgba(201,148,58,.6);}
-input::placeholder{color:rgba(244,239,228,.2);}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-
-/* BOXES */
-.box{background:rgba(27,47,20,.2);border:1px solid var(--border);padding:36px 40px;margin-bottom:24px;}
-.box-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:6px;}
-.box-sub{font-size:12.5px;color:var(--cream-3);margin-bottom:28px;line-height:1.6;}
-.nda-text{background:rgba(0,0,0,.35);padding:18px 20px;margin-bottom:20px;border-left:2px solid rgba(201,148,58,.3);font-size:12px;color:rgba(244,239,228,.5);line-height:1.75;}
-.nda-text strong{color:rgba(244,239,228,.8);}
-.checkbox-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;}
-.checkbox-row input[type=checkbox]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--gold);cursor:pointer;}
-.checkbox-row label{font-size:12.5px;color:rgba(244,239,228,.65);cursor:pointer;letter-spacing:0;text-transform:none;}
-
-/* BUTTONS */
-.btn-p{display:block;width:100%;background:var(--gold);color:var(--dark);border:none;padding:15px;font-family:'Instrument Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
-.btn-p:hover{background:var(--gold-l);}
-.btn-p:disabled{background:rgba(201,148,58,.3);cursor:not-allowed;}
-
-/* ERROR */
-.err{font-size:12px;color:var(--red);min-height:16px;margin-bottom:8px;}
-
+nav{background:rgba(7,11,5,.97);border-bottom:1px solid rgba(201,148,58,.18);height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;}
+.brand span{color:#C9943A;}
+.back{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(244,239,228,.35);text-decoration:none;}
+.back:hover{color:#C9943A;}
+/* PAGE */
+.page{max-width:700px;margin:0 auto;padding:48px 24px 80px;}
+.page-eyebrow{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(201,148,58,.6);margin-bottom:8px;text-align:center;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:#fff;margin-bottom:8px;text-align:center;}
+.page-title em{color:#C9943A;font-style:italic;}
+.page-sub{font-size:13px;color:rgba(244,239,228,.35);line-height:1.6;text-align:center;margin-bottom:40px;}
+/* STEPS */
+.steps{display:flex;max-width:320px;margin:0 auto 48px;}
+.si{flex:1;text-align:center;padding:10px 0;border-bottom:2px solid rgba(201,148,58,.2);font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.3);}
+.si.on{border-bottom-color:#C9943A;color:#C9943A;}
+/* PASSWORD BOX */
+.box{background:rgba(27,47,20,.2);border:1px solid rgba(201,148,58,.18);padding:36px 40px;margin-bottom:32px;}
+.box-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#fff;margin-bottom:8px;}
+.box-sub{font-size:12.5px;color:rgba(244,239,228,.4);margin-bottom:24px;line-height:1.6;}
+.fl{display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.35);margin-bottom:8px;}
+.fi{width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:#F4EFE4;font-family:'Instrument Sans',sans-serif;font-size:15px;padding:13px 16px;outline:none;}
+.fi:focus{border-color:rgba(201,148,58,.6);}
+.fi::placeholder{color:rgba(244,239,228,.2);}
+.err{font-size:12px;color:#C94A3A;min-height:16px;margin:8px 0;}
+.btn{display:block;width:100%;background:#C9943A;color:#070B05;border:none;padding:15px;font-family:'Instrument Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;margin-top:4px;}
+.btn:hover{background:#E0B055;}
 /* DOC GRID */
 .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.doc-card{background:rgba(244,239,228,.03);border:1px solid var(--border);padding:22px;cursor:pointer;display:flex;flex-direction:column;gap:10px;transition:background .2s,border-color .2s;position:relative;overflow:hidden;text-decoration:none;}
-.doc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--dc,var(--gold));}
-
-button.doc-card{border:none;cursor:pointer;display:flex;flex-direction:column;gap:10px;}
-button.doc-card:hover{background:rgba(244,239,228,.07)!important;border-color:var(--border-s)!important;}
-.doc-card:hover{background:rgba(244,239,228,.07);border-color:var(--border-s);}
+.portal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(201,148,58,.18);}
+.portal-head h2{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;}
+.portal-head p{font-size:11px;color:rgba(244,239,228,.35);margin-top:2px;}
+.badge{font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(58,138,58,.15);color:#70B870;border:1px solid rgba(58,138,58,.3);padding:4px 12px;}
+.logout{background:none;border:1px solid rgba(201,148,58,.18);color:rgba(244,239,228,.35);padding:6px 14px;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Instrument Sans',sans-serif;}
+.logout:hover{border-color:rgba(201,148,58,.35);color:#F4EFE4;}
+/* DOC CARDS - use <a> tags */
+.dc{display:flex;flex-direction:column;gap:10px;background:rgba(244,239,228,.03);border:1px solid rgba(201,148,58,.18);padding:22px;cursor:pointer;position:relative;overflow:hidden;text-decoration:none;color:inherit;}
+.dc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--c,#C9943A);}
+.dc:hover{background:rgba(244,239,228,.07);border-color:rgba(201,148,58,.35);}
 .dc-icon{font-size:1.6rem;line-height:1;}
 .dc-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:#fff;}
-.dc-desc{font-size:12px;color:var(--cream-3);line-height:1.6;}
+.dc-desc{font-size:12px;color:rgba(244,239,228,.35);line-height:1.6;}
 .dc-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;padding:2px 8px;margin-top:2px;}
-.tag-nda{background:rgba(201,74,58,.1);color:#C07060;border:1px solid rgba(201,74,58,.2);}
-.tag-dl{background:rgba(201,148,58,.1);color:var(--gold-l);border:1px solid rgba(201,148,58,.25);}
-.tag-mail{background:rgba(58,138,58,.1);color:#70B870;border:1px solid rgba(58,138,58,.25);}
-
+.tag-r{background:rgba(201,74,58,.1);color:#C07060;border:1px solid rgba(201,74,58,.2);}
+.tag-g{background:rgba(58,138,58,.1);color:#70B870;border:1px solid rgba(58,138,58,.25);}
+.tag-d{background:rgba(201,148,58,.1);color:#E0B055;border:1px solid rgba(201,148,58,.25);}
 /* MODAL */
-.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;overflow-y:auto;padding:32px 20px;}
-.modal-bg.open{display:flex;align-items:flex-start;justify-content:center;}
-.modal-box{background:#0D1209;border:1px solid var(--border-s);max-width:740px;width:100%;margin:auto;padding:40px 44px;}
-.modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
-.modal-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#fff;}
-.modal-close{background:none;border:none;color:var(--cream-3);font-size:1.5rem;cursor:pointer;line-height:1;padding:4px;}
-.modal-close:hover{color:#fff;}
-.modal-body{font-size:13px;color:var(--cream-2);line-height:1.8;}
-.modal-body h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--gold-l);margin:20px 0 8px;}
-.modal-body h3:first-child{margin-top:0;}
-.modal-body p{margin-bottom:10px;}
-.modal-body ul{padding-left:18px;margin-bottom:12px;}
-.modal-body ul li{margin-bottom:5px;}
-.modal-body table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12.5px;}
-.modal-body th{padding:8px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,148,58,.1);color:var(--gold-l);text-align:left;}
-.modal-body td{padding:7px 12px;border-bottom:1px solid rgba(201,148,58,.07);}
-.modal-body strong{color:var(--cream);}
-.modal-nda{background:rgba(201,74,58,.08);border-left:3px solid var(--red);padding:12px 16px;margin-bottom:20px;font-size:12px;}
-
-/* PORTAL HEADER */
-.portal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border);}
-.portal-head h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;}
-.portal-head p{font-size:11px;color:var(--cream-3);}
-.portal-badge{font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(58,138,58,.15);color:#70B870;border:1px solid rgba(58,138,58,.3);padding:4px 12px;}
-.logout-btn{background:none;border:1px solid var(--border);color:var(--cream-3);padding:6px 14px;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Instrument Sans',sans-serif;transition:all .2s;}
-.logout-btn:hover{border-color:var(--border-s);color:var(--cream);}
-
+#modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:999;overflow-y:auto;padding:32px 16px;}
+#modal.open{display:flex;align-items:flex-start;justify-content:center;}
+#modal-box{background:#0D1209;border:1px solid rgba(201,148,58,.35);max-width:760px;width:100%;margin:auto;padding:40px;}
+#modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;}
+#modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;}
+#modal-close{background:none;border:none;color:rgba(244,239,228,.4);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px;}
+#modal-close:hover{color:#fff;}
+#modal-body{font-size:13px;color:rgba(244,239,228,.7);line-height:1.8;}
+#modal-body h3{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:#E0B055;margin:20px 0 8px;}
+#modal-body h3:first-child{margin-top:0;}
+#modal-body p{margin-bottom:10px;}
+#modal-body ul{padding-left:18px;margin-bottom:12px;}
+#modal-body ul li{margin-bottom:5px;}
+#modal-body table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12.5px;}
+#modal-body th{padding:8px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,148,58,.1);color:#E0B055;text-align:left;}
+#modal-body td{padding:7px 12px;border-bottom:1px solid rgba(201,148,58,.07);}
+#modal-body strong{color:#F4EFE4;}
+.nda-warn{background:rgba(201,74,58,.08);border-left:3px solid #C94A3A;padding:12px 16px;margin-bottom:16px;font-size:12px;}
 /* FOOTER */
-.page-footer{border-top:1px solid var(--border);padding:20px 48px;text-align:center;font-size:10.5px;color:rgba(244,239,228,.2);}
-
+.foot{border-top:1px solid rgba(201,148,58,.18);padding:20px 40px;text-align:center;font-size:10.5px;color:rgba(244,239,228,.2);}
 @media(max-width:600px){
-  nav,.page-header,main,.page-footer{padding-left:20px;padding-right:20px;}
-  .form-row,.doc-grid{grid-template-columns:1fr;}
+  nav,.foot{padding-left:20px;padding-right:20px;}
+  .page{padding:32px 16px 60px;}
+  .doc-grid{grid-template-columns:1fr;}
   .box{padding:24px 20px;}
-  .modal-box{padding:28px 20px;}
+  #modal-box{padding:24px 16px;}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-brand">EQUINAT<span>®</span></div>
-  <a href="index.html" class="back-link">← Zurück zur Pitch-Seite</a>
+  <div class="brand">EQUINAT<span>®</span></div>
+  <a href="index.html" class="back">← Pitch-Seite</a>
 </nav>
 
-<div class="page-header">
-  <div class="eyebrow">Hersteller-Bereich · Geschützt</div>
+<div class="page">
+  <div class="page-eyebrow">Hersteller-Bereich · Geschützt</div>
   <div class="page-title">Hersteller-<em>Dokumente</em></div>
-  <p class="page-sub">Geben Sie Ihren persönlichen Zugangscode ein. Noch keinen? <a href="kontakt.html" style="color:var(--gold);">Erstgespräch anfragen →</a></p>
-  <div class="steps" style="max-width:320px;">
-    <div class="step-i active" id="si1">01 &nbsp;Passwort</div>
-    <div class="step-i" id="si2">02 &nbsp;Dokumente</div>
+  <p class="page-sub">Geben Sie Ihren persönlichen Zugangscode ein. Noch keinen? <a href="kontakt.html" style="color:#C9943A;">Erstgespräch anfragen →</a></p>
+  <div class="steps">
+    <div class="si on" id="si1">01 &nbsp;Passwort</div>
+    <div class="si" id="si2">02 &nbsp;Dokumente</div>
   </div>
-</div>
-
-<main>
 
   <!-- PASSWORD -->
   <div id="s1">
     <div class="box">
       <div class="box-title">Zugangscode eingeben</div>
-      <div class="box-sub">Ihr persönlicher Zugangscode wurde von EQUINAT per E-Mail übermittelt. Noch keinen erhalten? <a href="kontakt.html" style="color:var(--gold);">Erstgespräch anfragen →</a></div>
-      <div class="form-group">
-        <label>Zugangscode</label>
-        <input type="password" id="f-pw" placeholder="Ihr persönlicher Code"/>
-      </div>
-      <div class="err" id="err1"></div>
-      <button class="btn-p" onclick="checkPW()">Zugang öffnen →</button>
+      <div class="box-sub">Ihr persönlicher Code wurde von EQUINAT per E-Mail übermittelt.</div>
+      <label class="fl">Zugangscode</label>
+      <input class="fi" type="password" id="pw" placeholder="Ihr Code"/>
+      <div class="err" id="err"></div>
+      <button class="btn" id="pw-btn">Zugang öffnen →</button>
     </div>
   </div>
 
@@ -166,540 +118,180 @@ button.doc-card:hover{background:rgba(244,239,228,.07)!important;border-color:va
     <div class="portal-head">
       <div>
         <h2>Hersteller-Dokumente</h2>
-        <p>Alle Dokumente unterliegen der NDA-Pflicht · Zafao GmbH · Wiesbaden</p>
+        <p>NDA-Pflicht · Zafao GmbH · Wiesbaden</p>
       </div>
       <div style="display:flex;gap:10px;align-items:center;">
-        <span class="portal-badge">ZUGANG AKTIV</span>
-        <button class="logout-btn" onclick="logout()">Abmelden</button>
+        <span class="badge">ZUGANG AKTIV</span>
+        <button class="logout" id="logout-btn">Abmelden</button>
       </div>
     </div>
-    <div class="doc-grid">
-      <button class="doc-card" style="--dc:#C9943A;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('spec')">
+    <div class="doc-grid" id="doc-grid">
+      <a class="dc" style="--c:#C9943A;" href="javascript:void(0)" onclick="openDoc('spec')">
         <div class="dc-icon">📋</div>
         <div class="dc-name">Spec Sheet v1.0</div>
-        <div class="dc-desc">Vollständiges Lastenheft · Tagesdosen · Pelletierparameter · HPLC-Anforderungen · Zertifizierungsanforderungen · Pilotmengen · Rahmenvertrag-Eckpunkte.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
-      <button class="doc-card" style="--dc:#E8B85A;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('rezepturen')">
+        <div class="dc-desc">Vollständiges Lastenheft · Pelletierparameter · HPLC · Pilotmengen · Zertifizierungs-Roadmap · Rahmenvertrag-Eckpunkte.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
+      <a class="dc" style="--c:#E8B85A;" href="javascript:void(0)" onclick="openDoc('rezepturen')">
         <div class="dc-icon">🧪</div>
         <div class="dc-name">Vollrezepturen — alle 5 Linien</div>
-        <div class="dc-desc">DAILY · JOINT · RESPIRA · METABOLIC · MASH SYSTEM — vollständige Wirkstofflisten mit Tagesdosen, Rohstoffqualität, Herkunft und Produktionshinweisen.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
-      <button class="doc-card" style="--dc:#7EC870;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('mash')">
+        <div class="dc-desc">DAILY · JOINT · RESPIRA · METABOLIC · MASH SYSTEM — Wirkstofflisten, Tagesdosen, Rohstoffqualität, Produktionshinweise.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
+      <a class="dc" style="--c:#7EC870;" href="javascript:void(0)" onclick="openDoc('mash')">
         <div class="dc-icon">🍲</div>
-        <div class="dc-name">MASH SYSTEM® — Detailrezeptur</div>
-        <div class="dc-desc">Basis (NSC &lt;8%) · Winter Booster · Summer Booster — vollständige Wirkstofflisten, Sachet-Spezifikation, Quellverhalten, FEI-Status, Produktionshinweise.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
-      <button class="doc-card" style="--dc:#D4813A;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('qualitaet')">
+        <div class="dc-name">MASH SYSTEM® Detailrezeptur</div>
+        <div class="dc-desc">Basis (NSC &lt;8%) · Winter Booster · Summer Booster — vollständig mit Sachet-Spezifikation und FEI-Status.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
+      <a class="dc" style="--c:#D4813A;" href="javascript:void(0)" onclick="openDoc('qualitaet')">
         <div class="dc-icon">🏅</div>
         <div class="dc-name">Quality Manifest + 6 Hard Limits</div>
-        <div class="dc-desc">Brand Doctrine · HL-1 bis HL-6 verbindlich · Verarbeitungsparameter · Pflicht-Analytik je Charge · FEI Anti-Doping · Naturland-Roadmap.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
-      <button class="doc-card" style="--dc:#3A8A3A;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('analytik')">
+        <div class="dc-desc">Brand Doctrine · HL-1 bis HL-6 verbindlich · Verarbeitungsparameter · Analytik je Charge · Naturland-Roadmap.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
+      <a class="dc" style="--c:#3A8A3A;" href="javascript:void(0)" onclick="openDoc('analytik')">
         <div class="dc-icon">🔬</div>
         <div class="dc-name">Analytik & Rohstoff-Sourcing</div>
-        <div class="dc-desc">28 Peer-reviewed Studien · Rohstoff-Herkunftstabelle mit Preisranges · CoA-Anforderungen · Eurofins/SGS Prüfumfang je Charge · QR-Code-Rückverfolgung.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
-      <button class="doc-card" style="--dc:#8090D8;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('checkliste')">
+        <div class="dc-desc">28 Peer-reviewed Studien · Rohstoff-Herkunftstabelle mit Preisranges · CoA-Anforderungen · QR-Rückverfolgung.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
+      <a class="dc" style="--c:#8090D8;" href="javascript:void(0)" onclick="openDoc('checkliste')">
         <div class="dc-icon">✉️</div>
         <div class="dc-name">Anforderungs-Checkliste</div>
-        <div class="dc-desc">Standardisierte Checkliste für Ihre interne Prüfung von Kapazitäten, Zertifizierungen, Produktionstechnik und Zeitplan. Bitte ausgefüllt zurücksenden.</div>
-        <span class="dc-tag tag-dl">Vorlage</span>
-      </button>
-      <button class="doc-card" style="--dc:#C07060;;width:100%;text-align:left;font-family:\'Instrument Sans\',sans-serif;" onclick="showDoc('nda')">
+        <div class="dc-desc">Für Ihre interne Prüfung von Kapazitäten, Zertifizierungen und Produktionstechnik. Bitte ausgefüllt zurücksenden.</div>
+        <span class="dc-tag tag-d">Vorlage</span>
+      </a>
+      <a class="dc" style="--c:#C07060;" href="javascript:void(0)" onclick="openDoc('nda')">
         <div class="dc-icon">⚖️</div>
         <div class="dc-name">NDA-Volltext</div>
-        <div class="dc-desc">Vollständiger Wortlaut der Geheimhaltungsvereinbarung für Ihre Rechts- oder Compliance-Abteilung. Laufzeit 5 Jahre · Gerichtsstand Wiesbaden.</div>
-        <span class="dc-tag tag-dl">Volltext</span>
-      </button>
-      <button class="doc-card" style="--dc:#C9943A;width:100%;text-align:left;font-family:'Instrument Sans',sans-serif;" onclick="showDoc('kalkulation')">
+        <div class="dc-desc">Vollständiger Wortlaut der Geheimhaltungsvereinbarung für Ihre Rechts- oder Compliance-Abteilung.</div>
+        <span class="dc-tag tag-d">Volltext</span>
+      </a>
+      <a class="dc" style="--c:#C9943A;" href="javascript:void(0)" onclick="openDoc('kalkulation')">
         <div class="dc-icon">📊</div>
         <div class="dc-name">Kalkulation & Margenmodell</div>
-        <div class="dc-desc">COGS-Ziele je Linie · Subscription-Tiering · EBITDA-Projektion · Affiliate-Struktur · Break-Even-Analyse. Basis für Rahmenvertrag-Verhandlung.</div>
-        <span class="dc-tag tag-nda">NDA</span>
-      </button>
+        <div class="dc-desc">COGS-Ziele je Linie · CM-Tabelle · EBITDA-Projektion · Break-Even. Basis für Rahmenvertrag-Verhandlung.</div>
+        <span class="dc-tag tag-r">NDA</span>
+      </a>
     </div>
-  </div>
-
-</main>
-
-
-
-
-
-<div class="page-footer">© 2026 Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · EQUINAT® ist eine angemeldete Marke</div>
-
-<!-- MODAL -->
-<div class="modal-bg" id="modal" onclick="if(event.target===this)closeModal()">
-  <div class="modal-box">
-    <div class="modal-head">
-      <div class="modal-title" id="modal-title">Dokument</div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body" id="modal-body"></div>
   </div>
 </div>
 
+<!-- MODAL -->
+<div id="modal">
+  <div id="modal-box">
+    <div id="modal-head">
+      <div id="modal-title">Dokument</div>
+      <button id="modal-close">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<div class="foot">© 2026 Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · EQUINAT® ist eine angemeldete Marke</div>
+
 <script>
-const PW_HASH = '348344ec10e5218ad448bcbdeca005e0f6ea3609e42bd5712e00c69f2c7af32c';
-const AUTH_KEY = 'eq_hw_auth';
+var HASH = '348344ec10e5218ad448bcbdeca005e0f6ea3609e42bd5712e00c69f2c7af32c';
+var KEY = 'eq_hw_auth';
 
-async function sha256(msg){
-  const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
-  return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,'0')).join('');
+async function h256(s){
+  var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,'0');}).join('');
 }
 
-function goStep(n){
-  [1,2].forEach(i=>{
-    document.getElementById('s'+i).style.display = i===n ? 'block' : 'none';
-    const si = document.getElementById('si'+i);
-    si.className = i<=n ? 'step-i active' : 'step-i';
+function show(n){
+  document.getElementById('s1').style.display=n===1?'block':'none';
+  document.getElementById('s2').style.display=n===2?'block':'none';
+  document.getElementById('si1').className='si'+(n>=1?' on':'');
+  document.getElementById('si2').className='si'+(n>=2?' on':'');
+}
+
+// Init
+if(sessionStorage.getItem(KEY)==='1'){show(2);}else{show(1);}
+
+// Password check
+document.getElementById('pw-btn').addEventListener('click',function(){
+  var pw=document.getElementById('pw').value;
+  if(!pw)return;
+  h256(pw).then(function(hash){
+    if(hash===HASH){
+      sessionStorage.setItem(KEY,'1');
+      show(2);
+    }else{
+      document.getElementById('err').textContent='Zugangscode ungültig. Bitte an info@zafao.world wenden.';
+      document.getElementById('pw').value='';
+      document.getElementById('pw').focus();
+    }
   });
-  window.scrollTo({top:0,behavior:'smooth'});
-}
+});
 
-(function(){
-  if(sessionStorage.getItem(AUTH_KEY)==='1'){ goStep(2); return; }
-  goStep(1);
-  document.getElementById('f-pw').addEventListener('keydown', e=>{
-    if(e.key==='Enter') checkPW();
-    document.getElementById('err1').textContent='';
-  });
-})();
+document.getElementById('pw').addEventListener('keydown',function(e){
+  if(e.key==='Enter')document.getElementById('pw-btn').click();
+  document.getElementById('err').textContent='';
+});
 
-async function checkPW(){
-  const pw = document.getElementById('f-pw').value;
-  if(!pw) return;
-  const hash = await sha256(pw);
-  if(hash===PW_HASH){
-    sessionStorage.setItem(AUTH_KEY,'1');
-    goStep(2);
-  } else {
-    document.getElementById('err1').textContent='Zugangscode ungültig. Bitte an info@zafao.world wenden.';
-    document.getElementById('f-pw').value='';
-    document.getElementById('f-pw').focus();
-  }
-}
+// Logout
+document.getElementById('logout-btn').addEventListener('click',function(){
+  sessionStorage.removeItem(KEY);
+  document.getElementById('pw').value='';
+  show(1);
+});
 
-function logout(){
-  sessionStorage.removeItem(AUTH_KEY);
-  goStep(1);
-}
+// Modal close
+document.getElementById('modal-close').addEventListener('click',function(){closeModal();});
+document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 
-// DOCS
-const DOCS = {
-  spec:{
-    title:'Spec Sheet v1.0 — Vollständiges Lastenheft',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Geschäftsgeheimnisse der Zafao GmbH. Weitergabe ohne schriftliche Genehmigung untersagt.</div>
-    <h3>1 — Vier Produktlinien + MASH SYSTEM®</h3>
-    <table><tr><th>Produktlinie</th><th>Tagesdosis 500kg</th><th>Gebinde</th><th>Listenpreis</th><th>COGS-Ziel</th><th>FEI</th></tr>
-    <tr><td>DAILY COMPLETE®</td><td>80g/Tag</td><td>25kg + 10kg Sack</td><td>€129 / €59</td><td>€1,80–2,10/kg</td><td>0h</td></tr>
-    <tr><td>JOINT COMPLETE®</td><td>60g/Tag</td><td>5kg Eimer</td><td>€89</td><td>€2,60–3,10/kg</td><td>Teufelskralle: 96h</td></tr>
-    <tr><td>RESPIRA COMPLETE®</td><td>50g + 30ml Öl/Tag</td><td>5kg Eimer</td><td>€79</td><td>€2,80–3,40/kg</td><td>0h</td></tr>
-    <tr><td>METABOLIC COMPLETE®</td><td>70g/Tag</td><td>5kg Eimer</td><td>€89</td><td>€2,50–3,00/kg</td><td>Vitex: 96h</td></tr>
-    <tr><td>MASH BASIS</td><td>300–500g/Mahlzeit</td><td>15kg Sack</td><td>€49</td><td>€1,50–2,00/kg</td><td>0h</td></tr>
-    <tr><td>WINTER BOOSTER®</td><td>50g/Mahlzeit (Sachet)</td><td>30×50g Box</td><td>€34,90</td><td>€6–9/kg</td><td>Ingwer: 48h</td></tr>
-    <tr><td>SUMMER BOOSTER®</td><td>50g/Mahlzeit (Sachet)</td><td>30×50g Box</td><td>€39,90</td><td>€6–9/kg</td><td>0h</td></tr></table>
-    <h3>2 — Pelletierungsanforderungen (verbindlich)</h3>
-    <table><tr><th>Parameter</th><th>Spezifikation</th><th>Begründung</th></tr>
-    <tr><td>Presstemperatur Düse</td><td><strong>max. 65–70°C</strong></td><td>Schutz B. subtilis, ätherische Öle, Vitamine</td></tr>
-    <tr><td>Pellet-Ø</td><td><strong>6 mm</strong></td><td>Optimale Kaueigenschaften, Fressrate</td></tr>
-    <tr><td>Pellet-Härte (Kahl)</td><td>≥ 4,5 kg</td><td>Rieselfähig, geringer Abrieb</td></tr>
-    <tr><td>Abrieb (Holmen-Test)</td><td>&lt; 5%</td><td>Staubreduktion, Homogenität</td></tr>
-    <tr><td>Restfeuchte Endprodukt</td><td>≤ 11%</td><td>Haltbarkeit, Schimmelprävention</td></tr>
-    <tr><td>Konditionierzeit</td><td>max. 30 Sek.</td><td>Phytonährstoff-Erhalt</td></tr>
-    <tr><td>Öl-Coating</td><td>Nach Pelletierung, Rotationstrommel, min. 10 Min.</td><td>Für JOINT, RESPIRA, DAILY</td></tr>
-    <tr><td>Stickstoffspülung</td><td>O₂ &lt; 2% bei Befüllung</td><td>Oxidationsschutz Öle und Vitamine</td></tr>
-    <tr><td>Nachtrocknung</td><td>45°C Warmluft bis Feuchte &lt;12%</td><td>Gleichmäßige Restfeuchte</td></tr></table>
-    <h3>3 — Pflicht-Analytik je Charge</h3>
-    <table><tr><th>Test</th><th>Methode</th><th>Grenzwerte</th></tr>
-    <tr><td>Schwermetalle (Pb, Cd, As, Hg)</td><td>ICP-MS (Eurofins/SGS)</td><td>Pb &lt;5 · Cd &lt;1 · As &lt;2 · Hg &lt;0,1 mg/kg</td></tr>
-    <tr><td>Mykotoxine (Aflatoxin, DON, ZEA, OTA)</td><td>LC-MS/MS</td><td>AfB1 &lt;0,01 · DON &lt;5 · ZEA &lt;0,5 mg/kg</td></tr>
-    <tr><td>Pestizide-Screening</td><td>GC-MS/LC-MS Multi</td><td>VO 396/2005; Bio-Chargen: jede Lieferung</td></tr>
-    <tr><td>HPLC Wirkstoff-Marker</td><td>HPLC je Linie</td><td>Harpagosid ≥0,2% · Curcumin ≥0,9% · MSM ≥33%</td></tr>
-    <tr><td>Weender-Analyse</td><td>Standard</td><td>RP, RFE, RF, RA, Stärke, Zucker, Asche</td></tr>
-    <tr><td>Mikrobiologie</td><td>Standardmethode</td><td>Salmonellen neg. · E.coli &lt;100 KBE/g</td></tr>
-    <tr><td>Wassergehalt</td><td>Karl-Fischer</td><td>&lt; 12%</td></tr></table>
-    <h3>4 — Pilotmengen Phase 1</h3>
-    <table><tr><th>Linie</th><th>Pilotmenge</th><th>Validierungsziel</th><th>Timing</th></tr>
-    <tr><td>DAILY COMPLETE®</td><td>1.000 kg</td><td>Fressakzeptanz, HPLC, Mikrobiologie</td><td>Q3 2026</td></tr>
-    <tr><td>JOINT COMPLETE®</td><td>500 kg</td><td>HPLC Harpagosid, Curcumin, MSM</td><td>Q3 2026</td></tr>
-    <tr><td>RESPIRA COMPLETE®</td><td>500 kg</td><td>Staubindex, Quercetin HPLC, Ölcoating</td><td>Q3 2026</td></tr>
-    <tr><td>METABOLIC COMPLETE®</td><td>500 kg</td><td>NSC-Validierung &lt;8%, Berberin HPLC</td><td>Q4 2026</td></tr>
-    <tr><td>MASH SYSTEM®</td><td>500 kg Basis + 100 Sachets</td><td>Quellverhalten, NSC, Sachet-Dichtigkeit</td><td>Q4 2026</td></tr></table>
-    <h3>5 — Zertifizierungs-Roadmap</h3>
-    <table><tr><th>Zertifizierung</th><th>Zeitpunkt</th><th>Finanzierung</th></tr>
-    <tr><td>GMP+B2 oder QS</td><td><strong>Tag 1 — zwingend</strong></td><td>Hersteller trägt</td></tr>
-    <tr><td>HACCP vollständig dokumentiert</td><td>Tag 1</td><td>Hersteller trägt</td></tr>
-    <tr><td>VLOG „Ohne Gentechnik"</td><td>Tag 1 oder Bereitschaft</td><td>Hersteller trägt</td></tr>
-    <tr><td>EU-Bio (VO 2018/848)</td><td>Innerhalb 12 Monate</td><td>50/50 Kostenteilung</td></tr>
-    <tr><td>Naturland (Ziel)</td><td>Innerhalb 18–24 Monate</td><td>EQUINAT trägt Lizenzgebühr</td></tr>
-    <tr><td>ISO 22000</td><td>Mittelfristig (wünschenswert)</td><td>Hersteller trägt</td></tr></table>
-    <h3>6 — Rahmenvertrag-Eckpunkte</h3>
-    <table><tr><th>Parameter</th><th>Wert</th></tr>
-    <tr><td>Mindestabnahme/Monat</td><td>5 t (gestaffelt über alle Linien)</td></tr>
-    <tr><td>Skalierungsziel Jahr 2</td><td>10–20 t / Monat</td></tr>
-    <tr><td>Skalierungsziel Jahr 3</td><td>30–50 t / Monat</td></tr>
-    <tr><td>Lieferrhythmus</td><td>2-wöchentlich, JIT mit 21 Tagen Vorlauf</td></tr>
-    <tr><td>Vertragslaufzeit</td><td>Mindestens 24 Monate, Verlängerungsoption</td></tr>
-    <tr><td>Preisformel</td><td>COGS + fixer Aufschlag; jährliche CPI-Anpassung</td></tr>
-    <tr><td>Exklusivität</td><td>Exklusiv für EQUINAT-Formeln in DE/AT/CH</td></tr></table>`
-  },
-  rezepturen:{
-    title:'Vollrezepturen — Alle 5 Linien',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Vollrezepturen der Zafao GmbH. Weitergabe untersagt. Regulatorische Prüfung vor Produktion zwingend.</div>
-    <h3>DUAL-POSTBIOTIKA-ARCHITEKTUR (alle Linien)</h3>
-    <p>Alle EQUINAT-Linien enthalten <strong>Bacillus subtilis DSM 17299</strong> (EU-zugelassen 3b711, hitzestabil bis 80°C, direkt pelletierbar) + <strong>SCFP — Saccharomyces cerevisiae Fermentationsprodukt</strong> als Postbiotikum. Diese Dual-Architektur ist im DACH-Pferdefuttermarkt einzigartig.</p>
-    <h3>FORMEL 01 — DAILY COMPLETE® (pro 1 kg Endprodukt)</h3>
-    <p><em>Tagesdosis 80g bei 500kg Pferd · Bio ≥85% · NSC &lt;12% · Melassefrei</em></p>
-    <p><strong>A — Basiskomponenten (89%)</strong></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>Anteil</th><th>Standard</th><th>Funktion</th></tr>
-    <tr><td>Bio-Timothée-Gras, warmluftgetrocknet</td><td>250g</td><td>25,0%</td><td>DE/AT Bio-zertifiziert</td><td>Rohfaser-Basis, Kaureiz</td></tr>
-    <tr><td>Bio-Luzernecobs (Alfalfa)</td><td>180g</td><td>18,0%</td><td>Bayern/AT Bio</td><td>Protein 18% RP, Ca-Quelle, β-Carotin</td></tr>
-    <tr><td>Bio-Wiesengräser-Pellets (60+ Arten)</td><td>150g</td><td>15,0%</td><td>Alpenvorland Bio</td><td>Phytonährstoff-Vielfalt, Vitamine nativ</td></tr>
-    <tr><td>Bio-Haferflocken (opt.: haferfreie Var.)</td><td>100g</td><td>10,0%</td><td>DE Bio</td><td>Energie, Stärke langsam verdaulich</td></tr>
-    <tr><td>Bio-Weizenkleie</td><td>80g</td><td>8,0%</td><td>DE Bio</td><td>Rohfaser, B-Vitamine, Phosphor</td></tr>
-    <tr><td>Bio-Leinsamen geschrotet (therm. stab.)</td><td>60g</td><td>6,0%</td><td>DE/PL Bio, kalt aufgeschlossen</td><td>Omega-3 ALA 22%, Schleimstoffe Magen</td></tr>
-    <tr><td>Bio-Apfeltrester getrocknet</td><td>40g</td><td>4,0%</td><td>DE/AT Bio</td><td>Pektinfaser, Fressakzeptanz</td></tr>
-    <tr><td>Bio-Sonnenblumenkerne teilgeschält</td><td>30g</td><td>3,0%</td><td>HU/RO Bio</td><td>Omega-6, Vitamin E nativ, Energie</td></tr></table>
-    <p><strong>B — Phyto-Wirkkomponenten (7,2%)</strong></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>Tagesdosis 500kg</th><th>Funktion</th></tr>
-    <tr><td>Hagebutten-Fruchtpulver GOPO®-reich</td><td>25g</td><td>37,5g</td><td>Entzündungshemmung, Vit C komplex</td></tr>
-    <tr><td>Brennnessel-Kraut getrocknet</td><td>18g</td><td>27g</td><td>Eisen, Silizium, Chlorophyll</td></tr>
-    <tr><td>Bio-Hanföl kaltgepresst</td><td>15g</td><td>22,5g</td><td>Omega-3:6 = 1:3 optimal; THC &lt;0,1%</td></tr>
-    <tr><td>Bio-Fenchelsamen gemahlen</td><td>8g</td><td>12g</td><td>Karminativum, Verdauung</td></tr>
-    <tr><td>Bio-Schafgarbe (Achillea millefolium)</td><td>6g</td><td>9g</td><td>Flavonoide, Bitterstoffe</td></tr></table>
-    <p><strong>C — Mineral- & Vitaminkomplex (2,8%)</strong></p>
-    <table><tr><th>Zusatzstoff</th><th>Form</th><th>Tagesdosis 500kg</th><th>EU-Nr.</th></tr>
-    <tr><td>Selen</td><td>Selenhefe SelenoSource AF®</td><td>0,45mg</td><td>3b811</td></tr>
-    <tr><td>Vitamin E</td><td>RRR-α-Tocopherol nat. (d-Form)</td><td>225mg</td><td>3a700</td></tr>
-    <tr><td>Zink</td><td>Zink-Glycinchelat (Availa-Zn®)</td><td>90mg</td><td>3b607</td></tr>
-    <tr><td>Kupfer</td><td>Kupfer-Glycinchelat (Availa-Cu®)</td><td>22,5mg</td><td>3b413</td></tr>
-    <tr><td>Mangan</td><td>Glycin-Manganchelat</td><td>60mg</td><td>3b506</td></tr>
-    <tr><td>Biotin</td><td>D-Biotin 98%+</td><td>20mg</td><td>3a880</td></tr>
-    <tr><td>Vitamin D3</td><td>Cholecalciferol (Flechten, vegan)</td><td>5.000 IE</td><td>3a671</td></tr>
-    <tr><td>Jod</td><td>Kalziumjodat wasserfrei</td><td>1,4mg</td><td>3b202</td></tr>
-    <tr><td>Kobalt</td><td>Cobaltcarbonat granuliert</td><td>0,4mg</td><td>3b304</td></tr></table>
-    <p><strong>D — Probiotika & Präbiotika</strong></p>
-    <table><tr><th>Wirkstoff</th><th>Stamm/Form</th><th>Tagesdosis</th><th>Funktion</th></tr>
-    <tr><td>Bacillus subtilis</td><td>DSM 17299, EU-zugelassen Pferd</td><td>7,5×10¹⁰ CFU</td><td>Darmstabilisierung, Immunmodulation</td></tr>
-    <tr><td>SCFP (Saccharomyces cerevisiae FP)</td><td>Postbiotikum, hitzestabil</td><td>20g</td><td>Mikrobiom-Resilienz, Stressschutz</td></tr>
-    <tr><td>FOS-Präbiotika</td><td>Chicorée-Wurzel-Extrakt</td><td>4,5g</td><td>Selektive Förderung Laktobazillen</td></tr>
-    <tr><td>Flohsamenschalen</td><td>Bio, 85%+ Quellfaser</td><td>7,5g</td><td>Dickdarm-Mukosa, Kolik-Prophylaxe</td></tr></table>
-    <p><em>Produktionshinweis: Hanföl nach Pelletierung aufsprühen. Leinsamen thermisch aufschließen (Blausäure-Inaktivierung). Cold-Press max. 65°C.</em></p>
-
-    <h3>FORMEL 02 — JOINT COMPLETE® (pro 1 kg Endprodukt)</h3>
-    <p><em>Tagesdosis 60g bei 500kg Pferd · Bio ≥80% · Getreidefrei Option · ADMR-Karenzzeit beachten</em></p>
-    <p><strong>A — Basis (76%, identisch DAILY mit angepassten Mengen)</strong></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>Anpassung vs. DAILY</th></tr>
-    <tr><td>Bio-Timothée-Gras</td><td>220g</td><td>−3% (Platz für Wirkstoffe)</td></tr>
-    <tr><td>Bio-Luzernecobs</td><td>160g</td><td>−2%</td></tr>
-    <tr><td>Bio-Wiesengräser-Pellets</td><td>130g</td><td>−2%</td></tr>
-    <tr><td>Bio-Haferflocken</td><td>90g</td><td>−1%</td></tr>
-    <tr><td>Bio-Weizenkleie</td><td>70g</td><td>−1%</td></tr>
-    <tr><td>Bio-Leinsamen geschrotet</td><td>60g</td><td>Identisch (Omega-3 wichtig bei Entzündung)</td></tr>
-    <tr><td>Bio-Apfeltrester</td><td>30g</td><td>−1%</td></tr></table>
-    <p><strong>B — Gelenk-Wirkstoffkomplex (therapeutisch dosiert)</strong></p>
-    <table><tr><th>Wirkstoff</th><th>Form/Qualität</th><th>Menge/kg</th><th>Tagesdosis 500kg</th></tr>
-    <tr><td>MSM (Methylsulfonylmethan)</td><td>OptiMSM® destilliert, 99,9%</td><td>13,3g</td><td><strong>20g/Tag</strong></td></tr>
-    <tr><td>Teufelskrallen-Extrakt</td><td>Harpagophytum, std. 2,5% Harpagosid</td><td>2,0g</td><td>3g Extrakt = <strong>75mg Harpagosid</strong></td></tr>
-    <tr><td>Kurkuma Meriva®</td><td>Curcumin-Phospholipidkomplex, 95% Curcuminoide, 10× BV</td><td>1,5g</td><td>2,25g</td></tr>
-    <tr><td>Boswellia serrata</td><td>Standardisiert 65% Boswellinsäuren (AKBA)</td><td>0,8g</td><td>1,2g</td></tr>
-    <tr><td>Hagebutten-Fruchtpulver GOPO®</td><td>Rosa canina, &gt;0,5% GOPO-Glycosid</td><td>25g</td><td>37,5g</td></tr>
-    <tr><td>Hyaluronsäure oral (niedermolekular)</td><td>Sodium Hyaluronate</td><td>0,33g</td><td>500mg</td></tr>
-    <tr><td>Leinöl extra kaltgepresst</td><td>Bio, 55%+ ALA (Coating)</td><td>20g</td><td>30g (~16,5g ALA)</td></tr></table>
-    <p><em>ADMR-Hinweis: Teufelskralle ist auf der FEI Equine Prohibited Substances List (Controlled Medication). Empfohlene Karenzzeit: <strong>mindestens 96 Stunden</strong> vor Wettkampf. Auf Verpackung und Beipackzettel kennzeichnen.</em></p>
-
-    <h3>FORMEL 03 — RESPIRA COMPLETE® (pro 1 kg Endprodukt)</h3>
-    <p><em>Tagesdosis 50g + 30ml Schwarzkümmelöl-Coating · Getreidefrei · Staubfrei pelletiert · FEI 0h Karenz</em></p>
-    <p><strong>A — Getreidéfreie Basis (84%)</strong></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>RAO-Spezifische Begründung</th></tr>
-    <tr><td>Bio-Timothée-Gras, steampelleted</td><td>280g</td><td>Tiefster Allergengehalt aller Grasarten</td></tr>
-    <tr><td>Bio-Luzernecobs (einweichbar)</td><td>200g</td><td>Staubfreie Protein-Rohfaser-Quelle</td></tr>
-    <tr><td>Bio-Wiesengräser-Pellets</td><td>150g</td><td>Phytonährstoffe, kein Heupuder</td></tr>
-    <tr><td>Bio-Rübenschnitzel zuckerfrei gewaschen</td><td>100g</td><td>Pektinfaser, Energie ohne Getreide</td></tr>
-    <tr><td>Bio-Leinsamen geschrotet</td><td>70g</td><td>Omega-3 antiinflammatorisch bei RAO</td></tr>
-    <tr><td>Bio-Apfeltrester</td><td>40g</td><td>Quercetin-Naturquelle (6mg/100g)</td></tr></table>
-    <p><strong>B — Atemwegs-Wirkstoffkomplex</strong></p>
-    <table><tr><th>Wirkstoff</th><th>Form</th><th>Menge/kg</th><th>Tagesdosis</th><th>Wirkmechanismus</th></tr>
-    <tr><td>Quercetin-Phytosom (Quercefit®)</td><td>Quercetin + Sunflower Phospholipids, 10× BV</td><td>2,0g</td><td>3g</td><td>Mastzell-Stabilisierung, Histamin-Inhibition, NF-kB-Hemmung</td></tr>
-    <tr><td>Schwarzkümmelöl Nigella sativa</td><td>Bio, min. 0,5% Thymochinon, kaltgepresst — Coating!</td><td>20g</td><td>30ml</td><td>Bronchospasmolyse, Leukotrienen-Hemmung</td></tr>
-    <tr><td>Isländisch Moos (Cetraria islandica)</td><td>Trockenextrakt, min. 30% Polysaccharide</td><td>5g</td><td>7,5g</td><td>Schleimhautschutz, Schleimlösung</td></tr>
-    <tr><td>Thymian getrocknet</td><td>Bio, 0,5–1% äther. Öl (Thymol)</td><td>8g</td><td>12g</td><td>Schleimlösend, krampflösend, antiseptisch</td></tr>
-    <tr><td>Spitzwegerich (Plantago lanceolata)</td><td>Bio, getrocknet</td><td>8g</td><td>12g</td><td>Schleimhautberuhigend</td></tr>
-    <tr><td>N-Acetylcystein (NAC)</td><td>Pharmaqualität 98%+</td><td>2g</td><td>3g</td><td>Mukolytikum: spaltet Disulfidbrücken im Schleim</td></tr>
-    <tr><td>Hagebutten-Pulver GOPO®</td><td>Vit C &gt;0,5g/100g</td><td>30g</td><td>~2g Vit C</td><td>Antioxidativer Schleimhautschutz</td></tr></table>
-
-    <h3>FORMEL 04 — METABOLIC COMPLETE® (pro 1 kg Endprodukt)</h3>
-    <p><em>Tagesdosis 70g bei 500kg Pferd · NSC &lt;8% · Stärke &lt;10% · Getreidefrei · Melassefrei · FEI: Vitex 96h</em></p>
-    <p><strong>A — Stärke-/Zuckerarme Basis (80%)</strong></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>EMS-Relevanz</th></tr>
-    <tr><td>Bio-Timothée-Gras (tiefster NSC-Gehalt)</td><td>250g</td><td>NSC ~7% — niedrigste Stärke + Zucker aller Grasarten</td></tr>
-    <tr><td>Bio-Rübenschnitzel zuckerfrei gewaschen</td><td>180g</td><td>Pektinfaser, Energie ohne Stärke, NSC ~6%</td></tr>
-    <tr><td>Bio-Luzernecobs</td><td>150g</td><td>Protein, kein Stärke, Ca-Ausgleich</td></tr>
-    <tr><td>Bio-Leinsamen geschrotet (thermisch)</td><td>80g</td><td>Omega-3, Schleimstoffe, kein Stärke</td></tr>
-    <tr><td>Bio-Flohsamenschalen</td><td>20g</td><td>NSC-Aufnahmeverzögerung, postprandiale Insulin-Kurve flacher</td></tr>
-    <tr><td>Bio-Wiesengräser-Pellets</td><td>120g</td><td>Phytonährstoffe, strukturierend</td></tr></table>
-    <p><strong>B — Stoffwechsel-Wirkstoffkomplex</strong></p>
-    <table><tr><th>Wirkstoff</th><th>Form</th><th>Tagesdosis 500kg</th><th>Evidenz</th></tr>
-    <tr><td>Biotin</td><td>D-Biotin 98%+ Pharma</td><td>16mg</td><td>Reilly et al. 1998: signif. Hornwachstum bei 15–20mg/Tag</td></tr>
-    <tr><td>Chromhefe</td><td>Saccharomyces, min. 0,1% org. Chrom, EU 3b101</td><td>~2,3g = 1,5µg Cr/kg KM</td><td>Pagan 2011, Kentucky: verbessert Insulinsensitivität EMS</td></tr>
-    <tr><td>Zimtextrakt (CEYLON!)</td><td>Cinnamomum verum, std. 10% Zimtaldehyd</td><td>4,5g</td><td>Insulinmimetikum. Cave: NUR Ceylon &lt;0,004% Cumarin!</td></tr>
-    <tr><td>Magnesiumcitrat</td><td>Mg-Citrat, 16% Mg</td><td>7,5g Mg</td><td>Insulinrezeptor-Sensitivität; Mg-Mangel bei EMS häufig</td></tr>
-    <tr><td>Vitex agnus-castus</td><td>Trockenextrakt std. 0,5% Casticin</td><td>3g</td><td>ECIR Group: Dopamin-Effekt bei PPID/Cushing. FEI: 96h Karenz!</td></tr>
-    <tr><td>Mariendistel-Extrakt</td><td>Silybum marianum, std. 70–80% Silymarin</td><td>2,25g</td><td>Leberschutz bei PPID/Hyperadrenokortizismus</td></tr>
-    <tr><td>Berberin</td><td>Berberis vulgaris, std. ≥95%</td><td>2g</td><td>AMPK-Aktivator, Insulin-Sensitivität. Reg. Status DE prüfen!</td></tr>
-    <tr><td>Inositol (Myo-Inositol)</td><td>Pharmaqualität 99%</td><td>3g</td><td>Insulinsignal-Modulation; emerging equine evidence</td></tr></table>
-    <p><em>⚠ Kritisch: Ausschließlich Ceylon-Zimt (Cinnamomum verum, &lt;0,004% Cumarin). Cassia-Zimt enthält bis zu 1% Cumarin — lebertoxisch. Sortenreinheit je Charge per HPLC nachweisen.</em></p>`
-  },
-  mash:{
-    title:'MASH SYSTEM® — Vollständige Rezeptur',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Geschäftsgeheimnisse der Zafao GmbH.</div>
-    <h3>MASH SYSTEM® — Marktpositionierung</h3>
-    <p>EQUINAT MASH ist die <strong>erste therapeutische Mash-Linie im DACH-Markt mit NSC &lt;8%</strong>. Kein Wettbewerber (Marstall, Höveler, St. Hippolyt) unterschreitet 12% NSC im Mash-Bereich. EMS-Halter können erstmals eine emotionale Belohnungsmahlzeit füttern — das ist der Differenzierungspunkt.</p>
-    <h3>FORMEL 05A — MASH COMPLETE® BASIS (pro 1 kg Endprodukt)</h3>
-    <p><em>300–500g je Mahlzeit · 1–3× wöchentlich Wellness · täglich bei Senior/EMS/Reko · 15kg Sack · €49 · NSC &lt;8% · FEI 0h Karenz · Quellzeit 8–10 Min</em></p>
-    <table><tr><th>Zutat</th><th>Menge/kg</th><th>Anteil</th><th>Standard</th><th>Funktion</th></tr>
-    <tr><td>Heucobs Timothée Naturland</td><td>300g</td><td>30,0%</td><td>Naturland-zertifiziert</td><td>Strukturfaser, NSC-arm (~6%), Quellbasis</td></tr>
-    <tr><td>Bio-Luzernecobs gemahlen</td><td>150g</td><td>15,0%</td><td>EU Bio</td><td>Protein, Ca-Quelle, Quelleigenschaft</td></tr>
-    <tr><td>Leinkuchen Bio entzuckert</td><td>120g</td><td>12,0%</td><td>DE Bio, kalt aufgeschlossen</td><td>Schleimstoffe, Omega-3, Aminosäuren</td></tr>
-    <tr><td>Apfeltrester Naturland entzuckert</td><td>100g</td><td>10,0%</td><td>Naturland</td><td>Geschmack, Pektin, Quellbasis</td></tr>
-    <tr><td>Bio-Rübenschnitzel zuckerfrei</td><td>80g</td><td>8,0%</td><td>EU Bio</td><td>Energie ohne Stärke, NSC &lt;6%</td></tr>
-    <tr><td>SCFP Postbiotikum</td><td>30g</td><td>3,0%</td><td>EU-zugelassen</td><td>Mikrobiom-Resilienz, hitzestabil</td></tr>
-    <tr><td>Flohsamenschalen Bio</td><td>25g</td><td>2,5%</td><td>85%+ Quellfaser</td><td>Quellverhalten, Magenschleimhautschutz</td></tr>
-    <tr><td>Apfelpektin</td><td>20g</td><td>2,0%</td><td>Lebensmittelqualität</td><td>Magenschleimhaut, Säurebindung</td></tr>
-    <tr><td>L-Lysin + DL-Methionin + L-Threonin</td><td>25g</td><td>2,5%</td><td>Feed grade 98%</td><td>Aminosäuren-Premix: Senior-Muskelerhalt, Hufhorn</td></tr>
-    <tr><td>Mariendistel Siliphos® (Phospholipidkomplex)</td><td>10g</td><td>1,0%</td><td>Indena SpA, 2,5× BV</td><td>Leber-Support Senior/Cushing</td></tr>
-    <tr><td>MOS (Mannan-Oligosaccharide)</td><td>20g</td><td>2,0%</td><td>Bio-Technologie</td><td>Präbiotikum, Pathogen-Bindung im Darm</td></tr>
-    <tr><td>Vitamin E natürlich</td><td>1.500 IE</td><td>—</td><td>RRR-α-Tocopherol</td><td>Antioxidans, Muskelerhalt im Alter</td></tr>
-    <tr><td>Mineral-Premix (wie DAILY)</td><td>20g</td><td>2,0%</td><td>Organisch gebunden</td><td>Vollversorgung Zn, Cu, Se, Mn</td></tr></table>
-    <p><strong>Analytische Zielwerte Mash Basis:</strong> NSC &lt;8% · Rohfaser 22–28% · Rohprotein 12–14% · Stärke &lt;5% · Zucker &lt;6% · Restfaser nach 10 Min. Quellen: ≤3mm</p>
-    <p><strong>Quellvorschrift:</strong> 1 Teil MASH auf 2–3 Teile Wasser (lauwarm 30–40°C), 8–10 Minuten quellen lassen, nicht kochen. Für Zahnpferde: 15 Min. bei warmem Wasser.</p>
-
-    <h3>FORMEL 05B — MASH WINTER BOOSTER® (pro Sachet 50g)</h3>
-    <p><em>30×50g Sachets · Box €34,90 · Oktober–April · FEI: Ingwer 48h Karenz · Kompostierbare Sachets (Naturflex oder gleichwertig)</em></p>
-    <table><tr><th>Wirkstoff</th><th>Menge/Sachet</th><th>Funktion</th></tr>
-    <tr><td>Ingwerwurzel Bio gemahlen (Zingiber officinale)</td><td>12g</td><td>Durchblutungsförderung, antiinflammatorisch, wärmend. FEI-Watchlist: 48h!</td></tr>
-    <tr><td>Schwarzkümmel-Saat Bio gemahlen</td><td>8g</td><td>Bronchien-Support (Thymochinon), Synergie RESPIRA</td></tr>
-    <tr><td>Hagebutte mit GOPO® Naturland</td><td>6g</td><td>Vit C natürlich, antiinflammatorisch, Wintersteife</td></tr>
-    <tr><td>Thymian Naturland getrocknet</td><td>4g</td><td>Antiseptisch, sekretolytisch, wärmend</td></tr>
-    <tr><td>Zimt CEYLON Bio (Cinnamomum verum)</td><td>2g</td><td>Wärmewirkung. NUR Ceylon! &lt;0,004% Cumarin.</td></tr>
-    <tr><td>Kurkuma Bio gemahlen</td><td>2g</td><td>Mild antientzündlich, Synergist</td></tr>
-    <tr><td>Apfeltrester Bio (Trägermaterial)</td><td>16g</td><td>Bindung, Geschmacksträger, Rieselfähigkeit</td></tr></table>
-    <p><em>Produktionshinweis: Sachet-Füllung bei max. 40°C (ätherische Öle!). Sachet-Material: kompostierbar nach EN 13432. Mindesthaltbarkeit im Sachet: 18 Monate (Stickstoffspülung).</em></p>
-
-    <h3>FORMEL 05C — MASH SUMMER BOOSTER® (pro Sachet 50g)</h3>
-    <p><em>30×50g Sachets · Box €39,90 · Mai–September · FEI 0h Karenz — am Wettkampfmorgen fütterbar</em></p>
-    <table><tr><th>Wirkstoff</th><th>Menge/Sachet</th><th>Funktion</th></tr>
-    <tr><td>Natriumchlorid unraffiniert (Meersalz)</td><td>12g</td><td>Hauptelektrolyt-Verlust durch Schwitzen (Ratio 4:2:1:0,5)</td></tr>
-    <tr><td>Kaliumchlorid</td><td>6g</td><td>Zweithäufigster Verlust, Muskelkontraktion</td></tr>
-    <tr><td>Magnesiumcitrat (16% Mg)</td><td>3g</td><td>Krampfschutz, Muskelfunktion, Insulinsignal</td></tr>
-    <tr><td>Calciumcarbonat (Lithothamnium-Algenkalk)</td><td>2g</td><td>Muskelkontraktion, Säurepuffer</td></tr>
-    <tr><td>Hagebutten-Fruchtpulver GOPO® Naturland</td><td>8g</td><td>Vit C natürlich, Antioxidans-Last nach Sport</td></tr>
-    <tr><td>Spirulina platensis Bio</td><td>5g</td><td>Antioxidans, Phycocyanin, mineralreich</td></tr>
-    <tr><td>Pfefferminze Bio getrocknet</td><td>2g</td><td>Kühlend, magenfreundlich, Fressakzeptanz</td></tr>
-    <tr><td>Apfeltrester Bio (Trägermaterial)</td><td>12g</td><td>Bindung, Geschmacksträger</td></tr></table>
-    <p><strong>FEI-Vorteil Summer Booster:</strong> Kein Koffein, kein Theobromin, kein Synephrin, kein Ingwer. <strong>0 Stunden Karenzzeit.</strong> Kann am Wettkampfmorgen verfüttert werden — alle Wettbewerber-Elektrolyte mit Koffein/Theobromin-Risiko. Wir nicht.</p>
-    <p><em>Produktionshinweis: Sachet-Abfüllung bei Raumtemperatur. Elektrolyt-Premix vorab homogen mischen, dann Pflanzenkomponenten zugeben. Auffeuchtungstest: Sachet-Inhalt löst sich in 300ml Wasser innerhalb 60 Sek. vollständig auf.</em></p>`
-  },
-  qualitaet:{
-    title:'Quality Manifest — Brand Doctrine & 6 Hard Limits',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Verbindlich für alle EQUINAT-Lohnproduktionspartner ab Tag 1.</div>
-    <h3>Brand Doctrine — Was EQUINAT ist</h3>
-    <p>EQUINAT® ist die erste Pferdefutter-Marke im DACH-Markt, die vier Eigenschaften simultan abdeckt: Naturland-Bio über alle Linien, wissenschaftlich validierte Wirkstoffe in therapeutischer Bioverfügbarkeit, ein öffentlich namentliches tierärztliches Beirat und eine KI-gestützte Beratung. Kein Wettbewerber kombiniert alle vier.</p>
-    <h3>Die 6 Hard Limits — nicht verhandelbar</h3>
-    <p>Diese Limits gelten für alle Lohnhersteller-Partner. Abweichungen führen zur sofortigen Kündigung des Rahmenvertrags.</p>
-    <table><tr><th>Limit</th><th>Regel</th><th>Konsequenz bei Verstoß</th></tr>
-    <tr><td><strong>HL-1</strong></td><td>Kein synthetisches Vitamin A. Nur natürliches β-Carotin aus zertifizierten Pflanzenquellen.</td><td>Charge zurückhalten</td></tr>
-    <tr><td><strong>HL-2</strong></td><td>Kein Melasse-Einsatz — weder als Bindemittel noch als Geschmacksträger. NSC-Werte müssen ohne Melasse im Zielbereich liegen.</td><td>Charge zurückhalten</td></tr>
-    <tr><td><strong>HL-3</strong></td><td>Keine anorganischen Mineralien als Primärquelle (keine Oxide, Sulfate). Ausschließlich organisch gebundene Chelate, Hefe-Komplexe und Glycinate als Hauptquelle.</td><td>Charge zurückhalten</td></tr>
-    <tr><td><strong>HL-4</strong></td><td>Alle FEI-relevanten Stoffe sind auf Verpackung und Beipackzettel explizit zu kennzeichnen: Teufelskralle → 96h, Vitex → 96h, Ingwer → 48h. Keine Ausnahmen, auch nicht für Webshop-Beschreibungen.</td><td>Sofortige Korrektur, bei Weigerung Vertragsauflösung</td></tr>
-    <tr><td><strong>HL-5</strong></td><td>Keine therapeutischen Claims auf Verpackung oder in der Werbung. Ausschließlich Kommunikation im Rahmen von VO (EG) Nr. 767/2009. Studienhinweise nur in internen Unterlagen und Beratungsmaterial.</td><td>Sofortige Korrektur</td></tr>
-    <tr><td><strong>HL-6</strong></td><td>Keine Produktion ohne GMP+B2 oder QS-äquivalente Zertifizierung — auch für Pilotchargen, auch für Kleinstmengen. Keine Ausnahmen.</td><td>Kein Auftrag, Vertragsauflösung</td></tr></table>
-    <h3>Verarbeitungsparameter (verbindlich für alle Linien)</h3>
-    <table><tr><th>Parameter</th><th>Spezifikation</th><th>Monitoring</th></tr>
-    <tr><td>Presstemperatur Düse</td><td>max. 65–70°C</td><td>Kontinuierliche Temperaturdaten-Aufzeichnung je Charge</td></tr>
-    <tr><td>Pellet-Ø</td><td>6mm</td><td>Siebkontrolle je Charge</td></tr>
-    <tr><td>Pellet-Härte (Kahl-Tester)</td><td>≥ 4,5 kg</td><td>Min. 10 Proben je Charge</td></tr>
-    <tr><td>Abrieb (Holmen-Test)</td><td>&lt; 5%</td><td>Je Charge</td></tr>
-    <tr><td>Restfeuchte Endprodukt</td><td>≤ 11%</td><td>Karl-Fischer je Charge</td></tr>
-    <tr><td>Öl-Coating Temperatur</td><td>Endprodukt &lt; 35°C vor Coating</td><td>Thermometer-Protokoll</td></tr>
-    <tr><td>Stickstoffspülung</td><td>O₂ &lt; 2% bei Befüllung</td><td>O₂-Sensor-Protokoll je Abfüllung</td></tr>
-    <tr><td>MHD versiegelt</td><td>6 Monate ab Produktion</td><td>Lasercodiert, lesbar</td></tr></table>
-    <h3>Chargendokumentation — Vollständige Liste</h3>
-    <ul>
-    <li>CoA (Certificate of Analysis) für jeden Eingangs-Wirkstoff</li>
-    <li>Temperatur-Aufzeichnung je Pelletierungs-Charge</li>
-    <li>HPLC-Zertifikat extern (Eurofins oder SGS) je Charge</li>
-    <li>Schwermetall-Screening ICP-MS je Charge</li>
-    <li>Mykotoxin-Screening LC-MS/MS je Charge</li>
-    <li>Pestizide-Screening (GC-MS/LC-MS Multi) je Bio-Charge</li>
-    <li>Mikrobiologische Prüfung je Charge</li>
-    <li>Rückverfolgbarkeit bis Rohstoff-Ursprungsbetrieb dokumentiert (Feldparzelle oder Lieferant mit GPS-Koordinaten)</li>
-    <li>QR-Code auf Verpackung verlinkt auf Echtzeit-Analytik-Dashboard</li></ul>
-    <h3>Naturland-Roadmap (Zielpfad gemeinsam)</h3>
-    <table><tr><th>Phase</th><th>Timing</th><th>Maßnahme</th><th>Finanzierung</th></tr>
-    <tr><td>Phase 1</td><td>Monat 1–6</td><td>GMP+B2 bestätigt · HACCP vollständig · Alle Rohstoffe EU-Bio verifiziert</td><td>Hersteller trägt</td></tr>
-    <tr><td>Phase 2</td><td>Monat 6–12</td><td>EU-Bio-Antrag (Ecocert/LACON) · Kontrollstelle beauftragt · Erst-Audit</td><td>50/50 Kostenteilung</td></tr>
-    <tr><td>Phase 3</td><td>Monat 12–18</td><td>EU-Bio zertifiziert · Naturland-Erstgespräch · Lieferanten-Audits</td><td>EQUINAT trägt Naturland-Lizenz</td></tr>
-    <tr><td>Phase 4</td><td>Monat 18–24</td><td>Naturland-Zertifizierung komplett · Alle Linien Naturland-konform</td><td>EQUINAT trägt laufende Lizenzgebühr</td></tr></table>
-    <p>Einmalige Naturland-Zertifizierungskosten: geschätzt €13.000–26.500 (EQUINAT und Hersteller teilen). Laufende Lizenzgebühr: 0,5–1,5% Umsatz der zertifizierten Produkte (trägt EQUINAT vollständig).</p>`
-  },
-  analytik:{
-    title:'Analytik & Rohstoff-Sourcing',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Geschäftsgeheimnisse der Zafao GmbH.</div>
-    <h3>28 Peer-reviewed Studien — Auswahl</h3>
-    <table><tr><th>Studie</th><th>Relevanz</th></tr>
-    <tr><td>Sundqvist et al. 2022, Equine Vet. J.: Rosa canina GOPO® reduces lameness scores — p&lt;0.01</td><td>JOINT: Hagebutte GOPO®</td></tr>
-    <tr><td>Riegel DVM (2001): MSM in Racing Standardbreds — 20g/Tag sign. Entzündungsreduktion</td><td>JOINT: MSM 20g/Tag</td></tr>
-    <tr><td>Axmann et al. 2019, J. Vet. Pharmacol.: Harpagoside PK in horses — tmax 1h, keine NW</td><td>JOINT: Teufelskralle</td></tr>
-    <tr><td>Belcaro et al. 2010, J. Nat. Prod.: Meriva® 10× systemische Verfügbarkeit vs. Standard</td><td>JOINT: Curcumin Meriva®</td></tr>
-    <tr><td>Maschietto et al. 2025, ScienceDirect: Polyphenol-Suppl. equines Asthma — BAL-Neutrophile reduziert</td><td>RESPIRA: Quercetin</td></tr>
-    <tr><td>Vet. Immunology 2020: Thymochinon bronchodilatatorisch bei equinem RAO</td><td>RESPIRA: Schwarzkümmelöl</td></tr>
-    <tr><td>Reilly et al. 1998, Equine Vet. J.: Biotin 15–20mg/Tag sign. Hornwachstum</td><td>METABOLIC + DAILY</td></tr>
-    <tr><td>Pagan JD. 2011, Kentucky Equine Research: Chromhefe verbessert Insulinsensitivität EMS</td><td>METABOLIC: Chromhefe</td></tr>
-    <tr><td>Bello et al. 2024, PMC11640219: Nutraceutical mitigates insulin resistance IR-Horses</td><td>METABOLIC: Kombination</td></tr>
-    <tr><td>Cornell University 2021: Selenhefe vs. Natriumselenit — 2× höhere Blutselenspiegel</td><td>Alle Linien: Selenhefe</td></tr></table>
-    <h3>Rohstoff-Sourcing Tabelle (Prioritätsquellen)</h3>
-    <table><tr><th>Rohstoff</th><th>Herkunft (Priorität)</th><th>Standard</th><th>Backup</th><th>Preisrange</th></tr>
-    <tr><td>Bio-Timothée-Gras</td><td>DE Norddeutschland/DK</td><td>EU Bio, warmluftgetrocknet</td><td>NO/SE</td><td>€0,45–0,65/kg</td></tr>
-    <tr><td>Bio-Luzerne</td><td>Bayern/Österreich</td><td>EU Bio, Ernte Knospenstand</td><td>HU/FR Bio</td><td>€0,35–0,55/kg</td></tr>
-    <tr><td>Bio-Leinsamen</td><td>DE/PL Bio</td><td>EU Bio, kalt aufgeschlossen</td><td>CA Bio</td><td>€0,80–1,20/kg</td></tr>
-    <tr><td>Hagebutten-Pulver GOPO®</td><td>Chile/Österreich</td><td>GOPO®-standardisiert, Analysezertifikat</td><td>Bulgarien</td><td>€4,00–8,00/kg</td></tr>
-    <tr><td>Teufelskrallen-Extrakt</td><td>Namibia/Südafrika</td><td>FairWild, std. 2,5% Harpagosid</td><td>Botswana</td><td>€25–45/kg Extrakt</td></tr>
-    <tr><td>MSM (OptiMSM®)</td><td>USA — Bergstrom Nutrition</td><td>Destilliert, 99,9%+, GMP, GRAS</td><td>DE Pharma</td><td>€2,50–4,00/kg</td></tr>
-    <tr><td>Quercefit® Quercetin-Phytosom</td><td>Indena SpA, Mailand (IT)</td><td>ISO, GMP, Patentstoff, 40% Quercetin</td><td>—</td><td>€80–140/kg</td></tr>
-    <tr><td>Schwarzkümmelöl kaltgepresst</td><td>Ägypten/Äthiopien</td><td>Bio, min. 0,5% Thymochinon</td><td>TN/SY</td><td>€4,50–8,00/kg</td></tr>
-    <tr><td>Kurkuma Meriva®</td><td>Indena SpA/Sabinsa Corp.</td><td>GMP, Patentstoff, 18–22% Curcuminoide</td><td>—</td><td>€30–60/kg</td></tr>
-    <tr><td>Selenhefe (SelenoSource AF®)</td><td>Alltech, Irland</td><td>EU-zugelassen 3b811, NCYC R397</td><td>SelenoSource alternatives</td><td>€20–40/kg (konz.)</td></tr>
-    <tr><td>Zink-Glycinchelat (Availa-Zn®)</td><td>Zinpro Corp./Kelatex</td><td>EU-zugelassen 3b607, 20% Zn</td><td>Mintrex® Zn</td><td>€8–15/kg</td></tr>
-    <tr><td>Chromhefe</td><td>Alltech Irland/Balchem</td><td>EU 3b101, min. 0,1% org. Chrom</td><td>—</td><td>€40–80/kg (konz.)</td></tr>
-    <tr><td>Berberin</td><td>CN Extrakt-Produzenten</td><td>Berberis vulgaris, std. ≥95%, GMP</td><td>—</td><td>€15–30/kg</td></tr></table>
-    <h3>CoA-Anforderungen je Rohstoff-Lieferung</h3>
-    <ul>
-    <li>Pestizidrückstände: GC-MS/LC-MS Screening, Gesamt &lt;10 ppb</li>
-    <li>Schwermetalle: Pb &lt;1mg/kg · Cd &lt;0,5mg/kg · Hg &lt;0,1mg/kg · As &lt;1mg/kg</li>
-    <li>Mykotoxine: Aflatoxin B1 &lt;5µg/kg je Eingangs-Wirkstoff</li>
-    <li>Deklarationskonformität: Wirkstoffgehalt gemäß Spezifikation verifiziert</li>
-    <li>Externe Validierung durch Eurofins oder SGS für alle Wirkstoffe je Lieferung</li>
-    <li>Basiskomponenten: Spot-Checks jede 3. Charge</li></ul>`
-  },
-  checkliste:{
-    title:'Anforderungs-Checkliste für Ihren Rücklauf',
-    body:`<h3>Bitte ausgefüllt zurücksenden an: info@zafao.world</h3>
-    <p>Betreff: EQUINAT Hersteller-Anforderungs-Checkliste — [Ihr Firmenname]</p>
-    <h3>1 — Unternehmen & Kontakt</h3>
-    <table><tr><th>Angabe</th><th>Ihre Daten</th></tr>
-    <tr><td>Firmenname</td><td>_________________________</td></tr>
-    <tr><td>Adresse / Hauptwerk</td><td>_________________________</td></tr>
-    <tr><td>Ansprechpartner</td><td>_________________________</td></tr>
-    <tr><td>E-Mail + Telefon</td><td>_________________________</td></tr>
-    <tr><td>Gründungsjahr / Mitarbeiterzahl</td><td>_________________________</td></tr></table>
-    <h3>2 — Zertifizierungen</h3>
-    <table><tr><th>Zertifizierung</th><th>Status</th><th>Zertifikat-Nr. / Aussteller</th></tr>
-    <tr><td>GMP+B2</td><td>[ ] Vorhanden &nbsp;[ ] In Vorb. &nbsp;[ ] Nicht</td><td>_____________</td></tr>
-    <tr><td>QS-Zertifizierung</td><td>[ ] Vorhanden &nbsp;[ ] In Vorb. &nbsp;[ ] Nicht</td><td>_____________</td></tr>
-    <tr><td>HACCP vollständig dokumentiert</td><td>[ ] Ja &nbsp;[ ] In Vorb. &nbsp;[ ] Nein</td><td>—</td></tr>
-    <tr><td>EU-Bio (VO 2018/848)</td><td>[ ] Vorhanden &nbsp;[ ] Bereitschaft &nbsp;[ ] Nicht möglich</td><td>_____________</td></tr>
-    <tr><td>VLOG / Ohne Gentechnik</td><td>[ ] Vorhanden &nbsp;[ ] Bereitschaft &nbsp;[ ] Offen</td><td>_____________</td></tr></table>
-    <h3>3 — Produktionstechnik (verbindliche Anforderungen)</h3>
-    <table><tr><th>EQUINAT-Anforderung</th><th>Ihre Anlage / Antwort</th></tr>
-    <tr><td>Cold-Press-Pelletierung max. 70°C</td><td>[ ] Ja &nbsp;[ ] Nein &nbsp;[ ] Anpassbar — Max. °C: ___</td></tr>
-    <tr><td>Pellet-Ø 6mm</td><td>[ ] Ja &nbsp;[ ] Andere: ___ mm</td></tr>
-    <tr><td>Öl-Coating-Anlage (nach Pelletierung)</td><td>[ ] Vorhanden &nbsp;[ ] Zulieferer &nbsp;[ ] Nicht vorhanden</td></tr>
-    <tr><td>Stickstoffspülung bei Befüllung</td><td>[ ] Ja &nbsp;[ ] Nein &nbsp;[ ] Nachrüstbar</td></tr>
-    <tr><td>Chargenrückverfolgung bis Rohstoff</td><td>[ ] Vollständig &nbsp;[ ] Teilweise &nbsp;[ ] Nein</td></tr>
-    <tr><td>HPLC-Labor oder Analytik-Partner</td><td>[ ] Eigenes Labor &nbsp;[ ] Eurofins/SGS &nbsp;[ ] Anderer: ___</td></tr>
-    <tr><td>Sachet-Abfüllung (für Booster)</td><td>[ ] Vorhanden &nbsp;[ ] Zulieferer &nbsp;[ ] Nicht möglich</td></tr></table>
-    <h3>4 — Kapazitäten & Timing</h3>
-    <table><tr><th>Parameter</th><th>Ihre Angabe</th></tr>
-    <tr><td>Verfügbare Kapazität ab sofort</td><td>___ t / Monat</td></tr>
-    <tr><td>Maximale Kapazität skalierbar</td><td>___ t / Monat</td></tr>
-    <tr><td>Kleinste realisierbare Pilotcharge</td><td>___ kg</td></tr>
-    <tr><td>Lieferzeit Pilotcharge ab Auftragserteilung</td><td>___ Wochen</td></tr>
-    <tr><td>Erfahrung Kräuter- und Wirkstoffmischungen</td><td>[ ] Umfangreich &nbsp;[ ] Begrenzt &nbsp;[ ] Keine</td></tr>
-    <tr><td>Erfahrung Pferde-/Heimtierfutter</td><td>[ ] Umfangreich &nbsp;[ ] Begrenzt &nbsp;[ ] Andere Tierarten</td></tr></table>
-    <h3>5 — Ihre Fragen an EQUINAT</h3>
-    <p>_________________________________________________________________________________________________<br>_________________________________________________________________________________________________</p>
-    <p style="margin-top:20px;padding:14px;background:rgba(201,148,58,.07);border-left:2px solid var(--gold);font-size:12.5px;">Bitte diese Checkliste ausgefüllt senden an <strong>info@zafao.world</strong> · Betreff: EQUINAT Hersteller-Checkliste. Nach Eingang melden wir uns innerhalb von 48 Stunden für ein Erstgespräch.</p>`
-  },
-  nda:{
-    title:'NDA-Volltext — Geheimhaltungsvereinbarung',
-    body:`<h3>Geheimhaltungsvereinbarung</h3>
-    <p>Zwischen der <strong>Zafao GmbH</strong>, Adolfsallee 22, 65185 Wiesbaden, HRB 33239 AG Wiesbaden, Geschäftsführerin: Lea Zahlmann (nachfolgend „EQUINAT") und dem Empfänger dieser Unterlagen (nachfolgend „Hersteller").</p>
-    <h3>§ 1 Gegenstand</h3>
-    <p>Im Rahmen der Prüfung einer möglichen Lohnproduktions-Partnerschaft für die Marke EQUINAT® werden vertrauliche Informationen ausgetauscht. Diese Vereinbarung regelt den Schutz aller übermittelten Informationen.</p>
-    <h3>§ 2 Vertrauliche Informationen</h3>
-    <p>Als vertraulich gelten insbesondere: Produktrezepturen und Wirkstoffspezifikationen, Mengenverhältnisse und Rohstoffquellen, Preisstrukturen und Margenmodelle, Geschäftsstrategien und Marktpläne, Kundendaten und Vertriebskanäle, technische Unterlagen, Analytical Data und Labordaten der Zafao GmbH.</p>
-    <h3>§ 3 Geheimhaltungspflicht</h3>
-    <ul><li>Keine Weitergabe an Dritte ohne vorherige schriftliche Zustimmung der Zafao GmbH</li>
-    <li>Ausschließliche Nutzung zum Zweck der Partnerschaftsprüfung EQUINAT®</li>
-    <li>Keine Verwendung für eigene Produktentwicklungen oder Produktoptimierungen</li>
-    <li>Beschränkter Zugang innerhalb des Unternehmens: nur Mitarbeiter mit „need-to-know"</li>
-    <li>Rückgabe oder sichere Vernichtung aller Unterlagen (digital + Papier) binnen 7 Werktagen nach Anfrage der Zafao GmbH</li></ul>
-    <h3>§ 4 Ausnahmen</h3>
-    <p>Die Geheimhaltungspflicht gilt nicht für Informationen, die nachweislich bereits öffentlich bekannt waren, dem Hersteller bereits bekannt waren, oder durch Dritte rechtmäßig offenbart wurden.</p>
-    <h3>§ 5 Laufzeit</h3>
-    <p>Diese Vereinbarung gilt für <strong>5 Jahre</strong> ab der ersten Informationsübermittlung, unabhängig vom Ausgang der Partnerschaftsverhandlungen.</p>
-    <h3>§ 6 Vertragsstrafe</h3>
-    <p>Bei schuldhaftem Verstoß gegen diese Vereinbarung ist eine Vertragsstrafe von <strong>€25.000 je Verstoß</strong> zu zahlen, unbeschadet weitergehender Schadensersatzansprüche nach §§ 280 ff. BGB und dem Gesetz zum Schutz von Geschäftsgeheimnissen (GeschGehG).</p>
-    <h3>§ 7 Geistiges Eigentum</h3>
-    <p>Die Übermittlung vertraulicher Informationen begründet keinerlei Lizenz oder sonstige Rechte an Schutzrechten der Zafao GmbH. Alle Rechte verbleiben ausschließlich bei der Zafao GmbH.</p>
-    <h3>§ 8 Anwendbares Recht · Gerichtsstand</h3>
-    <p>Deutsches Recht. Gerichtsstand: Wiesbaden, sofern der Hersteller Kaufmann im Sinne des HGB ist.</p>
-    <h3>§ 9 Salvatorische Klausel</h3>
-    <p>Sollte eine Bestimmung dieser Vereinbarung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
-    <p style="margin-top:24px;padding:16px 20px;background:rgba(201,148,58,.07);border-left:2px solid var(--gold);">Die digitale Bestätigung im Kontaktformular auf equinatwhitelabel.netlify.app gilt als rechtsverbindliche Erklärung zur Anerkennung dieser Vereinbarung. Für eine handschriftlich unterzeichnete Version: <strong>info@zafao.world</strong></p>`
-  }
-},
-  kalkulation:{
-    title:'Kalkulation & Margenmodell',
-    body:`<div class="modal-nda"><strong>NDA-Pflicht:</strong> Interne Kalkulation der Zafao GmbH. Basis für Rahmenvertrag-Verhandlung.</div>
-    <h3>COGS-Ziele je Produktlinie</h3>
-    <table><tr><th>Linie</th><th>COGS-Ziel/kg</th><th>Listenpreis/kg</th><th>COGS-Anteil</th></tr>
-    <tr><td>DAILY COMPLETE® 25kg</td><td>€1,80–2,10</td><td>€5,16</td><td>~35–41%</td></tr>
-    <tr><td>JOINT COMPLETE® 5kg</td><td>€2,60–3,10</td><td>€17,80</td><td>~15–17%</td></tr>
-    <tr><td>RESPIRA COMPLETE® 5kg</td><td>€2,80–3,40</td><td>€15,80</td><td>~18–22%</td></tr>
-    <tr><td>METABOLIC COMPLETE® 5kg</td><td>€2,50–3,00</td><td>€17,80</td><td>~14–17%</td></tr>
-    <tr><td>MASH BASIS 15kg</td><td>€1,50–2,00</td><td>€3,27</td><td>~46–61%</td></tr>
-    <tr><td>WINTER BOOSTER® 30×50g</td><td>€6–9/kg</td><td>€23,27/kg</td><td>~26–39%</td></tr>
-    <tr><td>SUMMER BOOSTER® 30×50g</td><td>€6–9/kg</td><td>€26,60/kg</td><td>~23–34%</td></tr></table>
-    <h3>Contribution Margin — Subscription Gold-Tier (15% Rabatt, 10% Affiliate)</h3>
-    <table><tr><th>Linie</th><th>Subscription-Preis</th><th>Netto nach MwSt 7%</th><th>CM nach COGS + Aff.</th><th>CM %</th></tr>
-    <tr><td>DAILY 25kg</td><td>€109,65</td><td>€102,48</td><td>€50,05</td><td>48,8%</td></tr>
-    <tr><td>JOINT 5kg</td><td>€75,65</td><td>€70,70</td><td>€34,44</td><td>48,7%</td></tr>
-    <tr><td>RESPIRA 5kg</td><td>€67,15</td><td>€62,76</td><td>€30,53</td><td>48,6%</td></tr>
-    <tr><td>METABOLIC 5kg</td><td>€75,65</td><td>€70,70</td><td>€34,44</td><td>48,7%</td></tr>
-    <tr><td>MASH 15kg</td><td>€41,65</td><td>€38,93</td><td>€18,83</td><td>48,4%</td></tr></table>
-    <h3>EBITDA-Projektion (Haiku 4.5, 60% Affiliate)</h3>
-    <table><tr><th>Szenario</th><th>Abos</th><th>EBITDA/Mt</th><th>EBITDA-Marge</th><th>Jährlich</th></tr>
-    <tr><td>Beta-End</td><td>100</td><td>+€999</td><td>16,6%</td><td>+€11.988</td></tr>
-    <tr><td>Early Stage</td><td>300</td><td>+€3.934</td><td>21,8%</td><td>+€47.208</td></tr>
-    <tr><td>Wachstum</td><td>750</td><td>+€13.186</td><td>29,2%</td><td>+€158.232</td></tr>
-    <tr><td>Ziel Jahr 2</td><td>2.000</td><td>+€40.925</td><td>34,0%</td><td>+€491.100</td></tr></table>
-    <p><strong>Break-Even: ~68 Abos.</strong> Contribution Margin stabil 50,9% über alle Szenarien. Vollständige Kalkulation mit allen Variablen wird im Erstgespräch besprochen.</p>`
-  }
-};
-
-function showDoc
-
-function showDoc(key){
-  const d = DOCS[key];
-  if(!d) return;
-  document.getElementById('modal-title').textContent = d.title;
-  document.getElementById('modal-body').innerHTML = d.body;
-  document.getElementById('modal').classList.add('open');
-  document.body.style.overflow='hidden';
-}
 function closeModal(){
   document.getElementById('modal').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+
+window.openDoc=function(key){
+  var d=DOCS[key];
+  if(!d)return;
+  document.getElementById('modal-title').textContent=d.t;
+  document.getElementById('modal-body').innerHTML=d.b;
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  window.scrollTo(0,0);
+};
+
+var DOCS={
+  spec:{
+    t:'Spec Sheet v1.0 — Vollständiges Lastenheft',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Geschäftsgeheimnisse der Zafao GmbH. Weitergabe ohne schriftliche Genehmigung untersagt.</div><h3>Produktlinien Übersicht</h3><table><tr><th>Linie</th><th>Tagesdosis 500kg</th><th>Gebinde</th><th>Listenpreis</th><th>COGS-Ziel</th><th>FEI</th></tr><tr><td>DAILY COMPLETE®</td><td>80g</td><td>25kg + 10kg Sack</td><td>€129 / €59</td><td>€1,80–2,10/kg</td><td>0h</td></tr><tr><td>JOINT COMPLETE®</td><td>60g</td><td>5kg Eimer</td><td>€89</td><td>€2,60–3,10/kg</td><td>Teufelskralle: 96h</td></tr><tr><td>RESPIRA COMPLETE®</td><td>50g+30ml</td><td>5kg Eimer</td><td>€79</td><td>€2,80–3,40/kg</td><td>0h</td></tr><tr><td>METABOLIC COMPLETE®</td><td>70g</td><td>5kg Eimer</td><td>€89</td><td>€2,50–3,00/kg</td><td>Vitex: 96h</td></tr><tr><td>MASH BASIS</td><td>300–500g/Mahlzeit</td><td>15kg Sack</td><td>€49</td><td>€1,50–2,00/kg</td><td>0h</td></tr><tr><td>WINTER BOOSTER®</td><td>50g/Sachet</td><td>30×50g Box</td><td>€34,90</td><td>€6–9/kg</td><td>Ingwer: 48h</td></tr><tr><td>SUMMER BOOSTER®</td><td>50g/Sachet</td><td>30×50g Box</td><td>€39,90</td><td>€6–9/kg</td><td>0h</td></tr></table><h3>Pelletierungsanforderungen (verbindlich)</h3><table><tr><th>Parameter</th><th>Spezifikation</th></tr><tr><td>Presstemperatur Düse</td><td><strong>max. 65–70°C</strong></td></tr><tr><td>Pellet-Ø</td><td><strong>6 mm</strong></td></tr><tr><td>Pellet-Härte (Kahl)</td><td>≥ 4,5 kg</td></tr><tr><td>Restfeuchte Endprodukt</td><td>≤ 11%</td></tr><tr><td>Öl-Coating</td><td>Nach Pelletierung, Rotationstrommel, min. 10 Min.</td></tr><tr><td>Stickstoffspülung</td><td>O₂ &lt; 2% bei Befüllung</td></tr></table><h3>Pflicht-Analytik je Charge</h3><table><tr><th>Test</th><th>Methode</th><th>Grenzwerte</th></tr><tr><td>Schwermetalle</td><td>ICP-MS</td><td>Pb &lt;5 · Cd &lt;1 · Hg &lt;0,1 mg/kg</td></tr><tr><td>Mykotoxine</td><td>LC-MS/MS</td><td>AfB1 &lt;0,01 · DON &lt;5 mg/kg</td></tr><tr><td>HPLC Wirkstoff-Marker</td><td>HPLC je Linie</td><td>Harpagosid ≥0,2% · Curcumin ≥0,9% · MSM ≥33%</td></tr><tr><td>Weender-Analyse</td><td>Standard</td><td>RP, RFE, RF, RA, Stärke, Zucker</td></tr></table><h3>Pilotmengen Phase 1</h3><table><tr><th>Linie</th><th>Pilotmenge</th><th>Ziel</th></tr><tr><td>DAILY COMPLETE®</td><td>1.000 kg</td><td>Fressakzeptanz, HPLC, Mikrobiologie</td></tr><tr><td>JOINT COMPLETE®</td><td>500 kg</td><td>HPLC Harpagosid, Curcumin, MSM</td></tr><tr><td>RESPIRA COMPLETE®</td><td>500 kg</td><td>Staubindex, Quercetin HPLC, Ölcoating</td></tr><tr><td>METABOLIC COMPLETE®</td><td>500 kg</td><td>NSC-Validierung &lt;8%</td></tr><tr><td>MASH SYSTEM®</td><td>500 kg + 100 Sachets</td><td>Quellverhalten, NSC, Sachet-Dichtigkeit</td></tr></table><h3>Zertifizierungs-Roadmap</h3><table><tr><th>Zertifizierung</th><th>Zeitpunkt</th><th>Finanzierung</th></tr><tr><td>GMP+B2 oder QS</td><td><strong>Tag 1 — zwingend</strong></td><td>Hersteller trägt</td></tr><tr><td>EU-Bio (VO 2018/848)</td><td>Innerhalb 12 Monate</td><td>50/50 Kostenteilung</td></tr><tr><td>Naturland (Ziel)</td><td>18–24 Monate</td><td>EQUINAT trägt Lizenzgebühr</td></tr></table>'
+  },
+  rezepturen:{
+    t:'Vollrezepturen — Alle 5 Linien',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Vollrezepturen der Zafao GmbH.</div><h3>DAILY COMPLETE® — Basis (89%)</h3><table><tr><th>Zutat</th><th>Menge/kg</th><th>Anteil</th><th>Funktion</th></tr><tr><td>Bio-Timothée-Gras, warmluftgetrocknet</td><td>250g</td><td>25%</td><td>Rohfaser-Basis, Kaureiz</td></tr><tr><td>Bio-Luzernecobs (Alfalfa)</td><td>180g</td><td>18%</td><td>Protein 18% RP, Ca-Quelle, β-Carotin</td></tr><tr><td>Bio-Wiesengräser-Pellets (60+ Arten)</td><td>150g</td><td>15%</td><td>Phytonährstoffe, Vitamine nativ</td></tr><tr><td>Bio-Haferflocken</td><td>100g</td><td>10%</td><td>Energie, Stärke langsam verdaulich</td></tr><tr><td>Bio-Weizenkleie</td><td>80g</td><td>8%</td><td>Rohfaser, B-Vitamine, Phosphor</td></tr><tr><td>Bio-Leinsamen geschrotet (therm.stab.)</td><td>60g</td><td>6%</td><td>Omega-3 ALA 22%, Schleimstoffe</td></tr><tr><td>Bio-Apfeltrester</td><td>40g</td><td>4%</td><td>Pektinfaser, Fressakzeptanz</td></tr><tr><td>Bio-Sonnenblumenkerne</td><td>30g</td><td>3%</td><td>Omega-6, Vitamin E nativ</td></tr></table><h3>DAILY — Wirkkomponenten + Mineralien</h3><table><tr><th>Wirkstoff</th><th>Menge/kg</th><th>Tagesdosis 500kg</th></tr><tr><td>Hagebutten-Pulver GOPO®</td><td>25g</td><td>37,5g</td></tr><tr><td>Brennnessel-Kraut getrocknet</td><td>18g</td><td>27g</td></tr><tr><td>Bio-Hanföl kaltgepresst (Coating)</td><td>15g</td><td>22,5g</td></tr><tr><td>Bacillus subtilis DSM 17299</td><td>5×10⁷ CFU</td><td>7,5×10¹⁰ CFU</td></tr><tr><td>SCFP Postbiotikum</td><td>20g</td><td>30g</td></tr><tr><td>Selen-Hefe (SelenoSource AF®, 3b811)</td><td>0,3mg Se</td><td>0,45mg</td></tr><tr><td>Vitamin E natürlich (RRR-α-Tocopherol)</td><td>150mg</td><td>225mg</td></tr><tr><td>Zink-Glycinchelat (Availa-Zn®, 3b607)</td><td>60mg</td><td>90mg</td></tr><tr><td>Biotin D-Biotin 98%+ (3a880)</td><td>13,3mg</td><td>20mg</td></tr><tr><td>Vitamin D3 Cholecalciferol (3a671)</td><td>3.300 IE</td><td>5.000 IE</td></tr></table><h3>JOINT COMPLETE® — Gelenk-Wirkstoffkomplex</h3><table><tr><th>Wirkstoff</th><th>Form/Qualität</th><th>Tagesdosis 500kg</th></tr><tr><td>MSM (Methylsulfonylmethan)</td><td>OptiMSM® destilliert 99,9%</td><td><strong>20g/Tag</strong></td></tr><tr><td>Teufelskrallen-Extrakt</td><td>Std. 2,5% Harpagosid</td><td>3g = <strong>75mg Harpagosid</strong></td></tr><tr><td>Kurkuma Meriva®</td><td>Phospholipidkomplex 95% Curcuminoide, 10× BV</td><td>2,25g</td></tr><tr><td>Boswellia serrata</td><td>Std. 65% Boswellinsäuren (AKBA)</td><td>1,2g</td></tr><tr><td>Hagebutten-Pulver GOPO®</td><td>Rosa canina &gt;0,5% GOPO-Glycosid</td><td>37,5g</td></tr><tr><td>Leinöl kaltgepresst Bio (Coating)</td><td>55%+ ALA</td><td>30g</td></tr></table><h3>RESPIRA COMPLETE® — Atemwegs-Wirkstoffkomplex</h3><table><tr><th>Wirkstoff</th><th>Form</th><th>Tagesdosis</th></tr><tr><td>Quercetin-Phytosom (Quercefit®)</td><td>10× BV, Indena SpA</td><td>3g</td></tr><tr><td>N-Acetylcystein (NAC)</td><td>USP Pharmaqualität 98%+</td><td>10g</td></tr><tr><td>Schwarzkümmelöl (Coating!)</td><td>Bio, Thymochinon ≥1%, kaltgepresst</td><td>30ml</td></tr><tr><td>Thymian Bio (Thymus vulgaris)</td><td>0,5–1% äther. Öl Thymol</td><td>12g</td></tr><tr><td>Isländisch Moos Trockenextrakt</td><td>Min. 30% Polysaccharide</td><td>7,5g</td></tr><tr><td>Spitzwegerich Bio getrocknet</td><td>Aucubin-haltig</td><td>12g</td></tr></table><h3>METABOLIC COMPLETE® — Stoffwechsel-Wirkstoffkomplex</h3><table><tr><th>Wirkstoff</th><th>Form</th><th>Tagesdosis</th><th>Hinweis</th></tr><tr><td>Magnesiumcitrat</td><td>Mg-Citrat + Oxid 1:2, 16% Mg</td><td>15g Mg</td><td>Insulinrezeptor-Sensitivität</td></tr><tr><td>Chromhefe</td><td>Saccharomyces, ≥0,1% org. Chrom, EU 3b101</td><td>1,5µg Cr/kg KM</td><td>Glukose-Toleranz EMS</td></tr><tr><td>Berberin</td><td>Berberis vulgaris std. ≥95%</td><td>2g</td><td>AMPK-Aktivator. Reg. Status DE prüfen!</td></tr><tr><td>Zimtextrakt CEYLON</td><td>Cinnamomum verum, 10% Zimtaldehyd</td><td>4,5g</td><td><strong>NUR Ceylon!</strong> &lt;0,004% Cumarin</td></tr><tr><td>Vitex agnus-castus</td><td>Std. 0,5% Casticin</td><td>3g</td><td>PPID/Cushing. FEI: <strong>96h Karenz!</strong></td></tr><tr><td>Mariendistel Siliphos®</td><td>Phospholipidkomplex, 2,5× BV</td><td>2,25g</td><td>Leber-Support PPID</td></tr><tr><td>Biotin D-Biotin 98%+</td><td>Pharmaqualität</td><td>16mg</td><td>Hufhorn, Hornwand-Stabilität</td></tr></table>'
+  },
+  mash:{
+    t:'MASH SYSTEM® — Vollständige Rezeptur',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Erste therapeutische Mash-Linie im DACH-Markt mit NSC &lt;8%.</div><h3>MASH COMPLETE® BASIS (pro 1kg Endprodukt)</h3><p><em>NSC &lt;8% · Dental-friendly · FEI 0h · Quellzeit 8–10 Min · Restfaser ≤3mm</em></p><table><tr><th>Zutat</th><th>Menge/kg</th><th>Anteil</th><th>Funktion</th></tr><tr><td>Heucobs Timothée Naturland</td><td>300g</td><td>30%</td><td>Strukturfaser, NSC-arm (~6%), Quellbasis</td></tr><tr><td>Bio-Luzernecobs gemahlen</td><td>150g</td><td>15%</td><td>Protein, Ca-Quelle, Quelleigenschaft</td></tr><tr><td>Leinkuchen Bio entzuckert</td><td>120g</td><td>12%</td><td>Schleimstoffe, Omega-3, Aminosäuren</td></tr><tr><td>Apfeltrester Naturland entzuckert</td><td>100g</td><td>10%</td><td>Geschmack, Pektin, Quellbasis</td></tr><tr><td>Bio-Rübenschnitzel zuckerfrei gewaschen</td><td>80g</td><td>8%</td><td>Energie ohne Stärke, NSC &lt;6%</td></tr><tr><td>SCFP Postbiotikum</td><td>30g</td><td>3%</td><td>Mikrobiom-Resilienz, hitzestabil</td></tr><tr><td>Flohsamenschalen Bio</td><td>25g</td><td>2,5%</td><td>Quellverhalten, Magenschleimhautschutz</td></tr><tr><td>Apfelpektin</td><td>20g</td><td>2%</td><td>Magenschleimhaut, Säurebindung</td></tr><tr><td>Aminosäuren-Premix (Lys+Met+Thr)</td><td>25g</td><td>2,5%</td><td>Senior-Muskelerhalt, Hufhorn</td></tr><tr><td>Mariendistel Siliphos® Naturland</td><td>10g</td><td>1%</td><td>Leber-Support Senior/Cushing (2,5× BV)</td></tr><tr><td>MOS (Mannan-Oligosaccharide)</td><td>20g</td><td>2%</td><td>Präbiotikum, Pathogen-Bindung</td></tr><tr><td>Vitamin E natürlich</td><td>1.500 IE</td><td>—</td><td>Antioxidans, Muskelerhalt Alter</td></tr><tr><td>Mineral-Premix (organisch gebunden)</td><td>20g</td><td>2%</td><td>Vollversorgung Zn, Cu, Se, Mn</td></tr></table><p><strong>Analytische Zielwerte:</strong> NSC &lt;8% · Stärke &lt;5% · Zucker &lt;6% · Rohfaser 22–28%</p><h3>WINTER BOOSTER® (pro 50g Sachet)</h3><p><em>FEI: Ingwer 48h Karenz · Oktober–April · Kompostierbare Sachets</em></p><table><tr><th>Wirkstoff</th><th>Menge/Sachet</th><th>Funktion</th></tr><tr><td>Ingwerwurzel Bio gemahlen</td><td>12g</td><td>Durchblutung, wärmend. <strong>FEI-Watchlist: 48h!</strong></td></tr><tr><td>Schwarzkümmel-Saat Bio gemahlen</td><td>8g</td><td>Bronchien-Support, Thymochinon</td></tr><tr><td>Hagebutte mit GOPO® Naturland</td><td>6g</td><td>Vit C natürlich, Wintersteife</td></tr><tr><td>Thymian Naturland getrocknet</td><td>4g</td><td>Antiseptisch, sekretolytisch</td></tr><tr><td>Zimt CEYLON Bio (Cinnamomum verum)</td><td>2g</td><td>Wärmewirkung. <strong>NUR Ceylon! &lt;0,004% Cumarin.</strong></td></tr><tr><td>Kurkuma Bio gemahlen</td><td>2g</td><td>Mild antientzündlich</td></tr><tr><td>Apfeltrester Bio (Träger)</td><td>16g</td><td>Bindung, Geschmacksträger</td></tr></table><h3>SUMMER BOOSTER® (pro 50g Sachet)</h3><p><em>FEI 0h Karenz — am Wettkampfmorgen fütterbar · Mai–September</em></p><table><tr><th>Wirkstoff</th><th>Menge/Sachet</th><th>Funktion</th></tr><tr><td>Natriumchlorid (Meersalz, unraffiniert)</td><td>12g</td><td>Hauptelektrolyt-Verlust (Ratio 4:2:1:0,5)</td></tr><tr><td>Kaliumchlorid</td><td>6g</td><td>Zweithäufigster Verlust, Muskelkontraktion</td></tr><tr><td>Magnesiumcitrat (16% Mg)</td><td>3g</td><td>Krampfschutz, Muskelfunktion</td></tr><tr><td>Calciumcarbonat (Lithothamnium-Algenkalk)</td><td>2g</td><td>Muskelkontraktion, Säurepuffer</td></tr><tr><td>Hagebutten-Fruchtpulver GOPO®</td><td>8g</td><td>Vit C natürlich, Antioxidans nach Sport</td></tr><tr><td>Spirulina platensis Bio</td><td>5g</td><td>Antioxidans, Phycocyanin</td></tr><tr><td>Pfefferminze Bio getrocknet</td><td>2g</td><td>Kühlend, magenfreundlich</td></tr><tr><td>Apfeltrester Bio (Träger)</td><td>12g</td><td>Bindung, Geschmacksträger</td></tr></table><p><strong>FEI-Vorteil Summer Booster:</strong> Kein Koffein, kein Theobromin, kein Ingwer. <strong>0h Karenzzeit.</strong></p>'
+  },
+  qualitaet:{
+    t:'Quality Manifest — 6 Hard Limits',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Verbindlich für alle EQUINAT-Lohnproduktionspartner ab Tag 1.</div><h3>Die 6 Hard Limits</h3><table><tr><th>Limit</th><th>Regel</th></tr><tr><td><strong>HL-1</strong></td><td>Kein synthetisches Vitamin A. Nur natürliches β-Carotin aus zertifizierten Pflanzenquellen.</td></tr><tr><td><strong>HL-2</strong></td><td>Kein Melasse-Einsatz — weder als Bindemittel noch als Geschmacksträger.</td></tr><tr><td><strong>HL-3</strong></td><td>Keine anorganischen Mineralien als Primärquelle. Ausschließlich organisch gebundene Chelate und Hefe-Komplexe.</td></tr><tr><td><strong>HL-4</strong></td><td>Alle FEI-relevanten Stoffe auf Verpackung und Beipackzettel kennzeichnen: Teufelskralle → 96h · Vitex → 96h · Ingwer → 48h.</td></tr><tr><td><strong>HL-5</strong></td><td>Keine therapeutischen Claims auf Verpackung oder Werbung. Ausschließlich VO (EG) 767/2009 konform.</td></tr><tr><td><strong>HL-6</strong></td><td>Keine Produktion ohne GMP+B2 oder QS — auch für Pilotchargen keine Ausnahmen.</td></tr></table><h3>Verarbeitungsparameter (verbindlich)</h3><table><tr><th>Parameter</th><th>Spezifikation</th></tr><tr><td>Presstemperatur Düse</td><td>max. 65–70°C</td></tr><tr><td>Pellet-Ø</td><td>6 mm</td></tr><tr><td>Restfeuchte Endprodukt</td><td>≤ 11%</td></tr><tr><td>Öl-Coating</td><td>Rotationstrommel, min. 10 Min. nach Abkühlung &lt;35°C</td></tr><tr><td>Stickstoffspülung</td><td>O₂ &lt;2% bei Befüllung</td></tr><tr><td>MHD versiegelt</td><td>6 Monate</td></tr></table><h3>Naturland-Roadmap (gemeinsam)</h3><table><tr><th>Phase</th><th>Timing</th><th>Finanzierung</th></tr><tr><td>GMP+B2 + HACCP</td><td>Tag 1</td><td>Hersteller trägt</td></tr><tr><td>EU-Bio-Antrag</td><td>Monat 6–12</td><td>50/50 Kostenteilung</td></tr><tr><td>EU-Bio zertifiziert</td><td>Monat 12–18</td><td>50/50</td></tr><tr><td>Naturland komplett</td><td>Monat 18–24</td><td>EQUINAT trägt Lizenz</td></tr></table><p>Einmalige Zertifizierungskosten: €13.000–26.500 (aufgeteilt). Laufende Naturland-Lizenzgebühr 0,5–1,5%: trägt EQUINAT vollständig.</p>'
+  },
+  analytik:{
+    t:'Analytik & Rohstoff-Sourcing',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Geschäftsgeheimnisse der Zafao GmbH.</div><h3>Studien-Auswahl (28 Peer-reviewed)</h3><table><tr><th>Studie</th><th>Relevanz</th></tr><tr><td>Sundqvist et al. 2022, Equine Vet. J.: Rosa canina GOPO® — p&lt;0.01 Lahmheitsreduktion</td><td>JOINT: Hagebutte</td></tr><tr><td>Riegel DVM 2001: MSM 20g/Tag — sign. Entzündungsreduktion Standardbreds</td><td>JOINT: MSM</td></tr><tr><td>Belcaro et al. 2010: Meriva® 10× systemische Verfügbarkeit vs. Standard</td><td>JOINT: Curcumin</td></tr><tr><td>Maschietto et al. 2025: Polyphenole bei equinem Asthma — BAL-Neutrophile reduziert</td><td>RESPIRA: Quercetin</td></tr><tr><td>Reilly et al. 1998: Biotin 15–20mg/Tag — sign. Hornwachstum</td><td>METABOLIC + DAILY</td></tr><tr><td>Pagan 2011, Kentucky: Chromhefe — Insulinsensitivität EMS verbessert</td><td>METABOLIC</td></tr><tr><td>Cornell 2021: Selenhefe vs. Natriumselenit — 2× höhere Blutselenspiegel</td><td>Alle Linien</td></tr></table><h3>Rohstoff-Sourcing Prioritätsquellen</h3><table><tr><th>Rohstoff</th><th>Herkunft</th><th>Standard</th><th>Preisrange</th></tr><tr><td>Bio-Timothée-Gras</td><td>DE Norddeutschland/DK</td><td>EU Bio, warmluftgetrocknet</td><td>€0,45–0,65/kg</td></tr><tr><td>Hagebutten-Pulver GOPO®</td><td>Chile/Österreich</td><td>GOPO®-standardisiert</td><td>€4,00–8,00/kg</td></tr><tr><td>Teufelskrallen-Extrakt</td><td>Namibia/Südafrika</td><td>FairWild, std. 2,5% Harpagosid</td><td>€25–45/kg Extrakt</td></tr><tr><td>MSM (OptiMSM®)</td><td>USA — Bergstrom Nutrition</td><td>Destilliert 99,9%+, GMP</td><td>€2,50–4,00/kg</td></tr><tr><td>Quercefit® Phytosom</td><td>Indena SpA, Mailand</td><td>ISO, GMP, Patentstoff</td><td>€80–140/kg</td></tr><tr><td>Schwarzkümmelöl</td><td>Ägypten/Äthiopien</td><td>Bio, Thymochinon ≥1%</td><td>€4,50–8,00/kg</td></tr><tr><td>Kurkuma Meriva®</td><td>Indena SpA/Sabinsa</td><td>GMP, Patentstoff</td><td>€30–60/kg</td></tr><tr><td>Selenhefe (SelenoSource AF®)</td><td>Alltech, Irland</td><td>EU-zugelassen 3b811</td><td>€20–40/kg (konz.)</td></tr><tr><td>Chromhefe</td><td>Alltech/Balchem</td><td>EU 3b101, ≥0,1% org. Chrom</td><td>€40–80/kg (konz.)</td></tr></table><h3>CoA-Anforderungen je Rohstoff-Lieferung</h3><ul><li>Pestizidrückstände: GC-MS/LC-MS, Gesamt &lt;10 ppb</li><li>Schwermetalle: Pb &lt;1 · Cd &lt;0,5 · Hg &lt;0,1 mg/kg</li><li>Mykotoxine: AflatoxinB1 &lt;5µg/kg</li><li>Wirkstoffgehalt: gemäß Spezifikation HPLC-verifiziert</li><li>Externe Validierung Eurofins oder SGS für alle Wirkstoffe je Lieferung</li></ul>'
+  },
+  checkliste:{
+    t:'Anforderungs-Checkliste',
+    b:'<h3>Bitte ausgefüllt zurücksenden: info@zafao.world</h3><p>Betreff: EQUINAT Hersteller-Checkliste — [Ihr Firmenname]</p><h3>Zertifizierungen</h3><table><tr><th>Zertifizierung</th><th>Status</th></tr><tr><td>GMP+B2</td><td>[ ] Vorhanden &nbsp;[ ] In Vorbereitung &nbsp;[ ] Nicht vorhanden</td></tr><tr><td>QS-Zertifizierung</td><td>[ ] Vorhanden &nbsp;[ ] In Vorbereitung &nbsp;[ ] Nicht vorhanden</td></tr><tr><td>HACCP dokumentiert</td><td>[ ] Vorhanden &nbsp;[ ] In Vorbereitung &nbsp;[ ] Nicht vorhanden</td></tr><tr><td>EU-Bio (VO 2018/848)</td><td>[ ] Vorhanden &nbsp;[ ] Bereitschaft &nbsp;[ ] Nicht möglich</td></tr></table><h3>Produktionstechnik</h3><table><tr><th>EQUINAT-Anforderung</th><th>Ihre Antwort</th></tr><tr><td>Cold-Press-Pelletierung max. 70°C</td><td>[ ] Ja &nbsp;[ ] Nein &nbsp;[ ] Anpassbar — Max. °C: ___</td></tr><tr><td>Pellet-Ø 6mm</td><td>[ ] Ja &nbsp;[ ] Andere: ___ mm</td></tr><tr><td>Öl-Coating-Anlage (nach Pelletierung)</td><td>[ ] Vorhanden &nbsp;[ ] Zulieferer &nbsp;[ ] Nicht vorhanden</td></tr><tr><td>Stickstoffspülung bei Befüllung</td><td>[ ] Ja &nbsp;[ ] Nein &nbsp;[ ] Nachrüstbar</td></tr><tr><td>Chargenrückverfolgung bis Rohstoff</td><td>[ ] Vollständig &nbsp;[ ] Teilweise &nbsp;[ ] Nein</td></tr><tr><td>HPLC-Labor oder Analytik-Partner</td><td>[ ] Eigenes Labor &nbsp;[ ] Eurofins/SGS &nbsp;[ ] Anderer: ___</td></tr></table><h3>Kapazitäten</h3><table><tr><th>Parameter</th><th>Ihre Angabe</th></tr><tr><td>Verfügbare Kapazität ab sofort</td><td>___ t / Monat</td></tr><tr><td>Maximale Kapazität skalierbar</td><td>___ t / Monat</td></tr><tr><td>Kleinste Pilotcharge möglich</td><td>___ kg</td></tr><tr><td>Lieferzeit Pilotcharge</td><td>___ Wochen</td></tr></table><p style="margin-top:16px;padding:12px;background:rgba(201,148,58,.07);border-left:2px solid #C9943A;">Bitte senden an: <strong>info@zafao.world</strong> · Wir melden uns innerhalb 48h.</p>'
+  },
+  nda:{
+    t:'NDA-Volltext — Geheimhaltungsvereinbarung',
+    b:'<h3>Geheimhaltungsvereinbarung</h3><p>Zwischen der <strong>Zafao GmbH</strong>, Adolfsallee 22, 65185 Wiesbaden, HRB 33239 (nachfolgend „EQUINAT") und dem Empfänger dieser Unterlagen (nachfolgend „Hersteller").</p><h3>§ 1 Gegenstand</h3><p>Im Rahmen der Prüfung einer Lohnproduktions-Partnerschaft für EQUINAT® werden vertrauliche Informationen ausgetauscht.</p><h3>§ 2 Vertrauliche Informationen</h3><p>Produktrezepturen, Wirkstoffspezifikationen, Mengenverhältnisse, Rohstoffquellen, Preisstrukturen, Geschäftsstrategien, Kundendaten und technische Unterlagen der Zafao GmbH.</p><h3>§ 3 Geheimhaltungspflicht</h3><ul><li>Keine Weitergabe an Dritte ohne schriftliche Zustimmung der Zafao GmbH</li><li>Ausschließliche Nutzung zur Partnerschaftsprüfung</li><li>Keine Nutzung für eigene Produktentwicklungen</li><li>Rückgabe/Vernichtung aller Unterlagen binnen 7 Werktagen nach Anfrage</li></ul><h3>§ 4 Laufzeit</h3><p><strong>5 Jahre</strong> ab erster Informationsübermittlung.</p><h3>§ 5 Vertragsstrafe</h3><p>€25.000 je schuldhaftem Verstoß, unbeschadet weiterer Ansprüche nach GeschGehG und §§ 280 ff. BGB.</p><h3>§ 6 Geistiges Eigentum</h3><p>Keine Lizenz oder Rechte an Schutzrechten der Zafao GmbH durch Informationsübermittlung.</p><h3>§ 7 Recht & Gerichtsstand</h3><p>Deutsches Recht. Gerichtsstand: Wiesbaden.</p><p style="margin-top:16px;padding:12px;background:rgba(201,148,58,.07);border-left:2px solid #C9943A;">Für handschriftlich unterzeichnete Version: <strong>info@zafao.world</strong></p>'
+  },
+  kalkulation:{
+    t:'Kalkulation & Margenmodell',
+    b:'<div class="nda-warn"><strong>NDA-Pflicht:</strong> Interne Kalkulation der Zafao GmbH.</div><h3>COGS-Ziele je Produktlinie</h3><table><tr><th>Linie</th><th>COGS-Ziel/kg</th><th>Listenpreis/kg</th><th>COGS-Anteil</th></tr><tr><td>DAILY COMPLETE® 25kg</td><td>€1,80–2,10</td><td>€5,16</td><td>~35–41%</td></tr><tr><td>JOINT COMPLETE® 5kg</td><td>€2,60–3,10</td><td>€17,80</td><td>~15–17%</td></tr><tr><td>RESPIRA COMPLETE® 5kg</td><td>€2,80–3,40</td><td>€15,80</td><td>~18–22%</td></tr><tr><td>METABOLIC COMPLETE® 5kg</td><td>€2,50–3,00</td><td>€17,80</td><td>~14–17%</td></tr><tr><td>MASH BASIS 15kg</td><td>€1,50–2,00</td><td>€3,27</td><td>~46–61%</td></tr><tr><td>WINTER BOOSTER®</td><td>€6–9/kg</td><td>€23,27/kg</td><td>~26–39%</td></tr><tr><td>SUMMER BOOSTER®</td><td>€6–9/kg</td><td>€26,60/kg</td><td>~23–34%</td></tr></table><h3>Contribution Margin — Subscription Gold-Tier</h3><table><tr><th>Linie</th><th>Sub-Preis (15% Rabatt)</th><th>Netto nach MwSt 7%</th><th>CM nach COGS+Affiliate</th><th>CM %</th></tr><tr><td>DAILY 25kg</td><td>€109,65</td><td>€102,48</td><td>€50,05</td><td>48,8%</td></tr><tr><td>JOINT 5kg</td><td>€75,65</td><td>€70,70</td><td>€34,44</td><td>48,7%</td></tr><tr><td>RESPIRA 5kg</td><td>€67,15</td><td>€62,76</td><td>€30,53</td><td>48,6%</td></tr><tr><td>METABOLIC 5kg</td><td>€75,65</td><td>€70,70</td><td>€34,44</td><td>48,7%</td></tr><tr><td>MASH 15kg</td><td>€41,65</td><td>€38,93</td><td>€18,83</td><td>48,4%</td></tr></table><h3>EBITDA-Projektion</h3><table><tr><th>Szenario</th><th>Abos</th><th>EBITDA/Mt</th><th>EBITDA-Marge</th><th>Jährlich</th></tr><tr><td>Beta-End</td><td>100</td><td>+€999</td><td>16,6%</td><td>+€11.988</td></tr><tr><td>Early Stage</td><td>300</td><td>+€3.934</td><td>21,8%</td><td>+€47.208</td></tr><tr><td>Wachstum</td><td>750</td><td>+€13.186</td><td>29,2%</td><td>+€158.232</td></tr><tr><td>Ziel Jahr 2</td><td>2.000</td><td>+€40.925</td><td>34,0%</td><td>+€491.100</td></tr></table><p><strong>Break-Even: ~68 Abos.</strong> CM stabil 50,9% über alle Szenarien. Vollständige Kalkulation im Erstgespräch.</p>'
+  }
+};
 </script>
 </body>
 </html>
