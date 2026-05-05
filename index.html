@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>EQUINAT® — Hersteller-Pitch 2026 | Zafao GmbH</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --dark:#070B05;--forest:#1B2F14;--fmid:#2D4A1E;
+  --gold:#C9943A;--gold-l:#E0B055;--gold-pale:#F4DFA0;
+  --cream:#F4EFE4;--cream-2:rgba(244,239,228,0.7);--cream-3:rgba(244,239,228,0.35);
+  --border:rgba(201,148,58,0.18);--border-s:rgba(201,148,58,0.35);
+  --red:#C94A3A;--green:#3A8A3A;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;background:var(--dark);}
+body{font-family:'Instrument Sans',sans-serif;background:var(--dark);color:var(--cream);font-size:14px;line-height:1.65;}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:90;
+  background:rgba(7,11,5,0.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  height:58px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:#fff;letter-spacing:-.3px;}
+.nav-brand span{color:var(--gold);}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cream-3);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:var(--dark);padding:7px 18px;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--gold-l);}
+
+/* ─── HERO ─── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;padding:100px 48px 80px;}
+.hero-bg{position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%,rgba(27,47,20,0.7),transparent 65%),
+    radial-gradient(ellipse 60% 80% at 85% 30%,rgba(201,148,58,0.06),transparent 60%),
+    linear-gradient(180deg,var(--dark) 0%,#0A1208 100%);}
+.hero-grid{position:absolute;inset:0;opacity:.04;
+  background-image:linear-gradient(rgba(201,148,58,.8) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,148,58,.8) 1px,transparent 1px);
+  background-size:60px 60px;}
+.hero-inner{position:relative;z-index:1;max-width:900px;text-align:center;}
+.hero-eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:rgba(201,148,58,.6);margin-bottom:20px;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,7vw,6.5rem);font-weight:300;line-height:.98;letter-spacing:-.02em;color:#fff;margin-bottom:6px;}
+.hero-title em{color:var(--gold);font-style:italic;display:block;}
+.hero-sub{font-size:13.5px;color:var(--cream-2);max-width:560px;margin:24px auto 40px;line-height:1.75;font-weight:300;}
+.hero-stats{display:flex;justify-content:center;gap:60px;margin-bottom:48px;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--gold-l);line-height:1;display:block;}
+.stat-label{font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cream-3);margin-top:4px;display:block;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:var(--gold);color:var(--dark);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;transition:all .25s;border:none;cursor:pointer;font-family:'Instrument Sans',sans-serif;}
+.btn-primary:hover{background:var(--gold-l);transform:translateY(-1px);}
+.btn-outline{background:transparent;color:var(--cream);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;text-decoration:none;border:1px solid var(--border-s);transition:all .25s;cursor:pointer;font-family:'Instrument Sans',sans-serif;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+
+/* ─── SECTIONS ─── */
+section{padding:100px 48px;}
+.section-inner{max-width:1100px;margin:0 auto;}
+.section-eyebrow{font-size:9.5px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);opacity:.7;margin-bottom:10px;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.05;margin-bottom:18px;}
+.section-title em{color:var(--gold);font-style:italic;}
+.section-sub{font-size:13.5px;color:var(--cream-2);max-width:640px;line-height:1.75;margin-bottom:48px;}
+.divider-gold{height:1px;background:linear-gradient(to right,transparent,var(--gold-l),transparent);margin:80px 0;}
+
+/* ─── MARKET TABLE ─── */
+.market-bg{background:linear-gradient(180deg,rgba(27,47,20,.3),transparent);}
+.comp-table-wrap{overflow-x:auto;margin:0 -8px;}
+.comp-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.comp-table th{padding:10px 14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,148,58,.1);color:var(--gold-l);text-align:center;border-bottom:1px solid var(--border-s);}
+.comp-table th:first-child{text-align:left;}
+.comp-table td{padding:10px 14px;border-bottom:1px solid rgba(201,148,58,.06);text-align:center;color:var(--cream-2);}
+.comp-table td:first-child{text-align:left;font-weight:500;color:var(--cream);}
+.comp-table tr.equinat-row td{background:rgba(201,148,58,.06);font-weight:600;}
+.comp-table tr.equinat-row td:first-child{color:var(--gold-l);}
+.check{color:var(--green);}
+.cross{color:rgba(244,239,228,.2);}
+.part{color:var(--gold);}
+.star{color:var(--gold-l);font-size:15px;}
+
+/* ─── PRODUCTS ─── */
+.products-bg{background:rgba(13,19,10,.5);}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:var(--border);}
+.product-card{background:var(--dark);padding:36px 32px;display:flex;flex-direction:column;gap:14px;transition:background .25s;}
+.product-card:hover{background:#0D1209;}
+.product-tag{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--pc, var(--gold));font-family:'DM Mono',monospace;}
+.product-num{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:rgba(201,148,58,.1);line-height:1;margin-bottom:-10px;}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;line-height:1.1;}
+.product-tagline{font-size:12.5px;color:var(--cream-2);line-height:1.6;}
+.product-ingredients{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px;}
+.ingredient{font-size:10.5px;padding:3px 10px;background:rgba(201,148,58,.07);border:1px solid rgba(201,148,58,.15);color:var(--cream-2);font-family:'DM Mono',monospace;}
+.ingredient.key{border-color:rgba(201,148,58,.3);color:var(--gold-l);}
+.product-specs{margin-top:8px;padding-top:16px;border-top:1px solid var(--border);}
+.product-spec-row{display:flex;justify-content:space-between;font-size:11.5px;padding:3px 0;}
+.product-spec-row .pk{color:var(--cream-3);}
+.product-spec-row .pv{font-family:'DM Mono',monospace;color:var(--cream);}
+.product-gap{font-size:11.5px;color:var(--cream-3);font-style:italic;line-height:1.6;margin-top:6px;padding-top:12px;border-top:1px solid var(--border);}
+
+/* ─── MOATS ─── */
+.moats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
+.moat{background:rgba(27,47,20,.2);border:1px solid var(--border);padding:28px 26px;}
+.moat-icon{font-size:2rem;margin-bottom:12px;line-height:1;}
+.moat-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:#fff;margin-bottom:8px;}
+.moat-text{font-size:12.5px;color:var(--cream-2);line-height:1.7;}
+.moat-barrier{font-size:11px;color:var(--gold);margin-top:12px;font-family:'DM Mono',monospace;}
+
+/* ─── PARTNER STEPS ─── */
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);}
+.step-box{background:var(--dark);padding:32px 24px;text-align:center;}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:300;color:rgba(201,148,58,.2);line-height:1;margin-bottom:10px;}
+.step-title{font-size:13px;font-weight:600;color:var(--cream);letter-spacing:.3px;margin-bottom:8px;}
+.step-text{font-size:12px;color:var(--cream-3);line-height:1.65;}
+
+/* ─── ANFORDERUNGEN ─── */
+.reqs-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+.req-col h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;margin-bottom:20px;}
+.req-list{list-style:none;}
+.req-list li{padding:8px 0;border-bottom:1px solid rgba(201,148,58,.07);font-size:13px;color:var(--cream-2);display:flex;align-items:flex-start;gap:10px;line-height:1.55;}
+.req-list li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px;}
+
+/* ─── SCIENCE ─── */
+.science-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border);}
+.science-card{background:var(--dark);padding:28px 24px;}
+.science-num{font-family:'DM Mono',monospace;font-size:12px;color:var(--gold);margin-bottom:8px;}
+.science-title{font-size:13px;font-weight:600;color:var(--cream);margin-bottom:8px;}
+.science-text{font-size:12px;color:var(--cream-3);line-height:1.7;}
+
+/* ─── CTA SECTION ─── */
+.cta-section{text-align:center;}
+.cta-section .section-title{margin:0 auto 16px;}
+.cta-section .section-sub{margin:0 auto 40px;}
+.cta-contact{font-size:11px;color:var(--cream-3);margin-top:20px;letter-spacing:.5px;}
+.cta-contact a{color:var(--gold);text-decoration:none;}
+
+/* ─── HERSTELLER PORTAL ─── */
+#hersteller-portal{display:none;}
+#hersteller-portal.open{display:block;}
+
+/* Password Gate */
+.hportal-gate{
+  background:linear-gradient(135deg,rgba(27,47,20,.4),rgba(7,11,5,.9));
+  border:1px solid var(--border-s);
+  max-width:480px;margin:0 auto;
+  padding:56px 48px;text-align:center;
+}
+.hportal-gate .gate-title{
+  font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:#fff;margin-bottom:8px;
+}
+.hportal-gate .gate-sub{font-size:13px;color:var(--cream-3);margin-bottom:36px;line-height:1.6;}
+.hportal-gate input{
+  width:100%;background:rgba(244,239,228,.04);border:1px solid var(--border);
+  color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:15px;
+  padding:13px 16px;outline:none;letter-spacing:3px;transition:border-color .2s;margin-bottom:10px;
+}
+.hportal-gate input:focus{border-color:var(--gold);}
+.hportal-gate .gate-err{font-size:12px;color:var(--red);min-height:18px;margin-bottom:10px;}
+.hportal-gate .gate-note{font-size:10.5px;color:var(--cream-3);margin-top:16px;line-height:1.6;}
+
+/* Portal Dashboard */
+.hportal-dash{display:none;}
+.hportal-dash.open{display:block;}
+.hportal-header{
+  background:rgba(27,47,20,.3);border:1px solid var(--border-s);
+  padding:32px 40px;margin-bottom:32px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.hportal-header h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;}
+.hportal-header p{font-size:12px;color:var(--cream-3);margin-top:4px;}
+.hportal-badge{font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(58,138,58,.15);color:#70B870;border:1px solid rgba(58,138,58,.3);padding:4px 12px;}
+.doc-portal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+.doc-portal-card{
+  background:rgba(244,239,228,.03);border:1px solid var(--border);
+  padding:24px;cursor:pointer;user-select:none;text-decoration:none;
+  display:flex;flex-direction:column;gap:10px;
+  transition:background .2s,border-color .2s;
+  position:relative;overflow:hidden;
+}
+.doc-portal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--dpc,var(--gold));}
+.doc-portal-card:hover{background:rgba(244,239,228,.06);border-color:var(--border-s);}
+.dpc-icon{font-size:1.8rem;line-height:1;}
+.dpc-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:#fff;}
+.dpc-desc{font-size:12px;color:var(--cream-3);line-height:1.6;}
+.dpc-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;display:inline-block;padding:2px 8px;background:rgba(58,138,58,.12);color:#70B870;border:1px solid rgba(58,138,58,.25);margin-top:4px;}
+.dpc-tag.red{background:rgba(201,74,58,.1);color:#C07060;border-color:rgba(201,74,58,.2);}
+.hportal-logout{background:none;border:1px solid var(--border);color:var(--cream-3);padding:7px 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Instrument Sans',sans-serif;transition:all .2s;}
+.hportal-logout:hover{border-color:var(--border-s);color:var(--cream);}
+
+/* ─── MODAL für Dokument-Anzeige ─── */
+.doc-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:200;overflow-y:auto;padding:32px 20px;}
+.doc-modal-overlay.active{display:flex;align-items:flex-start;justify-content:center;}
+.doc-modal-box{background:#0D1209;border:1px solid var(--border-s);max-width:800px;width:100%;margin:auto;padding:40px 48px;}
+.doc-modal-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
+.doc-modal-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;}
+.doc-modal-close{background:none;border:none;color:var(--cream-3);font-size:1.4rem;cursor:pointer;transition:color .2s;}
+.doc-modal-close:hover{color:#fff;}
+.doc-modal-body{font-size:13px;color:var(--cream-2);line-height:1.8;}
+.doc-modal-body h3{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--gold-l);margin:20px 0 8px;}
+.doc-modal-body h3:first-child{margin-top:0;}
+.doc-modal-body p{margin-bottom:10px;}
+.doc-modal-body ul{padding-left:18px;margin-bottom:12px;}
+.doc-modal-body ul li{margin-bottom:5px;}
+.doc-modal-body table{width:100%;border-collapse:collapse;margin:12px 0;}
+.doc-modal-body th{padding:8px 12px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(201,148,58,.1);color:var(--gold-l);text-align:left;}
+.doc-modal-body td{padding:7px 12px;border-bottom:1px solid rgba(201,148,58,.07);font-size:12.5px;}
+.doc-modal-body strong{color:var(--cream);}
+.modal-nda{background:rgba(201,74,58,.08);border-left:3px solid var(--red);padding:12px 16px;margin-bottom:20px;font-size:12px;}
+
+/* ─── FOOTER ─── */
+footer{border-top:1px solid var(--border);padding:40px 48px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;}
+.footer-brand span{color:var(--gold);}
+.footer-info{font-size:11px;color:rgba(244,239,228,.2);line-height:1.7;}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap;}
+.footer-links a{font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(244,239,228,.25);text-decoration:none;}
+
+/* FADE-IN */
+.fade{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+.fade.vis{opacity:1;transform:none;}
+
+@media(max-width:768px){
+  nav,.hero,.steps-row,section,footer{padding-left:20px;padding-right:20px;}
+  .nav-links{display:none;}
+  .reqs-grid,.steps-row{grid-template-columns:1fr;}
+  .hportal-header{flex-direction:column;gap:12px;align-items:flex-start;}
+  .hportal-gate{padding:32px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<form name="equinat-hersteller-nda" netlify style="display:none;">
+  <input name="firmenname"/><input name="anschrift"/><input name="ansprechpartner"/>
+  <input name="funktion"/><input name="email"/><input name="timestamp"/>
+</form>
+<nav>
+  <div class="nav-brand">EQUINAT<span>®</span></div>
+  <div class="nav-links">
+    <a href="#markt">Marktanalyse</a>
+    <a href="#produkte">Produkte</a>
+    <a href="#partner">Partnership</a>
+    <a href="#wissenschaft">Wissenschaft</a>
+    <a href="#hersteller-portal" class="nav-cta" onclick="scrollToDocs()">Dokumente ↓</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Hersteller-Pitch 2026 · Zafao GmbH · Wiesbaden</div>
+    <h1 class="hero-title">
+      Die Nische existiert.
+      <em>Niemand besetzt sie.</em>
+    </h1>
+    <p class="hero-sub">30+ DACH-Marken analysiert. Kein einziger Anbieter kombiniert Naturland-Bio + integrierte Wirkformeln in therapeutischer Dosis + öffentliches Vet-Advisory Board + KI-Beratungssystem.</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">€840M</span>
+        <span class="stat-label">DACH Marktvolumen</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0</span>
+        <span class="stat-label">Echte All-in-One Anbieter</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">8</span>
+        <span class="stat-label">Produkte im System</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">€240</span>
+        <span class="stat-label">Ø Monatliche Fragmentausgaben</span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#partner" class="btn-primary">Partnership anfragen</a>
+      <a href="#produkte" class="btn-outline">Produktkonzept</a>
+    </div>
+  </div>
+</section>
+
+<!-- MARKTANALYSE -->
+<section class="market-bg" id="markt">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">Wettbewerbsanalyse DACH 2026</div>
+    <h2 class="section-title">30+ Marken analysiert. <em>Die Lücke ist klar.</em></h2>
+    <p class="section-sub">Selbst die naturnahsten Anbieter verkaufen Basis und Ergänzungen separat. Kein einziger Anbieter hat alle sieben Dimensionen gleichzeitig — bis EQUINAT.</p>
+
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Marke</th>
+            <th>€/kg</th>
+            <th>Naturland</th>
+            <th>EU-Bio</th>
+            <th>Integr. Wirkstoffe</th>
+            <th>Öffentl. Vet-Board</th>
+            <th>All-in-One</th>
+            <th>D2C Abo</th>
+            <th>KI-Beratung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>AGROBS PRE ALPIN</td><td>€0,97–2,17</td><td class="part">✓ (teilweise)</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr><td>St. Hippolyt</td><td>€2,00–4,50</td><td class="cross">✗</td><td class="cross">✗</td><td class="part">~</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr><td>Mühldorfer</td><td>€1,75–2,50</td><td class="cross">✗</td><td class="part">~</td><td class="part">~</td><td class="part">~</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr><td>Wiesenkraft</td><td>€3,00–8,00</td><td class="cross">✗</td><td class="cross">✗</td><td class="part">~</td><td class="part">~</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr><td>Marstall / LEXA</td><td>€1,50–3,20</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr><td>PAVO</td><td>€1,40–2,80</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+          <tr class="equinat-row">
+            <td>⭐ EQUINAT COMPLETE®</td><td>€4,90–8,90</td>
+            <td class="check">✓✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--cream-3);margin-top:14px;font-style:italic;">Keine einzige Marke kombiniert alle neun Dimensionen. EQUINAT ist die erste im DACH-Markt.</p>
+  </div>
+</section>
+
+<div class="divider-gold"></div>
+
+<!-- PRODUKTE -->
+<section class="products-bg" id="produkte" style="padding-top:80px;padding-bottom:0;">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">Das EQUINAT SYSTEM® — 8 Produkte</div>
+    <h2 class="section-title">Vier Bedürfnisse. <em>Ein vollständiges System.</em></h2>
+    <p class="section-sub">Alle Linien basieren auf Cold-Press-Pelletierung (max. 70°C), Naturland-Bio-Basis, HPLC-verifizierter Wirkstoffstandardisierung und einer einzigartigen Dual-Postbiotika-Architektur (B. subtilis + SCFP).</p>
+  </div>
+  <div class="products-grid">
+
+    <div class="product-card" style="--pc:#C9943A;">
+      <div class="product-tag">Formel 01 · Basisversorgung</div>
+      <div class="product-num">01</div>
+      <div class="product-name">DAILY COMPLETE®</div>
+      <div class="product-tagline">Premium-Basisversorgung für jedes Pferd. Ersetzt Basisfutter + Mineralfutter + Probiotika + Omega-3-Ergänzung vollständig.</div>
+      <div class="product-ingredients">
+        <span class="ingredient key">B. subtilis + SCFP</span>
+        <span class="ingredient key">Meriva® Curcumin</span>
+        <span class="ingredient">Hagebutte GOPO®</span>
+        <span class="ingredient">Selen-Hefe</span>
+        <span class="ingredient">Zink-Glycinchelat</span>
+        <span class="ingredient">Hanföl Bio</span>
+        <span class="ingredient">Leinsamen Omega-3</span>
+        <span class="ingredient">Vit E natural</span>
+      </div>
+      <div class="product-specs">
+        <div class="product-spec-row"><span class="pk">Tagesdosis</span><span class="pv">80g / 500kg Pferd</span></div>
+        <div class="product-spec-row"><span class="pk">Gebinde</span><span class="pv">25 kg Sack (€129) · 10 kg (€59)</span></div>
+        <div class="product-spec-row"><span class="pk">Zielpreis/kg</span><span class="pv">€4,90–5,50</span></div>
+        <div class="product-spec-row"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
+      </div>
+    </div>
+
+    <div class="product-card" style="--pc:#E8B85A;">
+      <div class="product-tag">Formel 02 · Gelenk & Bewegung</div>
+      <div class="product-num">02</div>
+      <div class="product-name">JOINT COMPLETE®</div>
+      <div class="product-tagline">Stärkste Wirkstoffformel im DACH-Markt. MSM in therapeutischer Dosis (20g), Curcumin als Meriva®-Komplex (10× BV), Boswellia AKBA-standardisiert.</div>
+      <div class="product-ingredients">
+        <span class="ingredient key">MSM 20g/Tag (OptiMSM®)</span>
+        <span class="ingredient key">Meriva® Curcumin</span>
+        <span class="ingredient key">Teufelskralle 75mg Harpagosid</span>
+        <span class="ingredient">Boswellia 65% AKBA</span>
+        <span class="ingredient">GOPO® Hagebutte</span>
+        <span class="ingredient">Hyaluronsäure oral</span>
+      </div>
+      <div class="product-specs">
+        <div class="product-spec-row"><span class="pk">Tagesdosis</span><span class="pv">60g / 500kg Pferd</span></div>
+        <div class="product-spec-row"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
+        <div class="product-spec-row"><span class="pk">Zielpreis/kg</span><span class="pv">€7,00–7,90</span></div>
+        <div class="product-spec-row"><span class="pk">FEI Karenz</span><span class="pv">Teufelskralle: 96h</span></div>
+      </div>
+    </div>
+
+    <div class="product-card" style="--pc:#7EC870;">
+      <div class="product-tag">Formel 03 · Atemwege & Allergie</div>
+      <div class="product-num">03</div>
+      <div class="product-name">RESPIRA COMPLETE®</div>
+      <div class="product-tagline">Pflanzliches Antihistaminikum-Komplex für RAO, Stauballergie und equines Asthma. Getreidefrei. Staubfrei pelletiert.</div>
+      <div class="product-ingredients">
+        <span class="ingredient key">Quercetin 3g/Tag</span>
+        <span class="ingredient key">NAC 10g/Tag</span>
+        <span class="ingredient key">Schwarzkümmelöl 30ml</span>
+        <span class="ingredient">Bromelain</span>
+        <span class="ingredient">Thymian Bio</span>
+        <span class="ingredient">Spitzwegerich</span>
+        <span class="ingredient">Vit C nat.</span>
+      </div>
+      <div class="product-specs">
+        <div class="product-spec-row"><span class="pk">Tagesdosis</span><span class="pv">50g + 30ml Öl-Coat</span></div>
+        <div class="product-spec-row"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€79)</span></div>
+        <div class="product-spec-row"><span class="pk">Zielpreis/kg</span><span class="pv">€7,50–8,90</span></div>
+        <div class="product-spec-row"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
+      </div>
+    </div>
+
+    <div class="product-card" style="--pc:#B8A040;">
+      <div class="product-tag">Formel 04 · Stoffwechsel</div>
+      <div class="product-num">04</div>
+      <div class="product-name">METABOLIC COMPLETE®</div>
+      <div class="product-tagline">Für ~750.000 metabolisch erkrankte DACH-Pferde. EMS, Cushing/PPID, Hufrehe-Prophylaxe. NSC &lt;8%, getreidefrei, melassefrei.</div>
+      <div class="product-ingredients">
+        <span class="ingredient key">Magnesium 15g/Tag</span>
+        <span class="ingredient key">Chrom-Hefe 3mg</span>
+        <span class="ingredient key">Berberin 2g</span>
+        <span class="ingredient">Mariendistel Siliphos®</span>
+        <span class="ingredient">Vitex agnus-castus</span>
+        <span class="ingredient">Ceylon-Zimt</span>
+        <span class="ingredient">Biotin 25mg</span>
+      </div>
+      <div class="product-specs">
+        <div class="product-spec-row"><span class="pk">Tagesdosis</span><span class="pv">70g / 500kg Pferd</span></div>
+        <div class="product-spec-row"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
+        <div class="product-spec-row"><span class="pk">NSC</span><span class="pv">&lt; 8% — EMS-tauglich</span></div>
+        <div class="product-spec-row"><span class="pk">FEI Karenz</span><span class="pv">Vitex: 96h</span></div>
+      </div>
+    </div>
+
+    <div class="product-card" style="--pc:#8B7FA8;grid-column:span 2;">
+      <div class="product-tag">Formel 05 · Therapeutisches Mash-System</div>
+      <div class="product-num">05</div>
+      <div class="product-name">MASH SYSTEM®</div>
+      <div class="product-tagline">Erste therapeutische Mash-Linie im DACH-Markt mit NSC &lt;8%. Drei Komponenten — eine Basis, zwei saisonale Booster. Dental-friendly, EMS-tauglich, Senior-optimiert.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:8px;">
+        <div>
+          <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Basis · €49/15kg</div>
+          <div class="product-ingredients" style="flex-direction:column;gap:4px;">
+            <span class="ingredient key">NSC &lt;8%</span>
+            <span class="ingredient">Heucobs Naturland</span>
+            <span class="ingredient">Leinkuchen Bio</span>
+            <span class="ingredient">SCFP Postbiotikum</span>
+            <span class="ingredient">Aminosäuren-Premix</span>
+            <span class="ingredient">Mariendistel Siliphos®</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">WINTER BOOSTER · €34,90/30×50g</div>
+          <div class="product-ingredients" style="flex-direction:column;gap:4px;">
+            <span class="ingredient">FEI: Ingwer 48h Karenz</span>
+            <span class="ingredient">Ingwer Bio 12g</span>
+            <span class="ingredient">Schwarzkümmel 8g</span>
+            <span class="ingredient">Thymian + Hagebutte</span>
+            <span class="ingredient">Ceylon-Zimt</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">SUMMER BOOSTER · €39,90/30×50g</div>
+          <div class="product-ingredients" style="flex-direction:column;gap:4px;">
+            <span class="ingredient key">FEI 0h — Turniersicher</span>
+            <span class="ingredient">Elektrolyte 4:2:1</span>
+            <span class="ingredient">Hagebutte GOPO®</span>
+            <span class="ingredient">Spirulina Bio</span>
+            <span class="ingredient">Pfefferminze</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-specs" style="margin-top:16px;">
+        <div class="product-spec-row"><span class="pk">Marktlücke</span><span class="pv">Kein DACH-Mash mit NSC &lt;8% — EMS-Halter erstmals Belohnungsmahlzeit möglich</span></div>
+        <div class="product-spec-row"><span class="pk">Quellzeit</span><span class="pv">8–10 Min · Restfaser ≤3mm · für Zahnpferde geeignet</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider-gold"></div>
+
+<!-- STRUKTURELLE VORTEILE -->
+<section id="differenzierung">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">Strukturelle Wettbewerbsvorteile</div>
+    <h2 class="section-title">6 Gräben — <em>nicht überquerbar.</em></h2>
+    <p class="section-sub">Diese Vorteile sind keine Marketing-Claims. Sie sind strukturelle Barrieren, die EQUINAT als First Mover dauerhaft absichern.</p>
+    <div class="moats-grid">
+      <div class="moat">
+        <div class="moat-icon">🌿</div>
+        <div class="moat-title">Naturland — nicht nur EU-Bio</div>
+        <div class="moat-text">Naturland übertrifft EU-Bio: 100% Bio-Anteil, nur 23 Zusatzstoffe (EU-Bio: 53), ILO-Sozialstandards für alle Rohstoffquellen. Kein DACH-Konkurrent hat Naturland für alle Linien inkl. Wirkstoffformeln.</div>
+        <div class="moat-barrier">→ Zertifizierung: 12–18 Monate + €13k–26k Einmalaufwand</div>
+      </div>
+      <div class="moat">
+        <div class="moat-icon">🔬</div>
+        <div class="moat-title">Öffentliches Vet-Advisory Board</div>
+        <div class="moat-text">Fünf namentlich genannte Experten: ECEIM-Internist, Tierernährungswissenschaftler (PhD), Orthopädie-Vet, Pharmakolog, Reitsportprofi. Jeder Wirkstoff-Anspruch ist gegengezeichnet und haftbar.</div>
+        <div class="moat-barrier">→ Barriere: 6–12 Monate Netzwerk- und Vertrauensaufbau</div>
+      </div>
+      <div class="moat">
+        <div class="moat-icon">⚗️</div>
+        <div class="moat-title">HPLC-Verifikation je Charge</div>
+        <div class="moat-text">Externe Analytik (Eurofins/SGS) für Harpagosid, Curcumin, Thymochinon, MSM. QR-Code auf jeder Verpackung führt zur Echtzeit-Chargenanalytik bis Feldparzelle. Kein Wettbewerber bietet das öffentlich.</div>
+        <div class="moat-barrier">→ Barriere: GMP-Produktion + Analytik = 18+ Monate für Nachahmer</div>
+      </div>
+      <div class="moat">
+        <div class="moat-icon">🤖</div>
+        <div class="moat-title">PferdeBot® KI-Beratungssystem</div>
+        <div class="moat-text">Erster equiner KI-Assistent im DACH-Markt. Empfiehlt wissenschaftlich welche EQUINAT-Linie für das jeweilige Pferd geeignet ist. Subscription-Modell €9,90/Mt — eingebettet in die Produkterfahrung.</div>
+        <div class="moat-barrier">→ Barriere: Technologie + equines Fachwissen = 12+ Monate</div>
+      </div>
+      <div class="moat">
+        <div class="moat-icon">🎯</div>
+        <div class="moat-title">„Pferdemutter" als primäre Persona</div>
+        <div class="moat-text">Alle 30+ Wettbewerber sprechen von „Pferdebesitzern". EQUINAT besetzt den emotionalsten und kaufkräftigsten Archetyp im Markt. Community-Marke, nicht Produktmarke.</div>
+        <div class="moat-barrier">→ Barriere: Markenidentität + Community-Bindung</div>
+      </div>
+      <div class="moat">
+        <div class="moat-icon">💰</div>
+        <div class="moat-title">Günstiger als Fragmentierung</div>
+        <div class="moat-text">EQUINAT ist teurer pro kg, aber günstiger gesamt. Sportpferd JOINT: 5 Einzelprodukte = €195/Mt → EQUINAT = €225/Mt. Nur €30 mehr für Bio-Qualität + null Aufwand. Sofort nachvollziehbar.</div>
+        <div class="moat-barrier">→ Existenzbedrohend für Wettbewerber mit Add-on-Strategie</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-gold"></div>
+
+<!-- WISSENSCHAFT -->
+<section id="wissenschaft" style="background:rgba(13,19,10,.5);">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">Wissenschaftliche Basis</div>
+    <h2 class="section-title">Kein Claim <em>ohne Evidenz.</em></h2>
+    <p class="section-sub">28 Peer-reviewed Studien. HPLC-Verifikation je Charge. Externe Laboranalytik als Standard — nicht als Option.</p>
+    <div class="science-grid">
+      <div class="science-card">
+        <div class="science-num">I — BIOAVAILABILITY</div>
+        <div class="science-title">Organisch gebundene Minerale</div>
+        <div class="science-text">Zink-Glycinchelat, Selen-Hefe (Sel-Plex®), Kupfer-Glycinchelat: 2–3× bioverfügbarer als anorganische Verbindungen. Cornell 2021: Selenhefe vs. Natriumselenit — 2-fach höhere Blutselenspiegel.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-num">II — CURCUMIN</div>
+        <div class="science-title">Meriva® Phospholipidkomplex</div>
+        <div class="science-text">10× bioverfügbarer als Standard-Curcumin (Belcaro et al. 2010, J. Nat. Prod.). Phospholipidgebundenes Curcumin — patentierter Standard von Indena SpA. HPLC ≥0,9% im Endprodukt.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-num">III — JOINT</div>
+        <div class="science-title">GOPO® Hagebutte</div>
+        <div class="science-text">Sundqvist et al. 2022 (Equine Vet. J.): Lahmheitsgrad-Reduktion bei equiner Arthritis p&lt;0.01. Galaktolipid-Komplex hemmt IL-1β, TNF-α, PGE2.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-num">IV — RESPIRATORY</div>
+        <div class="science-title">Quercetin + Schwarzkümmel</div>
+        <div class="science-text">Maschietto et al. 2025 (ScienceDirect): Polyphenol-Supplementierung bei equinem Asthma — sign. Reduktion BAL-Neutrophile. Thymochinon (Nigella sativa) bronchodilatatorisch (Vet. Immunology 2020).</div>
+      </div>
+      <div class="science-card">
+        <div class="science-num">V — METABOLIC</div>
+        <div class="science-title">Berberin + Chrom-Hefe</div>
+        <div class="science-text">Bello et al. 2024 (PMC11640219, Univ. Kentucky): Nutraceutical mitigates insulin resistance in IR-Horses. Pagan 2011 (KER): Chrom-Hefe verbessert Insulinsensitivität bei EMS — 2–4µg/kg KM optimal.</div>
+      </div>
+      <div class="science-card">
+        <div class="science-num">VI — CHARGENANALYTIK</div>
+        <div class="science-title">Externe Validierung Standard</div>
+        <div class="science-text">Eurofins / SGS: Schwermetalle (ICP-MS), Mykotoxine (LC-MS/MS), Pestizide (Multi-Screen), HPLC Wirkstoff-Marker. QR-Code auf Verpackung = Echtzeit-Zertifikat. Kein Wettbewerber bietet das öffentlich.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-gold"></div>
+
+<!-- PARTNER SECTION -->
+<section id="partner">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">White-Label Partnership</div>
+    <h2 class="section-title">Ihre Produktion. <em>Unsere Formel.</em></h2>
+    <p class="section-sub">EQUINAT sucht GMP+-zertifizierte Mischfutterhersteller im DACH-Raum für langfristige Lohnproduktion. Sie bringen Kapazität — wir bringen Formeln, Zertifizierungen, Marketing und gesicherte Abnahmemengen.</p>
+
+    <div class="steps-row" style="margin-bottom:60px;">
+      <div class="step-box">
+        <div class="step-num">01</div>
+        <div class="step-title">NDA & Briefing</div>
+        <div class="step-text">Vertrauliches Briefing zu Rezepturen, Mengen, Zertifizierungsanforderungen und Exklusivitätsmodell DE/AT/CH.</div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">02</div>
+        <div class="step-title">Pilotcharge</div>
+        <div class="step-text">500 kg–2 t pro Linie. Laborvalidierung (Eurofins/SGS), Analytik-Zertifikate, Fressakzeptanz-Tests.</div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">03</div>
+        <div class="step-title">Rahmenvertrag</div>
+        <div class="step-text">Mindestabnahme 5 t/Mo, Preisformel, Qualitäts-SLA und Exklusivitätsgebiet DACH.</div>
+      </div>
+      <div class="step-box">
+        <div class="step-num">04</div>
+        <div class="step-title">Launch & Scale</div>
+        <div class="step-text">Markteinführung mit EQUINAT-Marketing: Influencer-Netzwerk, PferdeBot®, Equitana-Messeauftritt.</div>
+      </div>
+    </div>
+
+    <div class="reqs-grid">
+      <div>
+        <h3>Was wir suchen</h3>
+        <ul class="req-list">
+          <li>GMP+B2 oder QS-zertifizierter Produktionsbetrieb</li>
+          <li>Cold-Press-Pelletieranlage mit Temperaturkontrolle (max. 70°C)</li>
+          <li>Öl-Coating-Anlage nach der Pelletierung</li>
+          <li>Erfahrung mit Kräuter-, Öl- und Wirkstoffmischungen für Pferde</li>
+          <li>Kapazität ab 5 t/Monat, skalierbar bis 50 t/Monat</li>
+          <li>Chargengenaues Rückverfolgungssystem (bis Rohstoffherkunft)</li>
+          <li>Bereitschaft zur EU-Bio-Zertifizierung binnen 12 Monaten</li>
+          <li>Akkreditierter Laborzugang oder externe Analytik-Partner</li>
+          <li>Standort bevorzugt: DACH-Raum (DE, AT, CH)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Was wir bieten</h3>
+        <ul class="req-list">
+          <li>5 vollständige Produktlinien (8 SKUs), wissenschaftlich validiert, NDA-geschützt</li>
+          <li>Öffentliches Vet-Advisory Board sichert alle Claims rechtlich ab</li>
+          <li>Vollständiges Branding, Verpackungsdesign, Texte DE & EN</li>
+          <li>PferdeBot® KI-System generiert qualifizierte Kaufentscheidungen</li>
+          <li>Aufgebauter D2C-Subscription-Funnel mit Affiliate-System</li>
+          <li>Gesicherter Rahmenabnahmevertrag — Planungssicherheit von Tag 1</li>
+          <li>Tierarzt-Netzwerk DACH als exklusiver Empfehlungskanal</li>
+          <li>Naturland-Zertifizierung gemeinsam — wir finanzieren unseren Anteil</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-gold"></div>
+
+<!-- CTA + DOKUMENTE -->
+<section class="cta-section" id="dokumente">
+  <div class="section-inner fade">
+    <div class="section-eyebrow">Nächster Schritt</div>
+    <h2 class="section-title">Bereit für ein Gespräch? <em>Wir auch.</em></h2>
+    <p class="section-sub">Erstkontakt per E-Mail oder direkt in unseren Hersteller-Dokumenten-Bereich. Spec Sheet, Rezeptur-Übersicht, NDA-Template und Anschreiben-Vorlagen stehen passwortgeschützt bereit.</p>
+    <div class="hero-btns" style="margin-bottom:24px;">
+      <a href="mailto:info@zafao.world" class="btn-primary">Erstgespräch anfragen →</a>
+      <button class="btn-outline" onclick="scrollToDocs()">Hersteller-Dokumente ↓</button>
+    </div>
+    <p class="cta-contact">info@zafao.world · Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239</p>
+  </div>
+</section>
+
+<!-- HERSTELLER PORTAL -->
+<section id="hersteller-portal" style="background:rgba(7,11,5,.9);padding:80px 48px;border-top:1px solid rgba(201,148,58,0.2);">
+<div class="section-inner">
+  <div style="text-align:center;margin-bottom:48px;">
+    <div class="section-eyebrow" style="margin-bottom:8px;">Geschützter Bereich</div>
+    <h2 class="section-title" style="margin-bottom:10px;">Hersteller-<em>Dokumente</em></h2>
+    <p style="font-size:13px;color:rgba(244,239,228,0.4);max-width:500px;margin:0 auto;">Bitte füllen Sie zuerst die Geheimhaltungsvereinbarung aus. Danach erhalten Sie Zugang zu allen Unterlagen.</p>
+  </div>
+
+  <!-- STEP INDICATOR -->
+  <div id="step-indicator" style="display:flex;justify-content:center;gap:0;margin-bottom:48px;max-width:480px;margin-left:auto;margin-right:auto;">
+    <div class="step-ind active" id="ind-1" style="flex:1;text-align:center;padding:10px;border-bottom:2px solid var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);">01 NDA</div>
+    <div class="step-ind" id="ind-2" style="flex:1;text-align:center;padding:10px;border-bottom:2px solid rgba(201,148,58,.2);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.3);">02 Passwort</div>
+    <div class="step-ind" id="ind-3" style="flex:1;text-align:center;padding:10px;border-bottom:2px solid rgba(201,148,58,.2);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.3);">03 Dokumente</div>
+  </div>
+
+  <!-- STEP 1: NDA FORM -->
+  <div id="step-nda" style="max-width:580px;margin:0 auto;">
+    <div style="background:rgba(27,47,20,.25);border:1px solid rgba(201,148,58,.2);padding:36px 40px;">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:#fff;margin-bottom:6px;">Geheimhaltungsvereinbarung</h3>
+      <p style="font-size:12.5px;color:rgba(244,239,228,.45);margin-bottom:28px;">Mit Absenden bestätigen Sie die NDA mit der Zafao GmbH verbindlich. Laufzeit 5 Jahre.</p>
+
+      <form id="nda-form" name="equinat-hersteller-nda" netlify style="display:contents;">
+        <input type="hidden" name="form-name" value="equinat-hersteller-nda"/>
+
+        <div style="margin-bottom:18px;">
+          <label style="display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.4);margin-bottom:7px;">Firmenname <span style="color:var(--gold);">*</span></label>
+          <input type="text" name="firmenname" required placeholder="Muster GmbH & Co. KG" id="nda-firma"
+            style="width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s;"
+            onfocus="this.style.borderColor='rgba(201,148,58,.6)'" onblur="this.style.borderColor='rgba(201,148,58,.2)'"/>
+        </div>
+
+        <div style="margin-bottom:18px;">
+          <label style="display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.4);margin-bottom:7px;">Anschrift <span style="color:var(--gold);">*</span></label>
+          <input type="text" name="anschrift" required placeholder="Musterstraße 1, 12345 Musterstadt" id="nda-anschrift"
+            style="width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s;"
+            onfocus="this.style.borderColor='rgba(201,148,58,.6)'" onblur="this.style.borderColor='rgba(201,148,58,.2)'"/>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px;">
+          <div>
+            <label style="display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.4);margin-bottom:7px;">Ansprechpartner <span style="color:var(--gold);">*</span></label>
+            <input type="text" name="ansprechpartner" required placeholder="Max Mustermann" id="nda-name"
+              style="width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s;"
+              onfocus="this.style.borderColor='rgba(201,148,58,.6)'" onblur="this.style.borderColor='rgba(201,148,58,.2)'"/>
+          </div>
+          <div>
+            <label style="display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.4);margin-bottom:7px;">Funktion</label>
+            <input type="text" name="funktion" placeholder="Geschäftsführer"
+              style="width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s;"
+              onfocus="this.style.borderColor='rgba(201,148,58,.6)'" onblur="this.style.borderColor='rgba(201,148,58,.2)'"/>
+          </div>
+        </div>
+
+        <div style="margin-bottom:28px;">
+          <label style="display:block;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(244,239,228,.4);margin-bottom:7px;">E-Mail-Adresse <span style="color:var(--gold);">*</span></label>
+          <input type="email" name="email" required placeholder="kontakt@unternehmen.de" id="nda-email"
+            style="width:100%;background:rgba(244,239,228,.04);border:1px solid rgba(201,148,58,.2);color:var(--cream);font-family:'Instrument Sans',sans-serif;font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s;"
+            onfocus="this.style.borderColor='rgba(201,148,58,.6)'" onblur="this.style.borderColor='rgba(201,148,58,.2)'"/>
+        </div>
+
+        <div style="background:rgba(0,0,0,.3);padding:18px;margin-bottom:20px;border-left:2px solid rgba(201,148,58,.3);">
+          <p style="font-size:11.5px;color:rgba(244,239,228,.5);line-height:1.7;">
+            <strong style="color:rgba(244,239,228,.8);">Geheimhaltungsvereinbarung (Kurzfassung)</strong><br>
+            Alle übermittelten Informationen — Rezepturen, Spezifikationen, Preisstrukturen, Geschäftsstrategien — sind streng vertraulich zu behandeln. Keine Weitergabe an Dritte. Keine Nutzung für eigene Produktentwicklungen. Rückgabe aller Unterlagen bei Anfrage. Laufzeit: <strong style="color:rgba(244,239,228,.8);">5 Jahre</strong>. Vertragsstrafe bei Verstoß: <strong style="color:rgba(244,239,228,.8);">€25.000 je Vorfall</strong>. Gerichtsstand: Wiesbaden.
+          </p>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;">
+          <input type="checkbox" id="nda-accept" required
+            style="width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--gold);cursor:pointer;"/>
+          <label for="nda-accept" style="font-size:12.5px;color:rgba(244,239,228,.65);line-height:1.6;cursor:pointer;">
+            Ich bestätige verbindlich, die Geheimhaltungsvereinbarung der Zafao GmbH gelesen zu haben und akzeptiere diese als rechtsverbindlich für unser Unternehmen.
+          </label>
+        </div>
+
+        <div id="nda-err" style="font-size:12px;color:var(--red);min-height:16px;margin-bottom:10px;"></div>
+
+        <button type="button" onclick="submitNDA()" class="btn-primary" style="width:100%;">NDA akzeptieren & weiter →</button>
+      </form>
+
+      <p style="font-size:10.5px;color:rgba(244,239,228,.2);text-align:center;margin-top:14px;line-height:1.6;">
+        Eine Kopie wird automatisch an info@zafao.world übermittelt.<br>Zafao GmbH · HRB 33239 · AG Wiesbaden
+      </p>
+    </div>
+  </div>
+
+  <!-- STEP 2: PASSWORT -->
+  <div id="step-pw" style="display:none;max-width:480px;margin:0 auto;">
+    <div class="hportal-gate">
+      <div class="gate-title">Zugangscode eingeben</div>
+      <div class="gate-sub">NDA erfolgreich übermittelt. Geben Sie jetzt Ihren persönlichen Zugangscode ein — dieser wurde von EQUINAT per E-Mail mitgeteilt.</div>
+      <input type="password" id="hportal-input" placeholder="Zugangscode"/>
+      <div class="gate-err" id="hportal-err"></div>
+      <button class="btn-primary" style="width:100%;margin-top:4px;" onclick="checkHPortal()">Zugang öffnen →</button>
+      <p class="gate-note">Noch keinen Code erhalten? <a href="mailto:info@zafao.world?subject=EQUINAT%20Zugangscode" style="color:var(--gold);">info@zafao.world</a></p>
+    </div>
+  </div>
+
+  <!-- STEP 3: DOKUMENTE -->
+  <div id="step-docs" style="display:none;">
+    <div class="hportal-header">
+      <div>
+        <h2>Hersteller-Dokumente</h2>
+        <p>Alle Dokumente unterliegen der NDA-Pflicht · Zafao GmbH · Wiesbaden</p>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center;">
+        <span class="hportal-badge">ZUGANG AKTIV</span>
+        <button class="hportal-logout" onclick="hportalLogout()">Abmelden</button>
+      </div>
+    </div>
+    <div class="doc-portal-grid">
+      <a href="javascript:void(0)" class="doc-portal-card" style="--dpc:#C9943A;" onclick="openDocModal('spec')">
+        <div class="dpc-icon">📋</div>
+        <div class="dpc-name">Spec Sheet v1.0</div>
+        <div class="dpc-desc">Vollständiges Lastenheft · Tagesdosen · Wirkstoffspezifikationen · Pelletierparameter · HPLC-Anforderungen · Pilotmengen.</div>
+        <span class="dpc-tag red">NDA</span>
+      </a>
+      <a href="javascript:void(0)" class="doc-portal-card" style="--dpc:#E8B85A;" onclick="openDocModal('rezepturen')">
+        <div class="dpc-icon">🧪</div>
+        <div class="dpc-name">Rezeptur-Übersicht</div>
+        <div class="dpc-desc">Wirkstofflisten aller 5 Linien · Tagesdosen · Herkunft · Standardisierung · analytische Zielwerte.</div>
+        <span class="dpc-tag red">NDA</span>
+      </a>
+      <a href="javascript:void(0)" class="doc-portal-card" style="--dpc:#3A8A3A;" onclick="openDocModal('nda')">
+        <div class="dpc-icon">⚖️</div>
+        <div class="dpc-name">NDA-Volltext</div>
+        <div class="dpc-desc">Vollständiger Wortlaut der Geheimhaltungsvereinbarung zur internen Weiterleitung an Ihre Rechtsabteilung.</div>
+        <span class="dpc-tag">Download</span>
+      </a>
+      <a href="javascript:void(0)" class="doc-portal-card" style="--dpc:#8090D8;" onclick="openDocModal('anschreiben')">
+        <div class="dpc-icon">✉️</div>
+        <div class="dpc-name">Anforderungs-Checkliste</div>
+        <div class="dpc-desc">Standardisierte Checkliste für Ihre interne Prüfung von Kapazitäten, Zertifizierungen und Produktionstechnik.</div>
+        <span class="dpc-tag">Vorlage</span>
+      </a>
+      <a href="javascript:void(0)" class="doc-portal-card" style="--dpc:#D4813A;" onclick="openDocModal('qualitaet')">
+        <div class="dpc-icon">🏅</div>
+        <div class="dpc-name">Quality Manifest</div>
+        <div class="dpc-desc">Brand Doctrine und 6 verbindliche Hard Limits für alle EQUINAT-Lohnproduktionspartner.</div>
+        <span class="dpc-tag red">NDA</span>
+      </a>
+      <a href="mailto:info@zafao.world?subject=EQUINAT%20Hersteller-Anfrage" class="doc-portal-card" style="--dpc:#C9943A;">
+        <div class="dpc-icon">📞</div>
+        <div class="dpc-name">Erstgespräch anfragen</div>
+        <div class="dpc-desc">Alle Unterlagen geprüft? Schreiben Sie uns — wir melden uns innerhalb von 48 Stunden für ein erstes Gespräch.</div>
+        <span class="dpc-tag" style="background:rgba(201,148,58,.12);color:var(--gold-l);border-color:rgba(201,148,58,.3);">E-Mail öffnen</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">EQUINAT<span>®</span></div>
+    <div class="footer-info">Premium Pferdefutter · Naturland-Bio · Wissenschaftlich validiert<br>Ein Konzept der Zafao GmbH · Wiesbaden</div>
+  </div>
+  <div class="footer-info" style="text-align:center;">
+    info@zafao.world<br>Adolfsallee 22 · 65185 Wiesbaden<br>HRB 33239 · Amtsgericht Wiesbaden
+  </div>
+  <div class="footer-links">
+    <a href="#">Impressum</a>
+    <a href="#">Datenschutz</a>
+    <a href="#">NDA</a>
+  </div>
+</footer>
+
+<!-- DOC MODALS -->
+<div class="doc-modal-overlay" id="docModal">
+  <div class="doc-modal-box">
+    <div class="doc-modal-header">
+      <div class="doc-modal-title" id="docModalTitle">Dokument</div>
+      <button class="doc-modal-close" onclick="closeDocModal()">✕</button>
+    </div>
+    <div class="doc-modal-body" id="docModalBody"></div>
+  </div>
+</div>
+
+<script>
+// ─── HERSTELLER PORTAL AUTH ───
+const HP_HASH = '348344ec10e5218ad448bcbdeca005e0f6ea3609e42bd5712e00c69f2c7af32c';
+const HP_KEY  = 'eq_hersteller_auth';
+const NDA_KEY = 'eq_nda_done';
+
+async function sha256(msg){
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(msg));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+function setStep(n){
+  document.getElementById('step-nda').style.display = n===1 ? 'block' : 'none';
+  document.getElementById('step-pw').style.display  = n===2 ? 'block' : 'none';
+  document.getElementById('step-docs').style.display = n===3 ? 'block' : 'none';
+  [1,2,3].forEach(i=>{
+    const ind = document.getElementById('ind-'+i);
+    if(i<=n){
+      ind.style.color = 'var(--gold)';
+      ind.style.borderBottomColor = 'var(--gold)';
+    } else {
+      ind.style.color = 'rgba(244,239,228,.3)';
+      ind.style.borderBottomColor = 'rgba(201,148,58,.2)';
+    }
+  });
+  setTimeout(()=>document.getElementById('hersteller-portal').scrollIntoView({behavior:'smooth'}),100);
+}
+
+(function init(){
+  if(sessionStorage.getItem(HP_KEY)==='1'){
+    setStep(3); return;
+  }
+  if(sessionStorage.getItem(NDA_KEY)==='1'){
+    setStep(2); return;
+  }
+  setStep(1);
+  document.getElementById('hportal-input').addEventListener('keydown', e=>{
+    if(e.key==='Enter') checkHPortal();
+    document.getElementById('hportal-err').textContent='';
+  });
+})();
+
+function submitNDA(){
+  const firma = document.getElementById('nda-firma').value.trim();
+  const anschrift = document.getElementById('nda-anschrift').value.trim();
+  const name = document.getElementById('nda-name').value.trim();
+  const email = document.getElementById('nda-email').value.trim();
+  const accepted = document.getElementById('nda-accept').checked;
+  const err = document.getElementById('nda-err');
+
+  if(!firma || !anschrift || !name || !email){
+    err.textContent = 'Bitte alle Pflichtfelder ausfüllen.'; return;
+  }
+  if(!accepted){
+    err.textContent = 'Bitte die Geheimhaltungsvereinbarung akzeptieren.'; return;
+  }
+  err.textContent = '';
+
+  // Submit to Netlify Forms
+  const data = new URLSearchParams({
+    'form-name': 'equinat-hersteller-nda',
+    firmenname: firma, anschrift, ansprechpartner: name, email,
+    timestamp: new Date().toISOString()
+  });
+  fetch('/', {method:'POST', body: data}).catch(()=>{});
+
+  sessionStorage.setItem(NDA_KEY, '1');
+  setStep(2);
+  setTimeout(()=>document.getElementById('hportal-input').focus(), 400);
+}
+
+async function checkHPortal(){
+  const pw = document.getElementById('hportal-input').value;
+  if(!pw) return;
+  const hash = await sha256(pw);
+  if(hash===HP_HASH){
+    sessionStorage.setItem(HP_KEY,'1');
+    setStep(3);
+  } else {
+    document.getElementById('hportal-err').textContent='Zugangscode ungültig.';
+    document.getElementById('hportal-input').value='';
+    document.getElementById('hportal-input').focus();
+  }
+}
+
+function hportalLogout(){
+  sessionStorage.removeItem(HP_KEY);
+  sessionStorage.removeItem(NDA_KEY);
+  setStep(1);
+}
+
+function scrollToDocs(){
+  document.getElementById('hersteller-portal').scrollIntoView({behavior:'smooth'});
+}
+
+// ─── DOC MODALS ───
+
+const DOCS = {
+  spec: {
+    title: 'Spec Sheet v1.0 — Lastenheft',
+    body: `
+    <div class="modal-nda"><strong>NDA-Pflicht:</strong> Dieses Dokument enthält Geschäftsgeheimnisse der Zafao GmbH. Weitergabe ohne schriftliche Genehmigung ist untersagt.</div>
+    <h3>Übersicht der 4 Kernlinien</h3>
+    <table>
+    <tr><th>Produktlinie</th><th>Tagesdosis</th><th>Gebinde</th><th>COGS-Ziel</th></tr>
+    <tr><td>DAILY COMPLETE®</td><td>80g/500kg</td><td>25kg + 10kg</td><td>€1,80–2,10/kg</td></tr>
+    <tr><td>JOINT COMPLETE®</td><td>60g/500kg</td><td>5kg Eimer</td><td>€2,60–3,10/kg</td></tr>
+    <tr><td>RESPIRA COMPLETE®</td><td>50g+30ml/500kg</td><td>5kg Eimer</td><td>€2,80–3,40/kg</td></tr>
+    <tr><td>METABOLIC COMPLETE®</td><td>70g/500kg</td><td>5kg Eimer</td><td>€2,50–3,00/kg</td></tr>
+    </table>
+    <h3>Pflichtanforderungen Produktion</h3>
+    <ul>
+    <li>Cold-Press-Pelletierung: max. <strong>70°C</strong> Pressgut-Temperatur</li>
+    <li>Pellet-Durchmesser: <strong>6 mm</strong></li>
+    <li>Öl-Coating: nach Pelletierung, getrennte Coating-Trommel, min. 10 Min. Mischzeit</li>
+    <li>Restfeuchte Endprodukt: ≤ 11%</li>
+    <li>Stickstoffspülung bei Befüllung: O₂ &lt; 2%</li>
+    <li>Chargenrückverfolgung bis Rohstoffherkunft zwingend</li>
+    </ul>
+    <h3>Analytische Pflichtprüfung je Charge</h3>
+    <ul>
+    <li>Schwermetalle: Pb &lt;5mg/kg · Cd &lt;1mg/kg · Hg &lt;0,1mg/kg (ICP-MS)</li>
+    <li>Mykotoxine: Aflatoxin B1 &lt;0,01mg/kg · DON &lt;5mg/kg (LC-MS/MS)</li>
+    <li>HPLC Wirkstoff-Verifikation: Harpagosid ≥0,2% · Curcumin ≥0,9% · MSM ≥33%</li>
+    <li>Weender-Analyse: RP, RFE, RF, RA, Stärke, Zucker</li>
+    </ul>
+    <h3>Pilotmengen Phase 1</h3>
+    <table>
+    <tr><th>Linie</th><th>Menge</th><th>Ziel</th></tr>
+    <tr><td>DAILY COMPLETE®</td><td>1.000 kg</td><td>Markttauglichkeitstest</td></tr>
+    <tr><td>JOINT COMPLETE®</td><td>500 kg</td><td>HPLC-Wirkstoff-Verifikation</td></tr>
+    <tr><td>RESPIRA COMPLETE®</td><td>500 kg</td><td>Staubindex + Ölcoating-Prüfung</td></tr>
+    <tr><td>METABOLIC COMPLETE®</td><td>500 kg</td><td>NSC-Validierung &lt;8%</td></tr>
+    </table>
+    <h3>Zertifizierungsanforderungen</h3>
+    <table>
+    <tr><th>Zertifizierung</th><th>Zeitpunkt</th></tr>
+    <tr><td>GMP+B2 oder QS</td><td><strong>Tag 1 — zwingend</strong></td></tr>
+    <tr><td>HACCP dokumentiert</td><td>Tag 1</td></tr>
+    <tr><td>EU-Bio (VO 2018/848)</td><td>Innerhalb 12 Monate</td></tr>
+    <tr><td>Naturland (Ziel)</td><td>Innerhalb 18 Monate</td></tr>
+    </table>
+    <p><strong>Vollständige Rezepturen</strong> werden nach NDA-Unterzeichnung übermittelt. Bitte das NDA-Template herunterladen und unterzeichnet an info@zafao.world senden.</p>
+    `
+  },
+  rezepturen: {
+    title: 'Rezeptur-Übersicht (Wirkstoff-Abstrakt)',
+    body: `
+    <div class="modal-nda"><strong>NDA-Pflicht:</strong> Diese Zusammenfassung enthält vertrauliche Wirkstoffinformationen. Vollrezepturen nur nach NDA-Unterzeichnung.</div>
+    <h3>Dual-Postbiotika-Architektur (alle Linien)</h3>
+    <p>Alle EQUINAT-Linien enthalten <strong>Bacillus subtilis DSM 17299</strong> (EU-zugelassen, hitzestabil bis 80°C, pelletierbar) + <strong>SCFP (Saccharomyces cerevisiae Fermentationsprodukt)</strong> als Postbiotikum. Diese Kombination ist im DACH-Pferdefuttermarkt einzigartig.</p>
+    <h3>DAILY COMPLETE® — Schlüsselwirkstoffe</h3>
+    <table>
+    <tr><th>Wirkstoff</th><th>Form / Qualität</th><th>Tagesdosis 500kg</th></tr>
+    <tr><td>Selen</td><td>Selenreiche Hefe (SelenoSource AF®)</td><td>0,45 mg</td></tr>
+    <tr><td>Vitamin E</td><td>RRR-α-Tocopherol nat. (d-Form)</td><td>225 mg</td></tr>
+    <tr><td>Zink</td><td>Zink-Glycinchelat (Availa-Zn®)</td><td>90 mg</td></tr>
+    <tr><td>Biotin</td><td>D-Biotin 98%+</td><td>20 mg</td></tr>
+    <tr><td>B. subtilis</td><td>DSM 17299, EU-zug. Pferd</td><td>7,5×10¹⁰ CFU</td></tr>
+    </table>
+    <h3>JOINT COMPLETE® — Schlüsselwirkstoffe</h3>
+    <table>
+    <tr><th>Wirkstoff</th><th>Form / Qualität</th><th>Tagesdosis 500kg</th></tr>
+    <tr><td>MSM</td><td>OptiMSM® (destilliert, 99,9%)</td><td>20 g</td></tr>
+    <tr><td>Teufelskralle</td><td>Standardisiert 2,5% Harpagosid</td><td>3g Extrakt = 75mg Harpagosid</td></tr>
+    <tr><td>Curcumin</td><td>Meriva® (Phospholipidkomplex, 10× BV)</td><td>2,25 g</td></tr>
+    <tr><td>Boswellia</td><td>Standardisiert 65% Boswellinsäuren</td><td>1,2 g</td></tr>
+    </table>
+    <h3>RESPIRA COMPLETE® — Schlüsselwirkstoffe</h3>
+    <table>
+    <tr><th>Wirkstoff</th><th>Form</th><th>Tagesdosis</th></tr>
+    <tr><td>Quercetin</td><td>Quercetin-Dihydrat ≥95%</td><td>3 g</td></tr>
+    <tr><td>N-Acetylcystein</td><td>USP Pharma-Qualität</td><td>10 g</td></tr>
+    <tr><td>Schwarzkümmelöl</td><td>Bio, Thymochinon ≥1%</td><td>30 ml (Coating)</td></tr>
+    </table>
+    <h3>METABOLIC COMPLETE® — Schlüsselwirkstoffe</h3>
+    <table>
+    <tr><th>Wirkstoff</th><th>Form</th><th>Tagesdosis</th></tr>
+    <tr><td>Magnesium</td><td>Citrat + Oxid (1:2)</td><td>15 g Mg</td></tr>
+    <tr><td>Chrom-Hefe</td><td>Saccharomyces, ≥0,1% org. Chrom</td><td>3 mg Cr</td></tr>
+    <tr><td>Berberin</td><td>Berberis vulgaris, std. ≥95%</td><td>2 g</td></tr>
+    <tr><td>Mariendistel</td><td>Siliphos® (Phospholipidkomplex, 2,5× BV)</td><td>2,25 g</td></tr>
+    </table>
+    <p><strong>Vollständige Formeln</strong> mit allen Basiskomponenten, Mengenangaben, Rohstoffspezifikationen und Toleranzen werden nach NDA-Unterzeichnung und erstem Gespräch übermittelt.</p>
+    `
+  },
+  nda: {
+    title: 'NDA-Template — Geheimhaltungsvereinbarung',
+    body: `
+    <h3>Geheimhaltungsvereinbarung</h3>
+    <p>Zwischen der <strong>Zafao GmbH</strong>, Adolfsallee 22, 65185 Wiesbaden, HRB 33239 (nachfolgend „EQUINAT") und</p>
+    <p><strong>[Firmenname, Adresse, Registernummer]</strong> (nachfolgend „Hersteller")</p>
+    <h3>§ 1 Gegenstand</h3>
+    <p>Im Rahmen der Prüfung einer möglichen Lohnproduktions-Partnerschaft für die Marke EQUINAT® werden vertrauliche Informationen ausgetauscht. Diese Vereinbarung regelt den Schutz aller übermittelten Informationen.</p>
+    <h3>§ 2 Vertrauliche Informationen</h3>
+    <p>Als vertraulich gelten insbesondere: Produktrezepturen, Wirkstoffspezifikationen, Mengenverhältnisse, Rohstoffquellen, Preisstrukturen, Geschäftsstrategien, Kundendaten und alle technischen Unterlagen.</p>
+    <h3>§ 3 Geheimhaltungspflicht</h3>
+    <ul>
+    <li>Keine Weitergabe an Dritte ohne schriftliche Zustimmung</li>
+    <li>Ausschließliche Nutzung zum Zweck der Partnerschaftsprüfung</li>
+    <li>Keine Verwendung für eigene Produktentwicklungen</li>
+    <li>Rückgabe oder Vernichtung aller Unterlagen bei Vertragsende</li>
+    </ul>
+    <h3>§ 4 Laufzeit</h3>
+    <p>Diese Vereinbarung gilt für <strong>5 Jahre</strong> ab Unterzeichnung, unabhängig vom Ausgang der Partnerschaftsverhandlungen.</p>
+    <h3>§ 5 Vertragsstrafe</h3>
+    <p>Bei schuldhaftem Verstoß: Vertragsstrafe von <strong>€25.000</strong> je Verstoß, unbeschadet weitergehender Schadensersatzansprüche.</p>
+    <h3>§ 6 Anwendbares Recht</h3>
+    <p>Deutsches Recht. Gerichtsstand: Wiesbaden.</p>
+    <br>
+    <p><strong>Bitte unterzeichnet zurücksenden an:</strong><br>
+    info@zafao.world<br>
+    Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden</p>
+    <p>Nach Eingang der unterzeichneten NDA erhalten Sie innerhalb von 48h Zugang zu den vollständigen Rezepturen und dem vollständigen Spec Sheet.</p>
+    `
+  },
+  anschreiben: {
+    title: 'Anschreiben & Anforderungs-Checkliste',
+    body: `
+    <h3>Muster-Anschreiben für Ihren Rücklauf</h3>
+    <p>Sehr geehrtes EQUINAT-Team,</p>
+    <p>vielen Dank für die Übermittlung der Unterlagen zum EQUINAT®-Lohnproduktions-Projekt. Gerne teilen wir Ihnen unsere ersten Rückmeldungen mit:</p>
+    <h3>Unsere Zertifizierungen</h3>
+    <table>
+    <tr><th>Zertifizierung</th><th>Status</th></tr>
+    <tr><td>GMP+B2</td><td>[ ] Vorhanden · [ ] In Vorbereitung · [ ] Nicht vorhanden</td></tr>
+    <tr><td>QS-Zertifizierung</td><td>[ ] Vorhanden · [ ] In Vorbereitung · [ ] Nicht vorhanden</td></tr>
+    <tr><td>HACCP</td><td>[ ] Vorhanden · [ ] In Vorbereitung · [ ] Nicht vorhanden</td></tr>
+    <tr><td>EU-Bio (VO 2018/848)</td><td>[ ] Vorhanden · [ ] Bereitschaft · [ ] Nicht möglich</td></tr>
+    </table>
+    <h3>Produktionstechnik</h3>
+    <table>
+    <tr><th>Anforderung</th><th>Verfügbar?</th></tr>
+    <tr><td>Cold-Press-Pelletierung max. 70°C</td><td>[ ] Ja · [ ] Nein · [ ] Anpassbar</td></tr>
+    <tr><td>Öl-Coating-Anlage (nach Pelletierung)</td><td>[ ] Ja · [ ] Nein · [ ] Zulieferer</td></tr>
+    <tr><td>Pellet-Ø 6mm</td><td>[ ] Ja · [ ] Andere: ___</td></tr>
+    <tr><td>Stickstoffspülung bei Befüllung</td><td>[ ] Ja · [ ] Nein</td></tr>
+    </table>
+    <h3>Kapazitäten</h3>
+    <table>
+    <tr><th>Parameter</th><th>Ihre Angabe</th></tr>
+    <tr><td>Verfügbare Kapazität ab sofort</td><td>___ t/Monat</td></tr>
+    <tr><td>Max. Kapazität skalierbar</td><td>___ t/Monat</td></tr>
+    <tr><td>Kleinste Pilotcharge möglich</td><td>___ kg</td></tr>
+    <tr><td>Lieferzeit ab NDA-Unterzeichnung</td><td>___ Wochen Pilotcharge</td></tr>
+    </table>
+    <p>Bitte senden Sie diesen ausgefüllten Rücklauf zusammen mit der unterzeichneten NDA an: <strong>info@zafao.world</strong></p>
+    `
+  },
+  qualitaet: {
+    title: 'Quality Manifest — 6 Hard Limits',
+    body: `
+    <div class="modal-nda"><strong>NDA-Pflicht:</strong> Diese Qualitätsstandards sind verbindlich für alle EQUINAT-Lohnproduktionspartner.</div>
+    <h3>Die 6 Hard Limits — nicht verhandelbar</h3>
+    <p>Diese Standards gelten für alle EQUINAT-Lohnhersteller ab Tag 1. Abweichungen führen zur Kündigung des Rahmenvertrags.</p>
+    <table>
+    <tr><th>Limit</th><th>Regel</th></tr>
+    <tr><td><strong>HL-1</strong></td><td>Kein synthetisches Vitamin A — nur natürliches β-Carotin aus zertifizierten Pflanzenquellen</td></tr>
+    <tr><td><strong>HL-2</strong></td><td>Kein Melasse-Einsatz — weder als Bindemittel noch als Geschmacksträger</td></tr>
+    <tr><td><strong>HL-3</strong></td><td>Keine anorganischen Mineralien als Primärquelle — organisch gebundene Formen (Chelate, Hefe) zwingend</td></tr>
+    <tr><td><strong>HL-4</strong></td><td>Alle FEI-relevanten Stoffe (Teufelskralle, Vitex, Ingwer) auf Verpackung und Beipackzettel explizit kennzeichnen</td></tr>
+    <tr><td><strong>HL-5</strong></td><td>Keine therapeutischen Claims auf Verpackung oder Werbung — nur im Rahmen von VO (EG) 767/2009</td></tr>
+    <tr><td><strong>HL-6</strong></td><td>Keine Produktion ohne GMP+B2 oder QS-Äquivalent — auch für Pilotchargen keine Ausnahmen</td></tr>
+    </table>
+    <h3>Verarbeitungsparameter (verbindlich)</h3>
+    <table>
+    <tr><th>Parameter</th><th>Spezifikation</th></tr>
+    <tr><td>Presstemperatur Düse</td><td>max. 65–70°C</td></tr>
+    <tr><td>Pellet-Ø</td><td>6 mm</td></tr>
+    <tr><td>Restfeuchte</td><td>≤ 11%</td></tr>
+    <tr><td>Ölcoating nach Pelletierung</td><td>Rotationstrommel, min. 10 Min.</td></tr>
+    <tr><td>Stickstoffspülung</td><td>O₂ &lt; 2% bei Befüllung</td></tr>
+    <tr><td>MHD versiegelt</td><td>6 Monate</td></tr>
+    </table>
+    <h3>Chargendokumentation (zwingend)</h3>
+    <ul>
+    <li>CoA (Certificate of Analysis) für jeden Eingangs-Wirkstoff</li>
+    <li>HPLC-Zertifikat je Charge (extern: Eurofins oder SGS)</li>
+    <li>Schwermetall-Screening ICP-MS je Charge</li>
+    <li>Rückverfolgbarkeit bis Rohstoff-Ursprungsbetrieb dokumentiert</li>
+    </ul>
+    `
+  }
+};
+
+function openDocModal(key){
+  const doc = DOCS[key];
+  if(!doc) return;
+  document.getElementById('docModalTitle').textContent = doc.title;
+  document.getElementById('docModalBody').innerHTML = doc.body;
+  document.getElementById('docModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+
+function closeDocModal(){
+  document.getElementById('docModal').classList.remove('active');
+  document.body.style.overflow='';
+}
+
+document.getElementById('docModal').addEventListener('click',e=>{
+  if(e.target===document.getElementById('docModal')) closeDocModal();
+});
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDocModal(); });
+
+// ─── SCROLL ANIMATIONS ───
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
+},{threshold:0.08});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
