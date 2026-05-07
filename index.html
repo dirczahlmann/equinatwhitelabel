@@ -70,6 +70,10 @@ tr.eq td{background:rgba(201,148,58,.06);font-weight:600;color:var(--gold-l);}
 .pc-specs{padding-top:14px;border-top:1px solid var(--border);}
 .psr{display:flex;justify-content:space-between;font-size:11.5px;padding:3px 0;}
 .psr .pk{color:var(--cream-3);}.psr .pv{font-family:'DM Mono',monospace;}
+.pc.phase2{opacity:.92;border-top:2px solid var(--gold);position:relative;}
+.pc.phase2::before{content:'PHASE 2 · Q3 2027';position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(201,148,58,.15),rgba(201,148,58,.05));color:var(--gold-l);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:3px;text-align:center;padding:6px 0;border-bottom:1px solid var(--border-s);}
+.pc.phase2{padding-top:46px;}
+.pc.phase2 .pc-name::after{content:' ™';font-size:.55em;color:var(--gold);vertical-align:super;letter-spacing:0;font-family:'Instrument Sans',sans-serif;}
 /* MOATS */
 .mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
 .moat{background:rgba(27,47,20,.2);border:1px solid var(--border);padding:28px 26px;}
@@ -154,7 +158,7 @@ nav,section,footer{padding-left:20px;padding-right:20px;}
 <div class="stats">
 <div class="stat"><span class="stat-num">€840M</span><span class="stat-label">DACH Marktvolumen</span></div>
 <div class="stat"><span class="stat-num">0</span><span class="stat-label">Echte All-in-One Anbieter</span></div>
-<div class="stat"><span class="stat-num">5+2</span><span class="stat-label">Linien + Booster</span></div>
+<div class="stat"><span class="stat-num">6+2</span><span class="stat-label">Linien + Booster</span></div>
 <div class="stat"><span class="stat-num">€39–144</span><span class="stat-label">Subscription-Spanne / Mt</span></div>
 </div>
 <div class="btns">
@@ -191,9 +195,9 @@ nav,section,footer{padding-left:20px;padding-right:20px;}
 <!-- PRODUKTE -->
 <section id="produkte" style="padding-bottom:0;">
 <div class="si fade">
-<div class="eyebrow">Das EQUINAT SYSTEM® — 5 Linien + 2 Booster</div>
-<h2 class="st">Vier Bedürfnisse + Mash. <em>Ein vollständiges System.</em></h2>
-<p class="ss">Cold-Press max. 70°C · Naturland-Bio-Basis · HPLC-verifiziert je Charge · Dual-Postbiotika B. subtilis + SCFP. EQUINAT ergänzt zu Heu und ggf. Kraftfutter — kein Vollfuttermittel-Ersatz.</p>
+<div class="eyebrow">Das EQUINAT SYSTEM® — 6 Linien + 2 Booster</div>
+<h2 class="st">Sechs Linien. <em>Ein vollständiges System.</em></h2>
+<p class="ss">Cold-Press max. 70°C · Naturland-Bio-Basis · HPLC-verifiziert je Charge · Dual-Postbiotika B. subtilis + SCFP. <strong style="color:var(--cream);">Phase 1 (Linien 01–05 + Mash) startet 2026. Phase 2 (BASE COMPLETE™, Linie 06) Q3 2027.</strong> EQUINAT ergänzt zu Heu und ggf. Kraftfutter — kein Vollfuttermittel-Ersatz.</p>
 </div>
 <div class="pg">
 <div class="pc">
@@ -268,8 +272,22 @@ nav,section,footer{padding-left:20px;padding-right:20px;}
 </div>
 </div>
 </div>
+<div class="pc phase2">
+<div class="pc-tag">Formel 06 · Trog-Basis · Phase 2</div>
+<div class="pc-num">06</div>
+<div class="pc-name">BASE COMPLETE</div>
+<div class="pc-desc">Strukturreiche Premium-Trog-Basis. Naturland-Bio, getreidefrei, magenfreundlich. Schließt die emotionale Trog-Lücke zwischen Heu und Therapie-Linien — ohne in den klassischen Müsli-Massenmarkt zu rutschen.</div>
+<div class="ings"><span class="ing k">Wiesenheu-Cobs Naturland</span><span class="ing">Luzerne moderat</span><span class="ing">Leinsamen ganz</span><span class="ing">Apfeltrester</span><span class="ing">Sonnenblumenkerne</span><span class="ing">Hagebutte (Vit C)</span></div>
+<div class="pc-specs">
+<div class="psr"><span class="pk">Tagesdosis</span><span class="pv">300–1.500 g je Pferd</span></div>
+<div class="psr"><span class="pk">Gebinde</span><span class="pv">15 kg (€49) · 20 kg (€59) · vorl.</span></div>
+<div class="psr"><span class="pk">NSC-Wert</span><span class="pv">≤12% · getreidefrei</span></div>
+<div class="psr"><span class="pk">Launch</span><span class="pv">voraussichtlich Q3 2027</span></div>
+</div>
+</div>
 </div>
 </section>
+
 
 <div class="dg"></div>
 
@@ -315,13 +333,14 @@ nav,section,footer{padding-left:20px;padding-right:20px;}
 <li>Chargengenaue Rückverfolgung bis Rohstoffherkunft</li>
 <li>Bereitschaft zur Naturland-Bio-Zertifizierung binnen 12 Monaten</li>
 <li>IP-Trennung zu eigenen Wettbewerbsprodukten</li>
+<li>Skalierbare Volumen-Kapazität für Phase-2-Trog-Basisfutter (Strukturmischung, getreidefrei)</li>
 <li>Standort bevorzugt DACH-Raum</li>
 </ul>
 </div>
 <div>
 <h3>Was wir bieten</h3>
 <ul class="rl">
-<li>5 vollständige Produktlinien (7 SKUs), NDA-geschützt</li>
+<li>6 Produktlinien (8 SKUs): Phase 1 mit DAILY/JOINT/RESPIRA/METABOLIC/MASH (7 SKUs ab 2026), Phase 2 mit BASE COMPLETE™ ab Q3 2027</li>
 <li>Öffentliches Vet-Advisory Board sichert alle Claims ab</li>
 <li>Vollständiges Branding und Verpackungsdesign DE & EN</li>
 <li>PferdeBot® KI-System generiert qualifizierte Kaufentscheidungen</li>
