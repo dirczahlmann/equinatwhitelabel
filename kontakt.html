@@ -69,15 +69,36 @@ select option{background:#0D1209;}
 textarea{resize:vertical;min-height:100px;}
 .nda-section{border-top:1px solid var(--border);padding-top:28px;margin-top:8px;}
 .nda-section h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
-.nda-text{background:rgba(0,0,0,.3);padding:18px 20px;margin-bottom:18px;border-left:2px solid rgba(201,148,58,.25);font-size:12px;color:rgba(244,239,228,.5);line-height:1.75;}
-.nda-text strong{color:rgba(244,239,228,.8);}
+.nda-text{background:rgba(0,0,0,.3);padding:18px 20px;margin-bottom:14px;border-left:2px solid rgba(201,148,58,.25);font-size:12px;color:rgba(244,239,228,.6);line-height:1.75;}
+.nda-text strong{color:rgba(244,239,228,.85);}
+.nda-actions{display:flex;gap:18px;margin-bottom:20px;flex-wrap:wrap;}
+.nda-link{color:var(--gold);background:none;border:none;border-bottom:1px solid rgba(201,148,58,.3);
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;padding:0 0 2px 0;
+  font-family:'Instrument Sans',sans-serif;text-decoration:none;display:inline-block;}
+.nda-link:hover{color:var(--gold-l);border-bottom-color:var(--gold-l);}
 .checkbox-row{display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;}
 .checkbox-row input[type=checkbox]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--gold);cursor:pointer;}
-.checkbox-row label{font-size:12.5px;color:rgba(244,239,228,.65);cursor:pointer;letter-spacing:0;text-transform:none;}
+.checkbox-row label{font-size:12.5px;color:rgba(244,239,228,.7);cursor:pointer;letter-spacing:0;text-transform:none;line-height:1.6;}
+.checkbox-row label strong{color:rgba(244,239,228,.95);}
 .btn-p{display:block;width:100%;background:var(--gold);color:var(--dark);border:none;padding:16px;font-family:'Instrument Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
 .btn-p:hover{background:var(--gold-l);}
 .err{font-size:12px;color:var(--red);min-height:16px;margin-bottom:10px;}
 .form-note{font-size:10.5px;color:rgba(244,239,228,.2);text-align:center;margin-top:14px;line-height:1.6;}
+
+/* MODAL */
+#nda-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;overflow-y:auto;padding:32px 16px;}
+#nda-modal.open{display:flex;align-items:flex-start;justify-content:center;}
+#nda-modal-box{background:#0D1209;border:1px solid var(--border-s);max-width:780px;width:100%;margin:auto;padding:40px 44px;}
+#nda-modal-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+#nda-modal-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;margin:0;}
+#nda-modal-close{background:none;border:none;color:rgba(244,239,228,.5);font-size:1.6rem;cursor:pointer;line-height:1;padding:4px 8px;}
+#nda-modal-close:hover{color:#fff;}
+#nda-modal-body{font-size:13px;color:rgba(244,239,228,.85);line-height:1.75;}
+#nda-modal-body h3{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--gold-l);margin:20px 0 8px;}
+#nda-modal-body h3:first-child{margin-top:0;}
+#nda-modal-body p{margin-bottom:10px;}
+#nda-modal-body strong{color:#F4EFE4;}
+#nda-modal-body .small{font-size:11px;color:rgba(244,239,228,.5);font-style:italic;border-top:1px solid rgba(201,148,58,.1);padding-top:14px;margin-top:20px;}
 
 /* SUCCESS */
 .success{display:none;text-align:center;padding:60px 40px;}
@@ -95,6 +116,7 @@ textarea{resize:vertical;min-height:100px;}
   .intro{grid-template-columns:1fr;}
   .form-card{padding:28px 20px;}
   .form-row{grid-template-columns:1fr;}
+  #nda-modal-box{padding:24px 20px;}
 }
 </style>
 </head>
@@ -107,7 +129,8 @@ textarea{resize:vertical;min-height:100px;}
   <input name="email"/><input name="telefon"/>
   <input name="kapazitaet"/><input name="zertifizierung"/>
   <textarea name="nachricht"></textarea>
-  <input name="nda_akzeptiert"/><input name="timestamp"/>
+  <input name="click_nda_akzeptiert"/><input name="timestamp"/>
+  <input name="user_agent"/><input name="sprache"/>
 </form>
 
 <nav>
@@ -124,19 +147,19 @@ textarea{resize:vertical;min-height:100px;}
       <h1 class="intro-title">Erstgespräch <em>vereinbaren.</em></h1>
       <p class="intro-text">Wir freuen uns über Ihr Interesse an einer Lohnproduktions-Partnerschaft für EQUINAT®. Bevor wir Rezepturen, Spezifikationen und Konditionen besprechen, bitten wir Sie um einen kurzen Schritt vorab.</p>
       <div class="why-box">
-        <h3>Warum zuerst die NDA?</h3>
-        <p>EQUINAT® enthält fünf vollständig entwickelte Produktrezepturen mit patentierten Wirkstoffen (Meriva®, GOPO®, OptiMSM®) und proprietärer Formulierungstechnik. Diese Information ist unser wichtigstes Kapital — und sie gehört in gute Hände.</p>
+        <h3>Warum zuerst die Click-NDA?</h3>
+        <p>EQUINAT® enthält sechs vollständig entwickelte Produktrezepturen mit patentierten Wirkstoffen (Meriva®, GOPO®, OptiMSM®) und proprietärer Formulierungstechnik. Diese Information ist unser wichtigstes Kapital — und sie gehört in gute Hände.</p>
         <ul>
           <li>Schützt beide Parteien rechtlich von Anfang an</li>
-          <li>Ermöglicht ein offenes, detailliertes Erstgespräch ohne Einschränkungen</li>
-          <li>Ist Standard in jeder ernsthaften Industriepartnerschaft</li>
+          <li>Ermöglicht ein offenes, detailliertes Erstgespräch</li>
+          <li>Standard in jeder ernsthaften Industriepartnerschaft</li>
           <li>Signalisiert gegenseitigen professionellen Respekt</li>
         </ul>
         <p style="margin-top:14px;padding:12px 16px;background:rgba(201,148,58,.1);border-left:2px solid var(--gold);font-size:12.5px;line-height:1.7;">
-          <strong style="color:rgba(244,239,228,.9);">Nach Eingang Ihrer NDA-Anfrage erhalten Sie:</strong><br>
+          <strong style="color:rgba(244,239,228,.9);">Nach Eingang Ihrer Anfrage erhalten Sie:</strong><br>
           → Persönliche Rückmeldung von Dirc Zahlmann innerhalb 48h<br>
-          → Ihren individuellen <strong style="color:var(--gold-l);">Zugangscode zum EQUINAT Dataroom</strong><br>
-          → Zugang zu allen Vollrezepturen, Spec Sheet, Quality Manifest, Rohstoff-Sourcing und Kalkulations-Grundlagen
+          → Bestätigungs-E-Mail mit Click-NDA-Volltext und <strong style="color:var(--gold-l);">Foundation-NDA als PDF</strong><br>
+          → Bei beiderseitigem Interesse: Zugangscode zum EQUINAT-Dataroom mit Vollrezepturen, Spec Sheet, Quality Manifest und Kalkulations-Grundlagen
         </p>
       </div>
     </div>
@@ -145,8 +168,8 @@ textarea{resize:vertical;min-height:100px;}
         <div class="sv-item">
           <div class="sv-num">01</div>
           <div class="sv-content">
-            <div class="sv-title">Anfrage & NDA senden</div>
-            <div class="sv-desc">Formular ausfüllen, NDA digital akzeptieren, Anfrage absenden.</div>
+            <div class="sv-title">Anfrage & Click-NDA senden</div>
+            <div class="sv-desc">Formular ausfüllen, Click-NDA digital akzeptieren, Anfrage absenden.</div>
             <div class="sv-time">→ Jetzt · 3 Minuten</div>
           </div>
         </div>
@@ -154,7 +177,7 @@ textarea{resize:vertical;min-height:100px;}
           <div class="sv-num">02</div>
           <div class="sv-content">
             <div class="sv-title">Persönliche Rückmeldung</div>
-            <div class="sv-desc">Dirc Zahlmann meldet sich direkt per E-Mail oder Telefon — inklusive Ihrem persönlichen Zugangscode zum Hersteller-Dataroom.</div>
+            <div class="sv-desc">Dirc Zahlmann meldet sich direkt per E-Mail oder Telefon — inklusive Bestätigung der Click-NDA und Zugang zum Foundation-NDA.</div>
             <div class="sv-time">→ Innerhalb 48 Stunden</div>
           </div>
         </div>
@@ -162,7 +185,7 @@ textarea{resize:vertical;min-height:100px;}
           <div class="sv-num">03</div>
           <div class="sv-content">
             <div class="sv-title">Erstgespräch (Video oder Vor-Ort)</div>
-            <div class="sv-desc">Vollständige Rezepturen, Anforderungen, Volumen und Konditionen besprechen.</div>
+            <div class="sv-desc">Vollständige Rezepturen, Anforderungen, Volumen und Konditionen besprechen — nach Foundation-NDA-Unterzeichnung.</div>
             <div class="sv-time">→ Ca. 45–60 Minuten</div>
           </div>
         </div>
@@ -240,25 +263,31 @@ textarea{resize:vertical;min-height:100px;}
       <textarea id="f-msg" placeholder="Was macht Ihren Betrieb für eine EQUINAT-Partnerschaft geeignet? Erfahrungen, Besonderheiten, Fragen..."></textarea>
     </div>
 
-    <!-- NDA -->
+    <!-- CLICK-NDA -->
     <div class="nda-section">
-      <h3>Geheimhaltungsvereinbarung (NDA) <span style="color:var(--gold);">✦</span></h3>
+      <h3>Click-NDA — Geheimhaltungsvereinbarung Erstsondierung <span style="color:var(--gold);">✦</span></h3>
       <div class="nda-text">
-        <strong>Kurzfassung — Geheimhaltungsvereinbarung Zafao GmbH:</strong><br><br>
-        Alle übermittelten Informationen — Produktrezepturen, Wirkstoffspezifikationen, Mengenverhältnisse, Rohstoffquellen, Preisstrukturen und Geschäftsstrategien der Zafao GmbH — sind streng vertraulich zu behandeln.<br><br>
-        <strong>Pflichten des Herstellers:</strong> Keine Weitergabe an Dritte ohne schriftliche Zustimmung. Keine Nutzung für eigene Produktentwicklungen. Rückgabe aller Unterlagen auf Anfrage.<br><br>
-        <strong>Laufzeit: 5 Jahre</strong> ab Unterzeichnung, unabhängig vom Ausgang der Gespräche.<br>
-        <strong>Vertragsstrafe bei Verstoß: €25.000 je Vorfall</strong>, unbeschadet weiterer Ansprüche nach GeschGehG.<br>
-        Gerichtsstand: Wiesbaden · Deutsches Recht.
+        <strong>Kurzfassung der EQUINAT® Click-NDA — Zafao GmbH:</strong><br><br>
+        Alle übermittelten Informationen — Produktrezepturen, Wirkstoffspezifikationen, Mengenverhältnisse, Rohstoffquellen, Pricing-Strategien, COGS-Ziele und Geschäftsstrategien der Zafao GmbH — sind streng vertraulich zu behandeln.<br><br>
+        <strong>Pflichten des Empfängers:</strong> Keine Weitergabe an Dritte ohne schriftliche Zustimmung. Keine Nutzung für eigene Produktentwicklungen. Rückgabe aller Unterlagen auf Anfrage.<br><br>
+        <strong>Geltungsdauer: 24 Monate</strong> ab digitaler Zustimmung.<br>
+        <strong>Stufung:</strong> Diese Click-NDA gilt nur für die Erstsondierungs-Phase. Für konkrete Verhandlungen, Spec-Sheet-Übergabe, Pilotchargen oder Pricing-Diskussionen wird der vollständige beidseitig unterschriebene <strong>Foundation-NDA</strong> vorausgesetzt (8 Seiten, PDF-Download verfügbar).<br><br>
+        Rechtsgrundlage: §§ 145 ff. BGB · Geschäftsgeheimnisgesetz (GeschGehG) · Gerichtsstand: Wiesbaden · Deutsches Recht.
       </div>
+
+      <div class="nda-actions">
+        <button type="button" class="nda-link" onclick="openNdaModal()">▸ Click-NDA Volltext lesen</button>
+        <a class="nda-link" href="EQUINAT-NDA-Template.pdf" target="_blank" rel="noopener" download>▸ Foundation-NDA als PDF herunterladen</a>
+      </div>
+
       <div class="checkbox-row">
         <input type="checkbox" id="cb-nda"/>
-        <label for="cb-nda">Ich bestätige verbindlich, die Geheimhaltungsvereinbarung der Zafao GmbH gelesen zu haben, und akzeptiere diese als rechtsverbindlich für unser Unternehmen. Die digitale Bestätigung hat die Wirkung einer handschriftlichen Unterschrift.</label>
+        <label for="cb-nda">Ich bestätige verbindlich, die EQUINAT® <strong>Click-NDA</strong> gelesen zu haben, und akzeptiere diese für die Phase der Erstsondierung als rechtsverbindlich für unser Unternehmen. Mir ist bewusst, dass für konkrete Verhandlungen der unterschriebene <strong>Foundation-NDA</strong> erforderlich ist. Die digitale Bestätigung hat im Rahmen dieser Click-NDA die Wirkung einer Willenserklärung gemäß § 145 ff. BGB.</label>
       </div>
     </div>
 
     <div class="err" id="form-err"></div>
-    <button class="btn-p" onclick="submitForm()">Anfrage & NDA verbindlich senden →</button>
+    <button class="btn-p" onclick="submitForm()">Anfrage & Click-NDA verbindlich senden →</button>
     <p class="form-note">Wir melden uns innerhalb von 48 Stunden persönlich · Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden</p>
   </div>
 
@@ -266,7 +295,8 @@ textarea{resize:vertical;min-height:100px;}
   <div class="success" id="success">
     <div class="success-icon">🤝</div>
     <h2 class="success-title">Anfrage eingegangen.</h2>
-    <p class="success-text">Vielen Dank für Ihr Interesse und die Unterzeichnung der NDA.<br><br>
+    <p class="success-text">Vielen Dank für Ihr Interesse und die Bestätigung der Click-NDA.<br><br>
+    Sie erhalten in Kürze eine <strong>Bestätigungs-E-Mail</strong> mit dem Click-NDA-Volltext und dem <strong>Foundation-NDA als PDF-Anhang</strong>.<br><br>
     <strong>Dirc Zahlmann</strong> wird sich persönlich bei Ihnen melden — in der Regel <strong>innerhalb von 48 Stunden</strong>.<br><br>
     Wir freuen uns auf das Gespräch.</p>
     <a href="index.html" style="display:inline-block;background:var(--gold);color:var(--dark);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none;">← Zurück zur Pitch-Seite</a>
@@ -274,9 +304,68 @@ textarea{resize:vertical;min-height:100px;}
 
 </div>
 
+<!-- CLICK-NDA MODAL -->
+<div id="nda-modal" role="dialog" aria-labelledby="nda-modal-title" aria-modal="true">
+  <div id="nda-modal-box">
+    <div id="nda-modal-head">
+      <h2 id="nda-modal-title">EQUINAT® Click-NDA — Erstsondierung</h2>
+      <button id="nda-modal-close" onclick="closeNdaModal()" aria-label="Schließen">✕</button>
+    </div>
+    <div id="nda-modal-body">
+
+      <h3>Vertraulichkeitsvereinbarung (Click-NDA)</h3>
+      <p>zwischen <strong>Zafao GmbH</strong> (HRB 33239, Adolfsallee 22, 65185 Wiesbaden, nachfolgend „EQUINAT“) und dem unterzeichnenden Hersteller (nachfolgend „Empfänger“).</p>
+
+      <h3>Präambel</h3>
+      <p>EQUINAT plant den Marktstart einer Premium-Pferdefutter-Marke im DACH-Raum und sucht qualifizierte Hersteller-Partner. Diese Click-NDA regelt den vertraulichen Umgang mit Informationen, die im Rahmen einer Erstsondierung übermittelt werden.</p>
+
+      <h3>§ 1 — Vertrauliche Informationen</h3>
+      <p>Vertraulich sind alle Informationen, die EQUINAT dem Empfänger über die Whitelabel-Site, das Hersteller-Portal oder im direkten Austausch zur Verfügung stellt, insbesondere: (a) Produktrezepturen und Wirkstoff-Zusammensetzungen; (b) Produktions-Spezifikationen und Qualitäts-Parameter; (c) Pricing-Strategien, Margen-Kalkulationen und COGS-Ziele; (d) Marktanalysen, Persona-Definitionen und Vertriebsstrategien; (e) Markenarchitektur, Differenzierungs-Konzepte und Naming; (f) Geplante oder laufende Hersteller-Verhandlungen mit Dritten.</p>
+      <p>Nicht vertraulich sind Informationen, die bereits öffentlich bekannt sind, dem Empfänger nachweislich bereits bekannt waren, oder durch berechtigte Dritte ohne Vertraulichkeitspflicht übermittelt werden.</p>
+
+      <h3>§ 2 — Verpflichtungen des Empfängers</h3>
+      <p>Der Empfänger verpflichtet sich, vertrauliche Informationen ausschließlich für Zwecke der Hersteller-Sondierung zu nutzen, sie nicht an Dritte weiterzugeben (ausgenommen interne Mitarbeiter mit zwingender Notwendigkeit und vergleichbarer Geheimhaltungspflicht), sie mit branchenüblicher Sorgfalt zu schützen, und auf Anfrage erhaltene Materialien zu vernichten oder zurückzusenden.</p>
+
+      <h3>§ 3 — Keine Lizenzierung</h3>
+      <p>Diese Vereinbarung gewährt dem Empfänger keine Lizenz oder Nutzungsrechte an EQUINAT-Marken, -Konzepten, -Rezepturen oder anderen geistigen Schutzrechten. Alle Rechte verbleiben bei EQUINAT bzw. der Zafao GmbH.</p>
+
+      <h3>§ 4 — Geltungsdauer und Folge-NDA</h3>
+      <p>Diese Click-NDA gilt für <strong>24 Monate</strong> ab Zustimmung. Sie regelt ausschließlich die Phase der Erstsondierung. Für konkrete Vertragsverhandlungen, Pilotchargen, Spec-Sheet-Übergabe oder Pricing-Verhandlungen ist der vollständige, beidseitig unterzeichnete <strong>EQUINAT Foundation-NDA</strong> erforderlich (8 Seiten, separater Vertrag, PDF-Download verfügbar).</p>
+      <p>Der Foundation-NDA ergänzt und vertieft diese Click-NDA; bei Konflikten zwischen den Bestimmungen gilt der Foundation-NDA als die strengere Regelung.</p>
+
+      <h3>§ 5 — Rechtliche Grundlagen</h3>
+      <p>Diese Click-NDA bildet einen Vertrag im Sinne des deutschen Bürgerlichen Gesetzbuchs (§§ 145 ff. BGB) und schützt Geschäftsgeheimnisse im Sinne des Geschäftsgeheimnisgesetzes (GeschGehG).</p>
+      <p>Bei Verstoß gegen diese Vereinbarung haftet der Empfänger nach den allgemeinen Bestimmungen des deutschen Schadensersatzrechts. Eine pauschale Vertragsstrafe ist im Foundation-NDA geregelt.</p>
+      <p>Erfüllungsort und ausschließlicher Gerichtsstand ist Wiesbaden, Deutschland. Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts.</p>
+
+      <h3>§ 6 — Zustimmung und Dokumentation</h3>
+      <p>Mit Setzen des Häkchens und Absenden des Formulars erklärt der Empfänger die rechtsverbindliche Zustimmung zu dieser Click-NDA. EQUINAT speichert dabei: Datum und Uhrzeit der Zustimmung, eingegebene Kontaktdaten, Browser-Information.</p>
+      <p>Der Empfänger erhält automatisch eine Bestätigungs-E-Mail mit dieser Click-NDA und dem Foundation-NDA als PDF-Anhang.</p>
+
+      <p class="small">Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · Vertretungsberechtigt: Dirc Zahlmann · Stand: Mai 2026</p>
+    </div>
+  </div>
+</div>
+
 <div class="page-footer">© 2026 Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239 · EQUINAT® ist eine angemeldete Marke</div>
 
 <script>
+function openNdaModal(){
+  document.getElementById('nda-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  window.scrollTo(0,0);
+}
+function closeNdaModal(){
+  document.getElementById('nda-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.getElementById('nda-modal').addEventListener('click', function(e){
+  if(e.target === this) closeNdaModal();
+});
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') closeNdaModal();
+});
+
 function submitForm(){
   const firma    = document.getElementById('f-firma').value.trim();
   const anschrift= document.getElementById('f-anschrift').value.trim();
@@ -288,30 +377,32 @@ function submitForm(){
   if(!firma)  { err.textContent='Bitte Firmennamen eingeben.'; return; }
   if(!anschrift){ err.textContent='Bitte Anschrift eingeben.'; return; }
   if(!name)   { err.textContent='Bitte Ansprechpartner eingeben.'; return; }
-  if(!email || !email.includes('@')){ err.textContent='Bitte gültige E-Mail eingeben.'; return; }
-  if(!cb)     { err.textContent='Bitte die Geheimhaltungsvereinbarung akzeptieren.'; return; }
+  if(!email || !email.includes('@')){ err.textContent='Bitte g\u00FCltige E-Mail eingeben.'; return; }
+  if(!cb)     { err.textContent='Bitte die Click-NDA akzeptieren.'; return; }
   err.textContent='';
 
   const btn = document.querySelector('.btn-p');
   btn.disabled = true;
-  btn.textContent = 'Wird gesendet …';
+  btn.textContent = 'Wird gesendet \u2026';
 
   fetch('/', {
     method: 'POST',
     headers: {'Content-Type':'application/x-www-form-urlencoded'},
     body: new URLSearchParams({
-      'form-name': 'equinat-hersteller-kontakt',
-      firmenname:      firma,
-      anschrift:       anschrift,
-      ansprechpartner: name,
-      funktion:        document.getElementById('f-funktion').value.trim(),
-      email:           email,
-      telefon:         document.getElementById('f-tel').value.trim(),
-      kapazitaet:      document.getElementById('f-kap').value,
-      zertifizierung:  document.getElementById('f-zert').value,
-      nachricht:       document.getElementById('f-msg').value.trim(),
-      nda_akzeptiert:  'Ja — digital bestätigt',
-      timestamp:       new Date().toISOString()
+      'form-name':         'equinat-hersteller-kontakt',
+      firmenname:          firma,
+      anschrift:           anschrift,
+      ansprechpartner:     name,
+      funktion:            document.getElementById('f-funktion').value.trim(),
+      email:               email,
+      telefon:             document.getElementById('f-tel').value.trim(),
+      kapazitaet:          document.getElementById('f-kap').value,
+      zertifizierung:      document.getElementById('f-zert').value,
+      nachricht:           document.getElementById('f-msg').value.trim(),
+      click_nda_akzeptiert:'Ja \u2014 Click-NDA digital best\u00E4tigt am ' + new Date().toLocaleDateString('de-DE') + ' um ' + new Date().toLocaleTimeString('de-DE'),
+      timestamp:           new Date().toISOString(),
+      user_agent:          navigator.userAgent,
+      sprache:             navigator.language
     })
   })
   .then(()=>{
@@ -320,7 +411,6 @@ function submitForm(){
     window.scrollTo({top:0,behavior:'smooth'});
   })
   .catch(()=>{
-    // Fallback: show success anyway (offline testing)
     document.getElementById('form-wrap').style.display='none';
     document.getElementById('success').style.display='block';
     window.scrollTo({top:0,behavior:'smooth'});
