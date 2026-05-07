@@ -70,9 +70,10 @@ tr.eq td{background:rgba(201,148,58,.06);font-weight:600;color:var(--gold-l);}
 .pc-specs{padding-top:14px;border-top:1px solid var(--border);}
 .psr{display:flex;justify-content:space-between;font-size:11.5px;padding:3px 0;}
 .psr .pk{color:var(--cream-3);}.psr .pv{font-family:'DM Mono',monospace;}
-.pc.phase2{opacity:.92;border-top:2px solid var(--gold);position:relative;}
-.pc.phase2::before{content:'PHASE 2 · Q3 2027';position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(201,148,58,.15),rgba(201,148,58,.05));color:var(--gold-l);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:3px;text-align:center;padding:6px 0;border-bottom:1px solid var(--border-s);}
-.pc.phase2{padding-top:46px;}
+.pc.phase2{opacity:.95;border:1px solid var(--border-s);border-top:2px solid var(--gold);position:relative;grid-column:1 / -1;max-width:580px;margin:32px auto 0;width:100%;background:rgba(27,47,20,.15);}
+.pc.phase2::before{content:'PHASE 2 · Q3 2027';position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(201,148,58,.18),rgba(201,148,58,.08));color:var(--gold-l);font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:3px;text-align:center;padding:7px 0;border-bottom:1px solid var(--border-s);}
+.pc.phase2{padding-top:48px;}
+.pc.phase2:hover{background:rgba(27,47,20,.25);}
 .pc.phase2 .pc-name::after{content:' ™';font-size:.55em;color:var(--gold);vertical-align:super;letter-spacing:0;font-family:'Instrument Sans',sans-serif;}
 /* MOATS */
 .mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;}
