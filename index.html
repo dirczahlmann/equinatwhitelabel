@@ -7,11 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Instrument+Sans:wght@300;400;500;600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <style>
 :root{
-  --dark:#070B05;--forest:#1B2F14;
-  --gold:#C9943A;--gold-l:#E0B055;
-  --cream:#F4EFE4;--cream-2:rgba(244,239,228,0.7);--cream-3:rgba(244,239,228,0.35);
-  --border:rgba(201,148,58,0.18);--border-s:rgba(201,148,58,0.35);
-  --green:#3A8A3A;
+--dark:#070B05;--forest:#1B2F14;
+--gold:#C9943A;--gold-l:#E0B055;
+--cream:#F4EFE4;--cream-2:rgba(244,239,228,0.7);--cream-3:rgba(244,239,228,0.35);
+--border:rgba(201,148,58,0.18);--border-s:rgba(201,148,58,0.35);
+--green:#3A8A3A;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;background:var(--dark);}
@@ -94,249 +94,384 @@ tr.eq td{background:rgba(201,148,58,.06);font-weight:600;color:var(--gold-l);}
 /* FADE */
 .fade{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
 .fade.vis{opacity:1;transform:none;}
+/* MODAL (Impressum/Datenschutz) */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:200;overflow-y:auto;padding:60px 20px;}
+.mo.open{display:flex;align-items:flex-start;justify-content:center;}
+.mob{background:#0D1209;border:1px solid var(--border-s);max-width:720px;width:100%;margin:auto;padding:40px 36px;max-height:85vh;overflow-y:auto;}
+.mob h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:6px;}
+.mob .mo-meta{font-size:11px;color:var(--cream-3);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+.mob h4{font-family:'Instrument Sans',sans-serif;font-size:13px;font-weight:600;color:var(--gold-l);margin:18px 0 6px;letter-spacing:.5px;}
+.mob p,.mob li{font-size:12.5px;line-height:1.65;color:var(--cream-2);margin-bottom:8px;}
+.mob ul{padding-left:18px;margin-bottom:10px;}
+.mob ul li{margin-bottom:4px;}
+.mob a{color:var(--gold);text-decoration:underline;}
+.mob a:hover{color:var(--gold-l);}
+.mob strong{color:var(--cream);font-weight:600;}
+.mo-close{position:absolute;top:16px;right:20px;background:none;border:none;color:var(--cream-3);font-size:22px;cursor:pointer;line-height:1;}
+.mo-close:hover{color:var(--cream);}
+.mo-tabs{display:flex;gap:8px;margin-bottom:20px;}
+.mo-tab{background:rgba(201,148,58,.06);color:var(--cream-3);border:1px solid var(--border);padding:7px 14px;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Instrument Sans',sans-serif;font-weight:500;transition:all .2s;}
+.mo-tab.active{background:var(--gold);color:var(--dark);border-color:var(--gold);}
+.mo-content{display:none;}
+.mo-content.active{display:block;}
+.mo-block{background:rgba(201,148,58,.05);border-left:2px solid var(--gold);padding:12px 14px;margin:10px 0;}
+.mo-block p{margin:0;font-size:11.5px;}
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
 .fb{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#fff;}
 .fb span{color:var(--gold);}
 .fi{font-size:11px;color:rgba(244,239,228,.2);line-height:1.7;}
 .fl{display:flex;gap:20px;}
-.fl a{font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(244,239,228,.25);text-decoration:none;}
+.fl button{font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(244,239,228,.4);background:none;border:none;cursor:pointer;font-family:'Instrument Sans',sans-serif;transition:color .2s;}
+.fl button:hover{color:var(--gold);}
 @media(max-width:768px){
-  nav,section,footer{padding-left:20px;padding-right:20px;}
-  .nav-links{display:none;}
-  .sr,.rg{grid-template-columns:1fr;}
-  .stats{gap:30px;}
+nav,section,footer{padding-left:20px;padding-right:20px;}
+.nav-links{display:none;}
+.sr,.rg{grid-template-columns:1fr;}
+.stats{gap:30px;}
 }
 </style>
 </head>
 <body>
 <nav>
-  <div class="nav-brand">EQUINAT<span>®</span></div>
-  <div class="nav-links">
-    <a href="#markt">Marktanalyse</a>
-    <a href="#produkte">Produkte</a>
-    <a href="#partner">Partnership</a>
-    <a href="#wissenschaft">Wissenschaft</a>
-    <a href="dokumente.html" class="nav-links nav-cta">Dokumente →</a>
-  </div>
+<div class="nav-brand">EQUINAT<span>®</span></div>
+<div class="nav-links">
+<a href="#markt">Marktanalyse</a>
+<a href="#produkte">Produkte</a>
+<a href="#hersteller-portal">Hersteller-Portal</a>
+<a href="#wissenschaft">Wissenschaft</a>
+<a href="dokumente.html" class="nav-links nav-cta">Dokumente →</a>
+</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div><div class="hero-grid"></div>
-  <div class="hero-inner">
-    <div class="eyebrow">Hersteller-Pitch 2026 · Zafao GmbH · Wiesbaden</div>
-    <h1 class="hero-title">Die Nische existiert.<em>Niemand besetzt sie.</em></h1>
-    <p class="hero-sub">30+ DACH-Marken analysiert. Kein einziger Anbieter kombiniert Naturland-Bio + integrierte Wirkformeln in therapeutischer Dosis + öffentliches Vet-Advisory Board + KI-Beratungssystem.</p>
-    <div class="stats">
-      <div class="stat"><span class="stat-num">€840M</span><span class="stat-label">DACH Marktvolumen</span></div>
-      <div class="stat"><span class="stat-num">0</span><span class="stat-label">Echte All-in-One Anbieter</span></div>
-      <div class="stat"><span class="stat-num">8</span><span class="stat-label">Produkte im System</span></div>
-      <div class="stat"><span class="stat-num">€240</span><span class="stat-label">Ø Monatliche Fragmentausgaben</span></div>
-    </div>
-    <div class="btns">
-      <a href="kontakt.html" class="btn-p">Partnership anfragen →</a>
-      <a href="dokumente.html" class="btn-o">Hersteller-Dokumente →</a>
-    </div>
-  </div>
+<div class="hero-bg"></div><div class="hero-grid"></div>
+<div class="hero-inner">
+<div class="eyebrow">Hersteller-Pitch 2026 · Zafao GmbH · Wiesbaden</div>
+<h1 class="hero-title">Die Nische existiert.<em>Niemand besetzt sie.</em></h1>
+<p class="hero-sub">30+ DACH-Marken analysiert. Kein einziger Anbieter kombiniert Naturland-Bio + integrierte Wirkformeln in therapeutischer Dosis + öffentliches Vet-Advisory Board + KI-Beratungssystem.</p>
+<div class="stats">
+<div class="stat"><span class="stat-num">€840M</span><span class="stat-label">DACH Marktvolumen</span></div>
+<div class="stat"><span class="stat-num">0</span><span class="stat-label">Echte All-in-One Anbieter</span></div>
+<div class="stat"><span class="stat-num">5+2</span><span class="stat-label">Linien + Booster</span></div>
+<div class="stat"><span class="stat-num">€39–144</span><span class="stat-label">Subscription-Spanne / Mt</span></div>
+</div>
+<div class="btns">
+<a href="kontakt.html" class="btn-p">Partnership anfragen →</a>
+<a href="dokumente.html" class="btn-o">Hersteller-Dokumente →</a>
+</div>
+</div>
 </section>
 
 <!-- MARKT -->
 <section id="markt" style="background:rgba(27,47,20,.15);">
-  <div class="si fade">
-    <div class="eyebrow">Wettbewerbsanalyse DACH 2026</div>
-    <h2 class="st">30+ Marken analysiert. <em>Die Lücke ist klar.</em></h2>
-    <p class="ss">Kein einziger Anbieter kombiniert alle sieben Dimensionen gleichzeitig — bis EQUINAT.</p>
-    <div class="tw">
-      <table>
-        <thead><tr><th>Marke</th><th>€/kg</th><th>Naturland</th><th>EU-Bio</th><th>Integr. Wirkstoffe</th><th>Öffentl. Vet-Board</th><th>All-in-One</th><th>D2C Abo</th><th>KI-Beratung</th></tr></thead>
-        <tbody>
-          <tr><td>AGROBS PRE ALPIN</td><td>€0,97–2,17</td><td class="cp">✓ (teilw.)</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
-          <tr><td>St. Hippolyt</td><td>€2,00–4,50</td><td class="cx">✗</td><td class="cx">✗</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
-          <tr><td>Mühldorfer</td><td>€1,75–2,50</td><td class="cx">✗</td><td class="cp">~</td><td class="cp">~</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
-          <tr><td>Wiesenkraft</td><td>€3,00–8,00</td><td class="cx">✗</td><td class="cx">✗</td><td class="cp">~</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
-          <tr><td>Marstall / LEXA</td><td>€1,50–3,20</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
-          <tr class="eq"><td>⭐ EQUINAT COMPLETE®</td><td>€4,90–8,90</td><td class="ck">✓✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div class="si fade">
+<div class="eyebrow">Wettbewerbsanalyse DACH 2026</div>
+<h2 class="st">30+ Marken analysiert. <em>Die Lücke ist klar.</em></h2>
+<p class="ss">Kein einziger Anbieter kombiniert alle sieben Dimensionen gleichzeitig — bis EQUINAT.</p>
+<div class="tw">
+<table>
+<thead><tr><th>Marke</th><th>€/kg</th><th>Naturland</th><th>EU-Bio</th><th>Integr. Wirkstoffe</th><th>Öffentl. Vet-Board</th><th>All-in-One</th><th>D2C Abo</th><th>KI-Beratung</th></tr></thead>
+<tbody>
+<tr><td>AGROBS PRE ALPIN</td><td>€0,97–2,17</td><td class="cp">✓ (teilw.)</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+<tr><td>St. Hippolyt</td><td>€2,00–4,50</td><td class="cx">✗</td><td class="cx">✗</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+<tr><td>Mühldorfer</td><td>€1,75–2,50</td><td class="cx">✗</td><td class="cp">~</td><td class="cp">~</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+<tr><td>Wiesenkraft</td><td>€3,00–8,00</td><td class="cx">✗</td><td class="cx">✗</td><td class="cp">~</td><td class="cp">~</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+<tr><td>Marstall / LEXA</td><td>€1,50–3,20</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td><td class="cx">✗</td></tr>
+<tr class="eq"><td>⭐ EQUINAT COMPLETE®</td><td>€4,90–8,90</td><td class="ck">✓✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td><td class="ck">✓</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 
 <div class="dg"></div>
 
 <!-- PRODUKTE -->
 <section id="produkte" style="padding-bottom:0;">
-  <div class="si fade">
-    <div class="eyebrow">Das EQUINAT SYSTEM® — 8 Produkte</div>
-    <h2 class="st">Vier Bedürfnisse. <em>Ein vollständiges System.</em></h2>
-    <p class="ss">Cold-Press max. 70°C · Naturland-Bio-Basis · HPLC-verifiziert je Charge · Dual-Postbiotika B. subtilis + SCFP</p>
-  </div>
-  <div class="pg">
-    <div class="pc">
-      <div class="pc-tag">Formel 01 · Basisversorgung</div>
-      <div class="pc-num">01</div>
-      <div class="pc-name">DAILY COMPLETE®</div>
-      <div class="pc-desc">Basisversorgung für jedes Pferd. Ersetzt Basisfutter + Mineralfutter + Probiotika + Omega-3 vollständig.</div>
-      <div class="ings"><span class="ing k">B. subtilis + SCFP</span><span class="ing k">Selen-Hefe</span><span class="ing">Hagebutte GOPO®</span><span class="ing">Zink-Glycinchelat</span><span class="ing">Vit E natural</span><span class="ing">Hanföl Bio</span></div>
-      <div class="pc-specs">
-        <div class="psr"><span class="pk">Tagesdosis</span><span class="pv">80g / 500kg Pferd</span></div>
-        <div class="psr"><span class="pk">Gebinde</span><span class="pv">25 kg (€129) · 10 kg (€59)</span></div>
-        <div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€1,80–2,10/kg</span></div>
-        <div class="psr"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-tag">Formel 02 · Gelenk & Bewegung</div>
-      <div class="pc-num">02</div>
-      <div class="pc-name">JOINT COMPLETE®</div>
-      <div class="pc-desc">MSM 20g in therapeutischer Dosis, Meriva® Curcumin (10× BV), Boswellia AKBA-standardisiert, Teufelskralle 75mg Harpagosid.</div>
-      <div class="ings"><span class="ing k">MSM 20g (OptiMSM®)</span><span class="ing k">Meriva® Curcumin</span><span class="ing k">Harpagosid 75mg</span><span class="ing">Boswellia 65% AKBA</span><span class="ing">GOPO® Hagebutte</span></div>
-      <div class="pc-specs">
-        <div class="psr"><span class="pk">Tagesdosis</span><span class="pv">60g / 500kg Pferd</span></div>
-        <div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
-        <div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€2,60–3,10/kg</span></div>
-        <div class="psr"><span class="pk">FEI Karenz</span><span class="pv">Teufelskralle: 96h</span></div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-tag">Formel 03 · Atemwege & Allergie</div>
-      <div class="pc-num">03</div>
-      <div class="pc-name">RESPIRA COMPLETE®</div>
-      <div class="pc-desc">Pflanzliches Antihistaminikum für RAO, Stauballergie, equines Asthma. Getreidefrei. Staubfrei pelletiert.</div>
-      <div class="ings"><span class="ing k">Quercetin 3g/Tag</span><span class="ing k">NAC 10g/Tag</span><span class="ing k">Schwarzkümmelöl 30ml</span><span class="ing">Bromelain</span><span class="ing">Thymian Bio</span></div>
-      <div class="pc-specs">
-        <div class="psr"><span class="pk">Tagesdosis</span><span class="pv">50g + 30ml Öl-Coat</span></div>
-        <div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€79)</span></div>
-        <div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€2,80–3,40/kg</span></div>
-        <div class="psr"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="pc-tag">Formel 04 · Stoffwechsel</div>
-      <div class="pc-num">04</div>
-      <div class="pc-name">METABOLIC COMPLETE®</div>
-      <div class="pc-desc">EMS, Cushing/PPID, Hufrehe-Prophylaxe. NSC &lt;8%, getreidefrei, melassefrei. Für ~750.000 metabolisch erkrankte DACH-Pferde.</div>
-      <div class="ings"><span class="ing k">Magnesium 15g</span><span class="ing k">Berberin 2g</span><span class="ing k">Chrom-Hefe 3mg</span><span class="ing">Mariendistel Siliphos®</span><span class="ing">Vitex agnus-castus</span><span class="ing">Biotin 25mg</span></div>
-      <div class="pc-specs">
-        <div class="psr"><span class="pk">Tagesdosis</span><span class="pv">70g / 500kg Pferd</span></div>
-        <div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
-        <div class="psr"><span class="pk">NSC</span><span class="pv">&lt;8% · EMS-tauglich</span></div>
-        <div class="psr"><span class="pk">FEI Karenz</span><span class="pv">Vitex: 96h</span></div>
-      </div>
-    </div>
-    <div class="pc" style="grid-column:span 2;">
-      <div class="pc-tag">Formel 05 · Therapeutisches Mash-System · 3 SKUs</div>
-      <div class="pc-num">05</div>
-      <div class="pc-name">MASH SYSTEM®</div>
-      <div class="pc-desc">Erste therapeutische Mash-Linie im DACH-Markt mit NSC &lt;8%. Dental-friendly, EMS-tauglich, Senior-optimiert. Eine Basis + zwei saisonale Booster.</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:8px;">
-        <div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Basis · 15kg Sack · €49</div>
-          <div class="ings" style="flex-direction:column;gap:4px;"><span class="ing k">NSC &lt;8%</span><span class="ing">Heucobs Naturland</span><span class="ing">SCFP Postbiotikum</span><span class="ing">Aminosäuren-Premix</span></div>
-          <div style="font-size:11px;color:var(--cream-3);margin-top:8px;">FEI 0h Karenz</div>
-        </div>
-        <div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Winter Booster · 30×50g · €34,90</div>
-          <div class="ings" style="flex-direction:column;gap:4px;"><span class="ing">Ingwer Bio 12g</span><span class="ing">Schwarzkümmel 8g</span><span class="ing">Thymian + Hagebutte</span><span class="ing">Ceylon-Zimt</span></div>
-          <div style="font-size:11px;color:rgba(201,148,58,.7);margin-top:8px;">FEI: Ingwer 48h Karenz</div>
-        </div>
-        <div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Summer Booster · 30×50g · €39,90</div>
-          <div class="ings" style="flex-direction:column;gap:4px;"><span class="ing k">FEI 0h · Turniersicher</span><span class="ing">Elektrolyte 4:2:1</span><span class="ing">Hagebutte GOPO®</span><span class="ing">Spirulina Bio</span></div>
-          <div style="font-size:11px;color:var(--green);margin-top:8px;">Am Wettkampfmorgen fütterbar</div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="si fade">
+<div class="eyebrow">Das EQUINAT SYSTEM® — 5 Linien + 2 Booster</div>
+<h2 class="st">Vier Bedürfnisse + Mash. <em>Ein vollständiges System.</em></h2>
+<p class="ss">Cold-Press max. 70°C · Naturland-Bio-Basis · HPLC-verifiziert je Charge · Dual-Postbiotika B. subtilis + SCFP. EQUINAT ergänzt zu Heu und ggf. Kraftfutter — kein Vollfuttermittel-Ersatz.</p>
+</div>
+<div class="pg">
+<div class="pc">
+<div class="pc-tag">Formel 01 · Basisversorgung</div>
+<div class="pc-num">01</div>
+<div class="pc-name">DAILY COMPLETE®</div>
+<div class="pc-desc">Tägliche Premium-Basisversorgung. Ersetzt Mineralfutter + Probiotika + Omega-3 vollständig. Wird zum vorhandenen Heu/Kraftfutter ergänzt — kein Vollfuttermittel-Ersatz.</div>
+<div class="ings"><span class="ing k">B. subtilis + SCFP</span><span class="ing k">Selen-Hefe</span><span class="ing">Hagebutte (Vit C)</span><span class="ing">Zink-Glycinchelat</span><span class="ing">Vit E natural</span><span class="ing">Hanföl Bio</span></div>
+<div class="pc-specs">
+<div class="psr"><span class="pk">Tagesdosis</span><span class="pv">80g / 500kg Pferd</span></div>
+<div class="psr"><span class="pk">Gebinde</span><span class="pv">25 kg (€129) · 10 kg (€59)</span></div>
+<div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€1,80–2,10/kg</span></div>
+<div class="psr"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
+</div>
+</div>
+<div class="pc">
+<div class="pc-tag">Formel 02 · Gelenk & Bewegung</div>
+<div class="pc-num">02</div>
+<div class="pc-name">JOINT COMPLETE®</div>
+<div class="pc-desc">MSM 20g in therapeutischer Dosis, Meriva® Curcumin (10× BV), Boswellia AKBA-standardisiert, Teufelskralle 75mg Harpagosid.</div>
+<div class="ings"><span class="ing k">MSM 20g (OptiMSM®)</span><span class="ing k">Meriva® Curcumin</span><span class="ing k">Harpagosid 75mg</span><span class="ing">Boswellia 65% AKBA</span><span class="ing">GOPO® Hagebutte</span></div>
+<div class="pc-specs">
+<div class="psr"><span class="pk">Tagesdosis</span><span class="pv">60g / 500kg Pferd</span></div>
+<div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
+<div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€2,60–3,10/kg</span></div>
+<div class="psr"><span class="pk">FEI Karenz</span><span class="pv">Teufelskralle: 96h</span></div>
+</div>
+</div>
+<div class="pc">
+<div class="pc-tag">Formel 03 · Atemwege & Allergie</div>
+<div class="pc-num">03</div>
+<div class="pc-name">RESPIRA COMPLETE®</div>
+<div class="pc-desc">Pflanzliches Antihistaminikum für RAO, Stauballergie, equines Asthma. Getreidefrei. Staubfrei pelletiert.</div>
+<div class="ings"><span class="ing k">Quercetin 3g/Tag</span><span class="ing k">NAC 10g/Tag</span><span class="ing k">Schwarzkümmelöl 30ml</span><span class="ing">Bromelain</span><span class="ing">Thymian Bio</span></div>
+<div class="pc-specs">
+<div class="psr"><span class="pk">Tagesdosis</span><span class="pv">50g + 30ml Öl-Coat</span></div>
+<div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€79)</span></div>
+<div class="psr"><span class="pk">COGS-Ziel</span><span class="pv">€2,80–3,40/kg</span></div>
+<div class="psr"><span class="pk">FEI Karenz</span><span class="pv">0 Stunden</span></div>
+</div>
+</div>
+<div class="pc">
+<div class="pc-tag">Formel 04 · Stoffwechsel</div>
+<div class="pc-num">04</div>
+<div class="pc-name">METABOLIC COMPLETE®</div>
+<div class="pc-desc">EMS, Cushing/PPID, Hufrehe-Prophylaxe. NSC &lt;8%, getreidefrei, melassefrei. Für ~750.000 metabolisch erkrankte DACH-Pferde.</div>
+<div class="ings"><span class="ing k">Magnesium 15g</span><span class="ing k">Berberin 2g</span><span class="ing k">Chrom-Hefe 3mg</span><span class="ing">Mariendistel Siliphos®</span><span class="ing">Vitex agnus-castus</span><span class="ing">Biotin 25mg</span></div>
+<div class="pc-specs">
+<div class="psr"><span class="pk">Tagesdosis</span><span class="pv">70g / 500kg Pferd</span></div>
+<div class="psr"><span class="pk">Gebinde</span><span class="pv">5 kg Eimer (€89)</span></div>
+<div class="psr"><span class="pk">NSC</span><span class="pv">&lt;8% · EMS-tauglich</span></div>
+<div class="psr"><span class="pk">FEI Karenz</span><span class="pv">Vitex: 96h</span></div>
+</div>
+</div>
+<div class="pc" style="grid-column:span 2;">
+<div class="pc-tag">Formel 05 · Therapeutisches Mash-System · 3 SKUs</div>
+<div class="pc-num">05</div>
+<div class="pc-name">MASH SYSTEM®</div>
+<div class="pc-desc">Erste therapeutische Mash-Linie im DACH-Markt mit NSC &lt;8%. Dental-friendly, EMS-tauglich, Senior-optimiert. Eine Basis + zwei saisonale Booster.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:8px;">
+<div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Basis · 15kg Sack · €49</div>
+<div class="ings" style="flex-direction:column;gap:4px;"><span class="ing k">NSC &lt;8%</span><span class="ing">Heucobs Naturland</span><span class="ing">SCFP Postbiotikum</span><span class="ing">Aminosäuren-Premix</span></div>
+<div style="font-size:11px;color:var(--cream-3);margin-top:8px;">FEI 0h Karenz</div>
+</div>
+<div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Winter Booster · 30×50g · €34,90</div>
+<div class="ings" style="flex-direction:column;gap:4px;"><span class="ing">Ingwer Bio 12g</span><span class="ing">Schwarzkümmel 8g</span><span class="ing">Thymian + Hagebutte</span><span class="ing">Ceylon-Zimt</span></div>
+<div style="font-size:11px;color:rgba(201,148,58,.7);margin-top:8px;">FEI: Ingwer 48h Karenz</div>
+</div>
+<div><div style="font-size:9.5px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:8px;">Summer Booster · 30×50g · €39,90</div>
+<div class="ings" style="flex-direction:column;gap:4px;"><span class="ing k">FEI 0h · Turniersicher</span><span class="ing">Elektrolyte 4:2:1</span><span class="ing">Hagebutte GOPO®</span><span class="ing">Spirulina Bio</span></div>
+<div style="font-size:11px;color:var(--green);margin-top:8px;">Am Wettkampfmorgen fütterbar</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <div class="dg"></div>
 
 <!-- MOATS -->
 <section id="differenzierung">
-  <div class="si fade">
-    <div class="eyebrow">Strukturelle Wettbewerbsvorteile</div>
-    <h2 class="st">6 Gräben — <em>nicht überquerbar.</em></h2>
-    <div class="mg">
-      <div class="moat"><div class="moat-icon">🌿</div><div class="moat-title">Naturland — nicht nur EU-Bio</div><div class="moat-text">100% Bio-Anteil, nur 23 Zusatzstoffe (EU-Bio: 53), ILO-Sozialstandards. Kein DACH-Wettbewerber hat Naturland für alle Linien inkl. Wirkstoffformeln.</div><div class="moat-bar">→ 12–18 Monate + €13k–26k Einmalaufwand für Nachahmer</div></div>
-      <div class="moat"><div class="moat-icon">🔬</div><div class="moat-title">Öffentliches Vet-Advisory Board</div><div class="moat-text">Fünf namentlich genannte Experten: ECEIM-Internist, Ernährungswissenschaftler (PhD), Orthopädie-Vet, Pharmakolog, Reitsportprofi. Jeder Claim gegengezeichnet.</div><div class="moat-bar">→ 6–12 Monate Netzwerk- und Vertrauensaufbau</div></div>
-      <div class="moat"><div class="moat-icon">⚗️</div><div class="moat-title">HPLC-Verifikation je Charge</div><div class="moat-text">Externe Analytik Eurofins/SGS für alle Marker. QR-Code auf Verpackung → Echtzeit-Chargenanalytik bis Feldparzelle. Kein Wettbewerber bietet das öffentlich.</div><div class="moat-bar">→ GMP-Produktion + Analytik = 18+ Monate für Nachahmer</div></div>
-      <div class="moat"><div class="moat-icon">🤖</div><div class="moat-title">PferdeBot® KI-Beratung</div><div class="moat-text">Erster equiner KI-Assistent im DACH-Markt. Empfiehlt wissenschaftlich die richtige Linie für jedes Pferd. €9,90/Mt Subscription-Modell.</div><div class="moat-bar">→ Technologie + equines Fachwissen = 12+ Monate</div></div>
-      <div class="moat"><div class="moat-icon">🎯</div><div class="moat-title">„Pferdemutter" als primäre Persona</div><div class="moat-text">Alle 30+ Wettbewerber sprechen von „Pferdebesitzern". EQUINAT besetzt den emotionalsten und kaufkräftigsten Archetyp im Markt.</div><div class="moat-bar">→ Markenidentität + Community-Bindung</div></div>
-      <div class="moat"><div class="moat-icon">💰</div><div class="moat-title">Günstiger als Fragmentierung</div><div class="moat-text">Teurer pro kg, aber günstiger gesamt. 5 Einzelprodukte für Sportpferd = €195/Mt → EQUINAT = €225/Mt. Nur €30 mehr für Bio-Qualität + null Aufwand.</div><div class="moat-bar">→ Existenzbedrohend für Wettbewerber mit Add-on-Strategie</div></div>
-    </div>
-  </div>
+<div class="si fade">
+<div class="eyebrow">Strukturelle Wettbewerbsvorteile</div>
+<h2 class="st">6 Gräben — <em>nicht überquerbar.</em></h2>
+<div class="mg">
+<div class="moat"><div class="moat-icon">🌿</div><div class="moat-title">Naturland — nicht nur EU-Bio</div><div class="moat-text">100% Bio-Anteil, nur 23 Zusatzstoffe (EU-Bio: 53), ILO-Sozialstandards. Kein DACH-Wettbewerber hat Naturland für alle Linien inkl. Wirkstoffformeln.</div><div class="moat-bar">→ 12–18 Monate + €13k–26k Einmalaufwand für Nachahmer</div></div>
+<div class="moat"><div class="moat-icon">🔬</div><div class="moat-title">Öffentliches Vet-Advisory Board</div><div class="moat-text">Fünf namentlich genannte Experten: ECEIM-Internist, Ernährungswissenschaftler (PhD), Orthopädie-Vet, Pharmakolog, Reitsportprofi. Jeder Claim gegengezeichnet.</div><div class="moat-bar">→ 6–12 Monate Netzwerk- und Vertrauensaufbau</div></div>
+<div class="moat"><div class="moat-icon">⚗️</div><div class="moat-title">HPLC-Verifikation je Charge</div><div class="moat-text">Externe Analytik Eurofins/SGS für alle Marker. QR-Code auf Verpackung → Echtzeit-Chargenanalytik bis Feldparzelle. Kein Wettbewerber bietet das öffentlich.</div><div class="moat-bar">→ GMP-Produktion + Analytik = 18+ Monate für Nachahmer</div></div>
+<div class="moat"><div class="moat-icon">🤖</div><div class="moat-title">PferdeBot® KI-Beratung</div><div class="moat-text">Erster equiner KI-Assistent im DACH-Markt. Empfiehlt wissenschaftlich die richtige Linie für jedes Pferd. €9,90/Mt Subscription-Modell.</div><div class="moat-bar">→ Technologie + equines Fachwissen = 12+ Monate</div></div>
+<div class="moat"><div class="moat-icon">🎯</div><div class="moat-title">„Pferdemutter" als primäre Persona</div><div class="moat-text">Alle 30+ Wettbewerber sprechen von „Pferdebesitzern". EQUINAT besetzt den emotionalsten und kaufkräftigsten Archetyp im Markt.</div><div class="moat-bar">→ Markenidentität + Community-Bindung</div></div>
+<div class="moat"><div class="moat-icon">💰</div><div class="moat-title">Günstiger als Fragmentierung</div><div class="moat-text">Sportpferd mit Einzelprodukten: ca. €120–180/Mt fragmentiert. EQUINAT Sportpferd-Subscription: €75/Mt mit Gold-Tier 17%. Plus PferdeBot® inklusive (Wert €119/Jahr).</div><div class="moat-bar">→ Existenzbedrohend für Wettbewerber mit Add-on-Strategie</div></div>
+</div>
+</div>
 </section>
 
 <div class="dg"></div>
 
-<!-- PARTNER -->
-<section id="partner">
-  <div class="si fade">
-    <div class="eyebrow">White-Label Partnership</div>
-    <h2 class="st">Ihre Produktion. <em>Unsere Formel.</em></h2>
-    <p class="ss">GMP+-zertifizierte Mischfutterhersteller im DACH-Raum gesucht. Sie bringen Kapazität — wir bringen Formeln, Zertifizierungen, Marketing und gesicherte Abnahmemengen.</p>
-    <div class="sr">
-      <div class="sb"><div class="sn">01</div><div class="st2">NDA & Briefing</div><div class="sd">Vertrauliches Briefing zu Rezepturen, Mengen, Zertifizierungsanforderungen und Exklusivitätsgebiet DE/AT/CH.</div></div>
-      <div class="sb"><div class="sn">02</div><div class="st2">Pilotcharge</div><div class="sd">500 kg–2 t pro Linie. Laborvalidierung (Eurofins/SGS), Analytik-Zertifikate, Fressakzeptanz-Tests.</div></div>
-      <div class="sb"><div class="sn">03</div><div class="st2">Rahmenvertrag</div><div class="sd">Mindestabnahme 5 t/Mo, Preisformel, Qualitäts-SLA und Exklusivitätsgebiet DACH.</div></div>
-      <div class="sb"><div class="sn">04</div><div class="st2">Launch & Scale</div><div class="sd">Markteinführung mit EQUINAT-Marketing: Influencer-Netzwerk, PferdeBot®, Equitana-Messe.</div></div>
-    </div>
-    <div class="rg">
-      <div>
-        <h3>Was wir suchen</h3>
-        <ul class="rl">
-          <li>GMP+B2 oder QS-zertifizierter Produktionsbetrieb</li>
-          <li>Cold-Press-Pelletierung max. 70°C</li>
-          <li>Öl-Coating-Anlage nach der Pelletierung</li>
-          <li>Erfahrung mit Kräuter- und Wirkstoffmischungen für Pferde</li>
-          <li>Kapazität ab 5 t/Monat, skalierbar bis 50 t/Monat</li>
-          <li>Chargengenaue Rückverfolgung bis Rohstoffherkunft</li>
-          <li>Bereitschaft zur EU-Bio-Zertifizierung binnen 12 Monaten</li>
-          <li>Standort bevorzugt DACH-Raum</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Was wir bieten</h3>
-        <ul class="rl">
-          <li>5 vollständige Produktlinien (8 SKUs), NDA-geschützt</li>
-          <li>Öffentliches Vet-Advisory Board sichert alle Claims ab</li>
-          <li>Vollständiges Branding und Verpackungsdesign DE & EN</li>
-          <li>PferdeBot® KI-System generiert qualifizierte Kaufentscheidungen</li>
-          <li>Aufgebauter D2C-Subscription-Funnel</li>
-          <li>Gesicherter Rahmenabnahmevertrag von Tag 1</li>
-          <li>Naturland-Zertifizierung gemeinsam — wir finanzieren unseren Anteil</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<!-- HERSTELLER-PORTAL (vorher: PARTNER) -->
+<section id="hersteller-portal">
+<div class="si fade">
+<div class="eyebrow">Hersteller-Portal · White-Label Partnership</div>
+<h2 class="st">Ihre Produktion. <em>Unsere Formel.</em></h2>
+<p class="ss">GMP+-zertifizierte Mischfutterhersteller im DACH-Raum gesucht. Sie bringen Kapazität — wir bringen Formeln, Zertifizierungen, Marketing und gesicherte Abnahmemengen.</p>
+<div class="sr">
+<div class="sb"><div class="sn">01</div><div class="st2">NDA & Briefing</div><div class="sd">Vertrauliches Briefing zu Rezepturen, Mengen, Zertifizierungsanforderungen und Exklusivitätsgebiet DE/AT/CH.</div></div>
+<div class="sb"><div class="sn">02</div><div class="st2">Pilotcharge</div><div class="sd">500 kg–2 t pro Linie. Laborvalidierung (Eurofins/SGS), Analytik-Zertifikate, Fressakzeptanz-Tests.</div></div>
+<div class="sb"><div class="sn">03</div><div class="st2">Rahmenvertrag</div><div class="sd">Mindestabnahme 5 t/Mo, Preisformel, Qualitäts-SLA und Exklusivitätsgebiet DACH.</div></div>
+<div class="sb"><div class="sn">04</div><div class="st2">Launch & Scale</div><div class="sd">Markteinführung mit EQUINAT-Marketing: Influencer-Netzwerk, PferdeBot®, Equitana-Messe.</div></div>
+</div>
+<div class="rg">
+<div>
+<h3>Was wir suchen</h3>
+<ul class="rl">
+<li>GMP+B2 oder QS-zertifizierter Produktionsbetrieb</li>
+<li>Cold-Press-Pelletierung max. 70°C</li>
+<li>Öl-Coating-Anlage nach der Pelletierung</li>
+<li>Erfahrung mit Kräuter- und Wirkstoffmischungen für Pferde</li>
+<li>Kapazität ab 5 t/Monat, skalierbar bis 50 t/Monat</li>
+<li>Chargengenaue Rückverfolgung bis Rohstoffherkunft</li>
+<li>Bereitschaft zur Naturland-Bio-Zertifizierung binnen 12 Monaten</li>
+<li>IP-Trennung zu eigenen Wettbewerbsprodukten</li>
+<li>Standort bevorzugt DACH-Raum</li>
+</ul>
+</div>
+<div>
+<h3>Was wir bieten</h3>
+<ul class="rl">
+<li>5 vollständige Produktlinien (7 SKUs), NDA-geschützt</li>
+<li>Öffentliches Vet-Advisory Board sichert alle Claims ab</li>
+<li>Vollständiges Branding und Verpackungsdesign DE & EN</li>
+<li>PferdeBot® KI-System generiert qualifizierte Kaufentscheidungen</li>
+<li>Aufgebauter D2C-Subscription-Funnel</li>
+<li>Gesicherter Rahmenabnahmevertrag von Tag 1</li>
+<li>Naturland-Zertifizierung gemeinsam — wir finanzieren unseren Anteil</li>
+<li>Phase-2-Volumen-Erweiterung in 12–18 Monaten geplant</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <div class="dg"></div>
 
 <!-- CTA -->
 <section id="wissenschaft">
-  <div class="si fade cta-box">
-    <div class="eyebrow">Nächster Schritt</div>
-    <h2 class="st" style="margin-bottom:10px;">Bereit für ein Gespräch?</h2>
-    <p class="ss" style="margin-left:auto;margin-right:auto;">Alle Unterlagen — Spec Sheet, Rezeptur-Übersicht, NDA-Template — stehen im geschützten Dokumenten-Bereich bereit.</p>
-    <div class="btns">
-      <a href="kontakt.html" class="btn-p">Erstgespräch vereinbaren →</a>
-      <a href="dokumente.html" class="btn-o">Hersteller-Dokumente →</a>
-    </div>
-    <p style="font-size:11px;color:var(--cream-3);margin-top:20px;">info@zafao.world · Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239</p>
-  </div>
+<div class="si fade cta-box">
+<div class="eyebrow">Nächster Schritt</div>
+<h2 class="st" style="margin-bottom:10px;">Bereit für ein Gespräch?</h2>
+<p class="ss" style="margin-left:auto;margin-right:auto;">Alle Unterlagen — Spec Sheet, Rezeptur-Übersicht, NDA-Template — stehen im geschützten Dokumenten-Bereich bereit.</p>
+<div class="btns">
+<a href="kontakt.html" class="btn-p">Erstgespräch vereinbaren →</a>
+<a href="dokumente.html" class="btn-o">Hersteller-Dokumente →</a>
+</div>
+<p style="font-size:11px;color:var(--cream-3);margin-top:20px;">info@zafao.world · Zafao GmbH · Adolfsallee 22 · 65185 Wiesbaden · HRB 33239</p>
+</div>
 </section>
 
 <footer>
-  <div><div class="fb">EQUINAT<span>®</span></div><div class="fi">Premium Pferdefutter · Naturland-Bio · Wissenschaftlich validiert<br>Ein Konzept der Zafao GmbH · Wiesbaden</div></div>
-  <div class="fi" style="text-align:center;">info@zafao.world<br>Adolfsallee 22 · 65185 Wiesbaden · HRB 33239</div>
-  <div class="fl"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+<div><div class="fb">EQUINAT<span>®</span></div><div class="fi">Premium Pferdefutter · Naturland-Bio · Wissenschaftlich validiert<br>Ein Konzept der Zafao GmbH · Wiesbaden</div></div>
+<div class="fi" style="text-align:center;">info@zafao.world<br>Adolfsallee 22 · 65185 Wiesbaden · HRB 33239</div>
+<div class="fl"><button onclick="oL('imp')">Impressum</button><button onclick="oL('dat')">Datenschutz</button></div>
 </footer>
+
+<!-- LEGAL MODAL -->
+<div class="mo" id="legalMo">
+<div class="mob" style="position:relative;">
+<button class="mo-close" onclick="cL()">✕</button>
+<div class="mo-tabs">
+<button class="mo-tab" onclick="sT('imp')" id="tImp">Impressum</button>
+<button class="mo-tab" onclick="sT('dat')" id="tDat">Datenschutz</button>
+</div>
+
+<!-- IMPRESSUM -->
+<div class="mo-content" id="cImp">
+<h3>Impressum</h3>
+<div class="mo-meta">Angaben gemäß § 5 TMG · Stand: Mai 2026</div>
+
+<h4>Anbieter & Vertragspartner</h4>
+<p><strong>Zafao GmbH</strong><br/>Adolfsallee 22<br/>65185 Wiesbaden<br/>Deutschland</p>
+
+<h4>Vertretungsberechtigter</h4>
+<p>Geschäftsführer: Dirc Zahlmann</p>
+
+<h4>Kontakt</h4>
+<p>E-Mail: <a href="mailto:info@zafao.world">info@zafao.world</a></p>
+
+<h4>Registereintrag</h4>
+<p>Eintragung im Handelsregister<br/>Registergericht: Amtsgericht Wiesbaden<br/>Registernummer: HRB 33239</p>
+
+<h4>Umsatzsteuer-ID</h4>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: in Bearbeitung. Wird nach Erteilung hier nachgetragen.</p>
+
+<h4>Marke</h4>
+<p>EQUINAT® ist eine eingetragene Marke der Zafao GmbH. Eine künftige Übertragung an die in Gründung befindliche Equinat GmbH (Geschäftsführerin: Lea Zahlmann) ist vorgesehen.</p>
+
+<h4>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h4>
+<p>Dirc Zahlmann<br/>Adolfsallee 22<br/>65185 Wiesbaden</p>
+
+<h4>Zweck dieser Webseite</h4>
+<p>Diese Webseite ist ein Hersteller-Pitch und dient ausschließlich der Informationskommunikation gegenüber potenziellen Auftragsfertigern für EQUINAT®-Produkte. Keine direkte Endkundenkommunikation.</p>
+
+<h4>Haftung für Inhalte</h4>
+<p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
+
+<h4>Haftung für Links</h4>
+<p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich.</p>
+
+<h4>Urheberrecht</h4>
+<p>Die Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung und Verbreitung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung der Zafao GmbH.</p>
+
+<div class="mo-block"><p><strong>Wettbewerber-Vergleich:</strong> Die Wettbewerbs-Tabelle auf dieser Seite zeigt öffentlich zugängliche Eigenschaften der genannten Marken. Sie ist eine sachliche Information für Hersteller-Partnerschafts-Verhandlungen, keine Bewertung oder Herabsetzung.</p></div>
+</div>
+
+<!-- DATENSCHUTZ -->
+<div class="mo-content" id="cDat">
+<h3>Datenschutzerklärung</h3>
+<div class="mo-meta">Stand: Mai 2026 · Version 1.0</div>
+
+<div class="mo-block"><p>Diese Datenschutzerklärung gilt für die Hersteller-Pitch-Webseite <strong>equinatwhitelabel.netlify.app</strong>. Der EQUINAT Shop und der PferdeBot® haben jeweils eigene, separate Datenschutzerklärungen.</p></div>
+
+<h4>1 — Verantwortlicher</h4>
+<p>Verantwortlich für die Datenverarbeitung im Sinne der DSGVO ist:<br/><br/><strong>Zafao GmbH</strong><br/>Adolfsallee 22, 65185 Wiesbaden<br/>E-Mail: <a href="mailto:info@zafao.world">info@zafao.world</a><br/>Vertreten durch: Dirc Zahlmann</p>
+
+<h4>2 — Erhobene Daten</h4>
+<p>Beim Aufrufen dieser Webseite werden durch unseren Hosting-Anbieter (Netlify Inc., USA) automatisch Informationen erfasst:</p>
+<ul>
+<li>IP-Adresse des anfragenden Endgeräts</li>
+<li>Datum und Uhrzeit des Zugriffs</li>
+<li>Name und URL der abgerufenen Datei</li>
+<li>Webseite, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+<li>Verwendeter Browser und Betriebssystem</li>
+</ul>
+<p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+
+<h4>3 — Bei Kontaktaufnahme</h4>
+<p>Wenn Sie über das Kontaktformular oder per E-Mail Kontakt aufnehmen, erheben wir Vor- und Nachname, E-Mail-Adresse, Unternehmen und Inhalt Ihrer Nachricht. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Speicherdauer: bis zum Abschluss der Vertragsanbahnung plus gesetzliche Aufbewahrungsfristen.</p>
+
+<h4>4 — Auftragsverarbeiter</h4>
+<p><strong>Netlify Inc.</strong> (Hosting), 44 Montgomery Street, Suite 300, San Francisco, CA 94104, USA. Standardvertragsklauseln Art. 46 Abs. 2 lit. c DSGVO.</p>
+
+<h4>5 — Cookies</h4>
+<p>Diese Webseite verwendet keine Tracking-Cookies. Es werden ausschließlich technisch notwendige Browser-Speicher verwendet.</p>
+
+<h4>6 — Ihre Rechte als betroffene Person</h4>
+<p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20), Widerspruch (Art. 21) und Widerruf der Einwilligung (Art. 7 Abs. 3).</p>
+<p>Zur Geltendmachung: <a href="mailto:info@zafao.world">info@zafao.world</a></p>
+
+<h4>7 — Beschwerderecht</h4>
+<p><strong>Der Hessische Beauftragte für Datenschutz und Informationsfreiheit</strong><br/>Postfach 3163, 65021 Wiesbaden<br/><a href="https://datenschutz.hessen.de" target="_blank">datenschutz.hessen.de</a></p>
+
+<h4>8 — Datensicherheit</h4>
+<p>Wir verwenden SSL/TLS-Verschlüsselung. Erkennbar an der https://-Adresse im Browser.</p>
+
+<div class="mo-block"><p><strong>Hinweis:</strong> Diese Datenschutzerklärung wird vor öffentlichem Marktstart anwaltlich finalisiert. Die jetzige Version deckt die aktuelle Pre-Launch-Hersteller-Pitch-Phase vollständig ab.</p></div>
+</div>
+</div>
+</div>
 
 <script>
 const obs = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
+entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('vis'); });
 },{threshold:0.08});
 document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+
+// Legal modal
+function oL(tab){ document.getElementById('legalMo').classList.add('open'); sT(tab||'imp'); document.body.style.overflow='hidden'; }
+function cL(){ document.getElementById('legalMo').classList.remove('open'); document.body.style.overflow=''; }
+function sT(tab){
+  document.getElementById('tImp').classList.remove('active');
+  document.getElementById('tDat').classList.remove('active');
+  document.getElementById('cImp').classList.remove('active');
+  document.getElementById('cDat').classList.remove('active');
+  if(tab==='imp'){ document.getElementById('tImp').classList.add('active'); document.getElementById('cImp').classList.add('active'); }
+  else { document.getElementById('tDat').classList.add('active'); document.getElementById('cDat').classList.add('active'); }
+  const m=document.querySelector('#legalMo .mob'); if(m) m.scrollTop=0;
+}
+document.getElementById('legalMo').addEventListener('click',function(e){ if(e.target===this) cL(); });
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') cL(); });
 </script>
 </body>
 </html>
