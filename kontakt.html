@@ -80,6 +80,19 @@ textarea{resize:vertical;min-height:100px;}
 .checkbox-row input[type=checkbox]{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--gold);cursor:pointer;}
 .checkbox-row label{font-size:12.5px;color:rgba(244,239,228,.7);cursor:pointer;letter-spacing:0;text-transform:none;line-height:1.6;}
 .checkbox-row label strong{color:rgba(244,239,228,.95);}
+
+/* PACKAGING TRIAGE */
+.pkg-section{border-top:1px solid var(--border);padding-top:28px;margin-top:8px;}
+.pkg-section h3{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.pkg-section p.pkg-intro{font-size:12px;color:rgba(244,239,228,.55);line-height:1.7;margin-bottom:18px;font-style:italic;}
+.pkg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin-top:10px;margin-bottom:6px;}
+.pkg-check{display:flex;align-items:flex-start;gap:10px;padding:8px 10px;background:rgba(244,239,228,.03);border:1px solid var(--border);transition:all .2s;cursor:pointer;}
+.pkg-check:hover{border-color:rgba(201,148,58,.35);background:rgba(244,239,228,.05);}
+.pkg-check input[type=checkbox]{width:16px;height:16px;min-width:16px;margin-top:2px;accent-color:var(--gold);cursor:pointer;}
+.pkg-check label{font-size:12px;color:rgba(244,239,228,.7);cursor:pointer;letter-spacing:0;text-transform:none;line-height:1.5;margin:0;}
+.pkg-bonus-label{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--cream-3);margin-top:18px;margin-bottom:10px;}
+.pkg-note{font-size:11px;color:rgba(244,239,228,.4);margin-top:12px;line-height:1.6;font-style:italic;padding-left:2px;}
+@media(max-width:600px){.pkg-grid{grid-template-columns:1fr;}}
 .btn-p{display:block;width:100%;background:var(--gold);color:var(--dark);border:none;padding:16px;font-family:'Instrument Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:background .2s;}
 .btn-p:hover{background:var(--gold-l);}
 .err{font-size:12px;color:var(--red);min-height:16px;margin-bottom:10px;}
@@ -129,6 +142,9 @@ textarea{resize:vertical;min-height:100px;}
   <input name="email"/><input name="telefon"/>
   <input name="kapazitaet"/><input name="zertifizierung"/>
   <textarea name="nachricht"></textarea>
+  <input name="bigbag_faehig"/>
+  <input name="bonus_endverpackung"/>
+  <textarea name="verpackung_bemerkung"></textarea>
   <input name="click_nda_akzeptiert"/><input name="timestamp"/>
   <input name="user_agent"/><input name="sprache"/>
 </form>
@@ -155,6 +171,10 @@ textarea{resize:vertical;min-height:100px;}
           <li>Standard in jeder ernsthaften Industriepartnerschaft</li>
           <li>Signalisiert gegenseitigen professionellen Respekt</li>
         </ul>
+        <p style="margin-top:14px;padding:12px 16px;background:rgba(58,138,58,.08);border-left:2px solid var(--green);font-size:12.5px;line-height:1.7;">
+          <strong style="color:rgba(244,239,228,.9);">Modulares Produktions-Modell:</strong><br>
+          Wir arbeiten mit einem Konfektions-Fulfillment-Partner für Endverpackung und D2C-Versand. <strong style="color:rgba(244,239,228,.85);">Sie produzieren in Big-Bags</strong> — Endverpackung (Eimer, Sachets, etc.) ist möglich, aber nicht zwingend. Das macht die Partnerschaft auch für reine Pellet-Spezialisten interessant.
+        </p>
         <p style="margin-top:14px;padding:12px 16px;background:rgba(201,148,58,.1);border-left:2px solid var(--gold);font-size:12.5px;line-height:1.7;">
           <strong style="color:rgba(244,239,228,.9);">Nach Eingang Ihrer Anfrage erhalten Sie:</strong><br>
           → Persönliche Rückmeldung von Dirc Zahlmann innerhalb 48h<br>
@@ -261,6 +281,44 @@ textarea{resize:vertical;min-height:100px;}
     <div class="form-group">
       <label>Kurze Vorstellung Ihres Betriebs (optional)</label>
       <textarea id="f-msg" placeholder="Was macht Ihren Betrieb für eine EQUINAT-Partnerschaft geeignet? Erfahrungen, Besonderheiten, Fragen..."></textarea>
+    </div>
+
+    <!-- VERPACKUNGS-TRIAGE -->
+    <div class="pkg-section">
+      <h3>Verpackungs-Möglichkeiten</h3>
+      <p class="pkg-intro">Wir arbeiten mit Konfektions-Fulfillment-Partnern für die Endverpackung. Big-Bag-Abfüllung ist das technische Minimum — alles weitere ist optional und hilft uns bei der Triage.</p>
+
+      <div class="form-group">
+        <label>Big-Bag-Abfüllung möglich? <span>✦</span></label>
+        <select id="f-bigbag" required>
+          <option value="" disabled selected>Bitte wählen</option>
+          <option value="1000kg_standard">Ja — 1.000 kg Standard FIBC</option>
+          <option value="750kg">Ja — 750 kg möglich</option>
+          <option value="500kg">Ja — 500 kg möglich</option>
+          <option value="alle_drei">Ja — 500 / 750 / 1.000 kg, alle drei</option>
+          <option value="andere">Ja — andere Größe (bitte bei Bemerkung angeben)</option>
+          <option value="nein">Nein, keine Big-Bag-Abfüllung möglich</option>
+        </select>
+      </div>
+
+      <div class="pkg-bonus-label">Bonus — welche Endverpackung können Sie zusätzlich? (optional)</div>
+      <div class="pkg-grid">
+        <div class="pkg-check"><input type="checkbox" id="pk-sack-klein"/><label for="pk-sack-klein">Sack 10 / 15 kg</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-sack-gross"/><label for="pk-sack-gross">Sack 20 / 25 kg</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-eimer"/><label for="pk-eimer">Eimer 3 / 5 kg</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-refill"/><label for="pk-refill">Refill-Beutel</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-sachets"/><label for="pk-sachets">Sachets (50 g Portionsbeutel)</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-sachetbox"/><label for="pk-sachetbox">Sachet-Box-Konfektion (z.B. 30×50g)</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-pla"/><label for="pk-pla">PLA-/kompostierbarer Inliner</label></div>
+        <div class="pkg-check"><input type="checkbox" id="pk-keine"/><label for="pk-keine">Nichts davon — nur Big-Bag</label></div>
+      </div>
+
+      <div class="form-group" style="margin-top:18px;">
+        <label>Bemerkungen zur Verpackung (optional)</label>
+        <textarea id="f-pkg-bem" placeholder="Falls bestimmte Optionen nur über Konfektionspartner möglich sind, oder Sie spezielle Verpackungs-Erfahrung haben — bitte hier kurz erwähnen." style="min-height:70px;"></textarea>
+      </div>
+
+      <p class="pkg-note">Sie müssen nicht alle Verpackungsformen können. Reine Pellet-/Big-Bag-Hersteller sind ebenso interessant — die Endverpackung übernimmt unser Konfektions-Fulfillment-Partner.</p>
     </div>
 
     <!-- CLICK-NDA -->
@@ -371,6 +429,7 @@ function submitForm(){
   const anschrift= document.getElementById('f-anschrift').value.trim();
   const name     = document.getElementById('f-name').value.trim();
   const email    = document.getElementById('f-email').value.trim();
+  const bigbag   = document.getElementById('f-bigbag').value;
   const cb       = document.getElementById('cb-nda').checked;
   const err      = document.getElementById('form-err');
 
@@ -378,8 +437,20 @@ function submitForm(){
   if(!anschrift){ err.textContent='Bitte Anschrift eingeben.'; return; }
   if(!name)   { err.textContent='Bitte Ansprechpartner eingeben.'; return; }
   if(!email || !email.includes('@')){ err.textContent='Bitte g\u00FCltige E-Mail eingeben.'; return; }
+  if(!bigbag) { err.textContent='Bitte Big-Bag-F\u00E4higkeit angeben.'; return; }
   if(!cb)     { err.textContent='Bitte die Click-NDA akzeptieren.'; return; }
   err.textContent='';
+
+  // Sammle Bonus-Verpackungs-Checkboxes
+  const bonusOptions = [];
+  if(document.getElementById('pk-sack-klein').checked) bonusOptions.push('Sack 10/15 kg');
+  if(document.getElementById('pk-sack-gross').checked) bonusOptions.push('Sack 20/25 kg');
+  if(document.getElementById('pk-eimer').checked)      bonusOptions.push('Eimer 3/5 kg');
+  if(document.getElementById('pk-refill').checked)     bonusOptions.push('Refill-Beutel');
+  if(document.getElementById('pk-sachets').checked)    bonusOptions.push('Sachets 50g');
+  if(document.getElementById('pk-sachetbox').checked)  bonusOptions.push('Sachet-Box-Konfektion');
+  if(document.getElementById('pk-pla').checked)        bonusOptions.push('PLA-/komp. Inliner');
+  if(document.getElementById('pk-keine').checked)      bonusOptions.push('Nichts davon \u2014 nur Big-Bag');
 
   const btn = document.querySelector('.btn-p');
   btn.disabled = true;
@@ -389,20 +460,23 @@ function submitForm(){
     method: 'POST',
     headers: {'Content-Type':'application/x-www-form-urlencoded'},
     body: new URLSearchParams({
-      'form-name':         'equinat-hersteller-kontakt',
-      firmenname:          firma,
-      anschrift:           anschrift,
-      ansprechpartner:     name,
-      funktion:            document.getElementById('f-funktion').value.trim(),
-      email:               email,
-      telefon:             document.getElementById('f-tel').value.trim(),
-      kapazitaet:          document.getElementById('f-kap').value,
-      zertifizierung:      document.getElementById('f-zert').value,
-      nachricht:           document.getElementById('f-msg').value.trim(),
-      click_nda_akzeptiert:'Ja \u2014 Click-NDA digital best\u00E4tigt am ' + new Date().toLocaleDateString('de-DE') + ' um ' + new Date().toLocaleTimeString('de-DE'),
-      timestamp:           new Date().toISOString(),
-      user_agent:          navigator.userAgent,
-      sprache:             navigator.language
+      'form-name':           'equinat-hersteller-kontakt',
+      firmenname:            firma,
+      anschrift:             anschrift,
+      ansprechpartner:       name,
+      funktion:              document.getElementById('f-funktion').value.trim(),
+      email:                 email,
+      telefon:               document.getElementById('f-tel').value.trim(),
+      kapazitaet:            document.getElementById('f-kap').value,
+      zertifizierung:        document.getElementById('f-zert').value,
+      nachricht:             document.getElementById('f-msg').value.trim(),
+      bigbag_faehig:         bigbag,
+      bonus_endverpackung:   bonusOptions.length ? bonusOptions.join(', ') : 'keine Angabe',
+      verpackung_bemerkung:  document.getElementById('f-pkg-bem').value.trim(),
+      click_nda_akzeptiert:  'Ja \u2014 Click-NDA digital best\u00E4tigt am ' + new Date().toLocaleDateString('de-DE') + ' um ' + new Date().toLocaleTimeString('de-DE'),
+      timestamp:             new Date().toISOString(),
+      user_agent:            navigator.userAgent,
+      sprache:               navigator.language
     })
   })
   .then(()=>{
